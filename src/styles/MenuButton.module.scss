@@ -1,0 +1,58 @@
+/** @format */
+
+.menuButton {
+  --toggle-width: 32px;
+  --toggle-height: 32px;
+  --button-padding: 6px;
+  border: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  font-size: 1.5rem;
+  line-height: 1;
+  width: var(--toggle-width);
+  height: var(--toggle-height);
+  border-radius: 50%;
+  background: var(--bg-color-00);
+  box-shadow: 2px 2px 1px 0px hsla(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background 200ms ease-in-out;
+  padding: var(--button-padding);
+
+  &:hover {
+    background: var(--bg-color-10);
+    outline: 1px solid var(--bg-color-40);
+    .bar {
+      background-color: var(--color-accent-00);
+    }
+  }
+
+  .bar {
+    display: block;
+    background-color: var(--color-accent-10);
+    height: 2px;
+    width: calc(100% - var(--button-padding));
+    border-radius: 2px;
+  }
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+}
+
+@media (prefers-reduced-motion) {
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+}
+
+@media (prefers-color-scheme: dark) {
+}

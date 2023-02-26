@@ -1,0 +1,154 @@
+/** @format */
+
+.header {
+  height: var(--header-height);
+  width: 100dvw;
+  background-color: var(--bg-color-20);
+  padding: 0px 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--bg-color-40);
+
+  .logoWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+
+    & > img {
+      border-radius: 50%;
+      box-shadow: 2px 2px 1px 0px hsla(0, 0, 0, 0.3);
+      filter: brightness(calc(100% - var(--color-accent-l-offset)));
+    }
+
+    &:hover > img {
+      box-shadow: 2px 2px 1px 0px hsla(0, 0, 0, 0.4);
+      filter: brightness(calc(100% - 2 * var(--color-accent-l-offset)));
+    }
+
+    & > p {
+      font-size: x-large;
+      color: var(--color-accent-10);
+    }
+
+    &:hover > p {
+      color: var(--color-accent-00);
+    }
+  }
+
+  .nav {
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    @media screen and (max-width: 700px) {
+      .navLink {
+        display: none;
+      }
+    }
+
+    .navLink {
+      text-decoration: none;
+      position: relative;
+      color: var(--color-accent-10);
+      font-size: large;
+
+      &:hover {
+        color: var(--color-accent-00);
+        transition: color 200ms ease;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: var(--color-accent-10);
+        height: 2px;
+        bottom: -5px;
+        left: 0px;
+        right: 0px;
+        visibility: hidden;
+        transform: scale(0);
+        transform-origin: 0 50%;
+        transition: transform 200ms ease;
+      }
+
+      &.isCurrentWindow::after,
+      &:focus-within::after,
+      &:hover::after {
+        visibility: visible;
+        transform: scaleX(1);
+      }
+
+      &:focus-within::after,
+      &:hover::after {
+        background-color: var(--color-accent-00);
+      }
+    }
+
+    .themeToggle {
+      --toggle-width: 48px;
+      --toggle-height: 24px;
+      background-color: var(--bg-color-00);
+      &:hover {
+        background-color: var(--bg-color-10);
+      }
+
+      .themeToggleThumb {
+        left: calc((var(--toggle-width) / 2) - var(--thumb-width) / 2);
+        background-color: var(--color-accent-00);
+      }
+    }
+  }
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .navLink {
+    &:hover {
+      color: var(--color-accent-10);
+    }
+
+    &:focus-within::after,
+    &:hover::after {
+      visibility: hidden;
+      transform: scaleX(0);
+      background-color: var(--color-accent-10);
+    }
+  }
+
+  .logoWrapper:hover {
+    & > img {
+      box-shadow: 2px 2px 1px 0px hsla(0, 0, 0, 0.3);
+    }
+
+    & > p {
+      color: var(--color-accent-10);
+    }
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .navLink::after {
+    transition-duration: 200ms;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+}
+
+@media (prefers-color-scheme: dark) {
+}
