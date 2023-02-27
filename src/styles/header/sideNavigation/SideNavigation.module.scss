@@ -28,8 +28,8 @@
     width: calc(100% - var(--button-padding));
     border-radius: 2px;
 
-    &:first-child,
-    &:last-child {
+    &:first-of-type,
+    &:last-of-type {
       height: 2px;
     }
   }

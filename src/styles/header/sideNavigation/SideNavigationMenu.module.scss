@@ -11,7 +11,7 @@
   transform: translateX(100%);
   transition: transform 300ms ease;
   gap: 16px;
-  padding: 32px;
+  padding: 32px 64px 32px 48px;
   background-color: var(--bg-color-20);
   border-left: 1px solid var(--bg-color-40);
 
@@ -21,6 +21,7 @@
 
   .sideNavLink {
     font-size: medium;
+    padding-right: 25px;
   }
 }
 
