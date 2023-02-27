@@ -1,16 +1,12 @@
 /** @format */
 
-.header {
-  height: var(--header-height);
-  width: 100dvw;
-  background-color: var(--bg-color-20);
-  padding: 0px 32px;
+.nav {
+  height: fit-content;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: center;
+  justify-content: center;
   align-items: center;
-  border-bottom: 1px solid var(--bg-color-40);
+  gap: 16px;
 }
 
 /* Enable hover only on non-touch devices */

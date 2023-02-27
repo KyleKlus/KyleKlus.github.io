@@ -22,14 +22,6 @@
   transition: background 200ms ease-in-out;
   padding: var(--button-padding);
 
-  &:hover {
-    background: var(--bg-color-10);
-    outline: 1px solid var(--bg-color-40);
-    .bar {
-      background-color: var(--color-accent-00);
-    }
-  }
-
   .bar {
     display: block;
     background-color: var(--color-accent-10);
@@ -41,6 +33,13 @@
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
+  .menuButton:hover {
+    background: var(--bg-color-10);
+    outline: 1px solid var(--bg-color-40);
+    .bar {
+      background-color: var(--color-accent-00);
+    }
+  }
 }
 
 @media (prefers-reduced-motion) {

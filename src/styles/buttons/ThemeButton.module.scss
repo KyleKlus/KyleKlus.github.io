@@ -21,24 +21,15 @@
   cursor: pointer;
   transition: background 0.25s ease-in-out;
   padding: var(--button-padding);
-
-  img {
-    fill: white;
-  }
-
-  &:hover {
-    background: var(--bg-color-10);
-    box-shadow: 2px 2px 1px 0px hsla(0, 0, 0, 0.4);
-    outline: 1px solid var(--bg-color-40);
-
-    img {
-      filter: brightness(calc(100% - 2 * var(--color-accent-l-offset)));
-    }
-  }
 }
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
+  .themeButton:hover {
+    background: var(--bg-color-10);
+    box-shadow: 2px 2px 1px 0px hsla(0, 0, 0, 0.4);
+    outline: 1px solid var(--bg-color-40);
+  }
 }
 
 @media (prefers-reduced-motion) {

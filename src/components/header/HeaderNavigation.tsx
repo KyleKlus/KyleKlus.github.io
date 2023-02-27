@@ -1,8 +1,8 @@
 /** @format */
-import styles from '@/styles/header/Header.module.scss';
+import styles from '@/styles/header/HeaderNavigation.module.scss';
 import dynamic from 'next/dynamic';
 import MenuButton from '../buttons/MenuButton';
-import Menu from './Menu';
+import SideNavigation from './SideNavigation';
 import NavLink from './NavLink';
 
 const ThemeButton = dynamic(() => import('../buttons/ThemeButton'), {
@@ -26,7 +26,7 @@ export default function HeaderNavigation() {
       />
       <ThemeButton />
       <MenuButton />
-      <Menu />
+      <SideNavigation />
     </nav>
   );
 }

@@ -1,10 +1,10 @@
 /** @format */
-import styles from '@/styles/header/Header.module.scss';
+import styles from '@/styles/header/SideNavigation.module.scss';
 import NavLink from './NavLink';
 
-export default function Menu() {
+export default function SideNavigation() {
   return (
-    <nav className={styles.menu}>
+    <nav className={styles.sideNav}>
       <NavLink
         pathName="/"
         displayText="Home"
