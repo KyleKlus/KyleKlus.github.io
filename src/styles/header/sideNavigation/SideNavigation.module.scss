@@ -1,11 +1,10 @@
 /** @format */
 
-.menuButton {
+.sideNav {
   --toggle-width: 32px;
   --toggle-height: 32px;
   --button-padding: 6px;
   border: 0;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,15 +24,20 @@
   .bar {
     display: block;
     background-color: var(--color-accent-10);
-    height: 2px;
+    height: 1px;
     width: calc(100% - var(--button-padding));
     border-radius: 2px;
+
+    &:first-child,
+    &:last-child {
+      height: 2px;
+    }
   }
 }
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
-  .menuButton:hover {
+  .sideNav:hover {
     background: var(--bg-color-10);
     outline: 1px solid var(--bg-color-40);
     .bar {

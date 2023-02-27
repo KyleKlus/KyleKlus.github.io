@@ -1,0 +1,49 @@
+/** @format */
+
+.sideNavMenu {
+  position: absolute;
+  top: var(--header-height);
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 300ms ease;
+  gap: 16px;
+  padding: 32px;
+  background-color: var(--bg-color-20);
+  border-left: 1px solid var(--bg-color-40);
+
+  &.isActive {
+    transform: translateX(0%);
+  }
+
+  .sideNavLink {
+    font-size: medium;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sideNavLink {
+    display: unset;
+  }
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+}
+
+@media (prefers-reduced-motion) {
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+}
+
+@media (prefers-color-scheme: dark) {
+}
