@@ -99,7 +99,7 @@ body {
   );
 }
 
-body.dark {
+body[data-theme='dark'] {
   --bg-color-l: 2%;
   --bg-color-multiplier: 1;
 }

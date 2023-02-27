@@ -1,7 +1,7 @@
 /** @format */
 import styles from '@/styles/ThemeButton.module.scss';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 
 interface IThemeButtonProps {}
@@ -9,55 +9,22 @@ interface IThemeButtonProps {}
 export default function ThemeButton(
   props: React.PropsWithChildren<IThemeButtonProps>
 ) {
-  let prefChoice = '';
-  let localStorageChoice = '';
-  let choice = 'light';
+  const [activeTheme, setActiveTheme] = useState(document.body.dataset.theme);
+  const inactiveTheme = activeTheme === 'light' ? 'dark' : 'light';
 
-  if (typeof window !== 'undefined') {
-    prefChoice = window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light';
-    localStorageChoice = JSON.parse(
-      localStorage.getItem('themeChoice') || '{}'
-    );
-
-    choice = localStorageChoice === '{}' ? prefChoice : localStorageChoice;
-    localStorage.removeItem('themeChoice');
-    localStorage.setItem('themeChoice', JSON.stringify(choice));
-  }
-
-  const [theme, setTheme] = useState(choice);
-
-  function toggleTheme() {
-    switch (theme) {
-      case 'dark':
-        localStorage;
-        window.document.body.classList.remove('dark');
-        window.document.body.classList.add('light');
-        localStorage.removeItem('themeChoice');
-        localStorage.setItem('themeChoice', JSON.stringify('light'));
-        setTheme('light');
-        break;
-      case 'light':
-        window.document.body.classList.remove('light');
-        window.document.body.classList.add('dark');
-        localStorage.removeItem('themeChoice');
-        localStorage.setItem('themeChoice', JSON.stringify('dark'));
-        setTheme('dark');
-        break;
-
-      default:
-        break;
-    }
-  }
+  useEffect(() => {
+    document.body.dataset.theme = activeTheme;
+    localStorage.removeItem('theme');
+    window.localStorage.setItem('theme', JSON.stringify(activeTheme || '{}'));
+  }, [activeTheme]);
 
   return (
     <button
       className={styles.themeButton}
-      onClick={toggleTheme}
+      onClick={() => setActiveTheme(inactiveTheme)}
     >
       <Image
-        src={'/' + theme + '-mode.svg'}
+        src={'/' + activeTheme + '-mode.svg'}
         alt=""
         width={'16'}
         height={'16'}

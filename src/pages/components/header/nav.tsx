@@ -1,8 +1,12 @@
 /** @format */
 import styles from '@/styles/Header.module.scss';
+import dynamic from 'next/dynamic';
 import MenuButton from '../buttons/menuButton';
-import ThemeButton from '../buttons/themeButton';
 import NavLink from './navLink';
+
+const ThemeButton = dynamic(() => import('../buttons/themeButton'), {
+  ssr: false,
+});
 
 export default function Navigation() {
   return (
