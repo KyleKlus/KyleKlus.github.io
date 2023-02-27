@@ -1,8 +1,7 @@
 /** @format */
-import styles from '@/styles/ThemeButton.module.scss';
+import styles from '@/styles/buttons/ThemeButton.module.scss';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import dynamic from 'next/dynamic';
 
 interface IThemeButtonProps {}
 

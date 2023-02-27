@@ -1,6 +1,6 @@
 /** @format */
 
-import styles from '@/styles/Header.module.scss';
+import styles from '@/styles/header/Header.module.scss';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 

@@ -1,5 +1,5 @@
 /** @format */
-import styles from '@/styles/MenuButton.module.scss';
+import styles from '@/styles/buttons/MenuButton.module.scss';
 
 interface IMenuButtonProps {}
 

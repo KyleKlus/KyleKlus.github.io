@@ -1,9 +1,9 @@
 /** @format */
 
 import Head from 'next/head';
-import Footer from './components/footer/footer';
-import Header from './components/header/header';
-import IndexMain from './components/main-index';
+import Footer from '@/components/footer/Footer';
+import Header from '@/components/header/Header';
+import IndexMain from '@/components/main-index';
 export default function Home() {
   return (
     <>

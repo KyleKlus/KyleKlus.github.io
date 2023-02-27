@@ -108,6 +108,59 @@
       }
     }
   }
+
+  .menu {
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    @media screen and (max-width: 700px) {
+      .navLink {
+        display: none;
+      }
+    }
+
+    .navLink {
+      text-decoration: none;
+      position: relative;
+      color: var(--color-accent-10);
+      font-size: large;
+
+      &:hover {
+        color: var(--color-accent-00);
+        transition: color 200ms ease;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: var(--color-accent-10);
+        height: 2px;
+        bottom: -5px;
+        left: 0px;
+        right: 0px;
+        visibility: hidden;
+        transform: scale(0);
+        transform-origin: 0 50%;
+        transition: transform 200ms ease;
+      }
+
+      &.isCurrentWindow::after,
+      &:focus-within::after,
+      &:hover::after {
+        visibility: visible;
+        transform: scaleX(1);
+      }
+
+      &:focus-within::after,
+      &:hover::after {
+        background-color: var(--color-accent-00);
+      }
+    }
+  }
 }
 
 /* Enable hover only on non-touch devices */

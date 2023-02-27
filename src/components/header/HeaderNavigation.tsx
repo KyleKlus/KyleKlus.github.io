@@ -1,14 +1,15 @@
 /** @format */
-import styles from '@/styles/Header.module.scss';
+import styles from '@/styles/header/Header.module.scss';
 import dynamic from 'next/dynamic';
-import MenuButton from '../buttons/menuButton';
-import NavLink from './navLink';
+import MenuButton from '../buttons/MenuButton';
+import Menu from './Menu';
+import NavLink from './NavLink';
 
-const ThemeButton = dynamic(() => import('../buttons/themeButton'), {
+const ThemeButton = dynamic(() => import('../buttons/ThemeButton'), {
   ssr: false,
 });
 
-export default function Navigation() {
+export default function HeaderNavigation() {
   return (
     <nav className={styles.nav}>
       <NavLink
@@ -20,15 +21,12 @@ export default function Navigation() {
         displayText="Portfolio"
       />
       <NavLink
-        pathName="/projects"
-        displayText="Projects"
-      />
-      <NavLink
         pathName="/about"
         displayText="About"
       />
       <ThemeButton />
       <MenuButton />
+      <Menu />
     </nav>
   );
 }
