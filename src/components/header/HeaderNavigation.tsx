@@ -1,14 +1,17 @@
 /** @format */
 import styles from '@/styles/header/HeaderNavigation.module.scss';
 import dynamic from 'next/dynamic';
-import SideNavigation from './sideNavigation/SideNavigation';
+import SideNavigationButton from '../buttons/SideNavigationButton';
 import NavLink from './NavLink';
+import { useState } from 'react';
+import SideNavigation from './SideNavigation';
 
 const ThemeButton = dynamic(() => import('../buttons/ThemeButton'), {
   ssr: false,
 });
 
 export default function HeaderNavigation() {
+  const [isSideNavigationActive, setIsSideNavigationActive] = useState(false);
   return (
     <nav className={styles.nav}>
       <NavLink
@@ -24,7 +27,12 @@ export default function HeaderNavigation() {
         displayText="About"
       />
       <ThemeButton />
-      <SideNavigation />
+      <SideNavigationButton
+        onClick={() => {
+          setIsSideNavigationActive(!isSideNavigationActive);
+        }}
+      />
+      <SideNavigation isActive={isSideNavigationActive} />
     </nav>
   );
 }
