@@ -1,5 +1,14 @@
 /** @format */
 
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: calc(100dvh - var(--header-height) - var(--footer-height));
+  overflow: auto;
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
 }

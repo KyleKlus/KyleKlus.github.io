@@ -45,6 +45,75 @@ export default function SideNavigation(
           displayText="Cookbook"
         />
       </Card>
+
+      <Card className={styles.menuCard}>
+        <h4>Other Sites</h4>
+        <NavLink
+          className={styles.sideNavLink}
+          pathName="/projects"
+          displayText="Projects"
+        />
+        <NavLink
+          className={styles.sideNavLink}
+          pathName="/Kyles-Cookbook"
+          displayText="Cookbook"
+        />
+      </Card>
+
+      <Card className={styles.menuCard}>
+        <h4>Other Sites</h4>
+        <NavLink
+          className={styles.sideNavLink}
+          pathName="/projects"
+          displayText="Projects"
+        />
+        <NavLink
+          className={styles.sideNavLink}
+          pathName="/Kyles-Cookbook"
+          displayText="Cookbook"
+        />
+      </Card>
+
+      <Card className={styles.menuCard}>
+        <h4>Other Sites</h4>
+        <NavLink
+          className={styles.sideNavLink}
+          pathName="/projects"
+          displayText="Projects"
+        />
+        <NavLink
+          className={styles.sideNavLink}
+          pathName="/Kyles-Cookbook"
+          displayText="Cookbook"
+        />
+      </Card>
+
+      <Card className={styles.menuCard}>
+        <h4>Other Sites</h4>
+        <NavLink
+          className={styles.sideNavLink}
+          pathName="/projects"
+          displayText="Projects"
+        />
+        <NavLink
+          className={styles.sideNavLink}
+          pathName="/Kyles-Cookbook"
+          displayText="Cookbook"
+        />
+      </Card>
+      <Card className={styles.menuCard}>
+        <h4>Other Sites</h4>
+        <NavLink
+          className={styles.sideNavLink}
+          pathName="/projects"
+          displayText="Projects"
+        />
+        <NavLink
+          className={styles.sideNavLink}
+          pathName="/Kyles-Cookbook"
+          displayText="Cookbook"
+        />
+      </Card>
     </nav>
   );
 }

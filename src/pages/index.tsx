@@ -3,7 +3,7 @@
 import Head from 'next/head';
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
-import IndexMain from '@/components/main-index';
+import Main from '@/components/Main';
 export default function Home() {
   return (
     <>
@@ -23,7 +23,7 @@ export default function Home() {
         />
       </Head>
       <Header />
-      <IndexMain></IndexMain>
+      <Main></Main>
       <Footer></Footer>
     </>
   );

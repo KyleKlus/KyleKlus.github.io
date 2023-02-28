@@ -11,7 +11,6 @@ const ThemeButton = dynamic(() => import('../buttons/ThemeButton'), {
 });
 
 export default function HeaderNavigation() {
-  const [isSideNavigationActive, setIsSideNavigationActive] = useState(false);
   return (
     <nav className={styles.nav}>
       <NavLink
@@ -27,12 +26,6 @@ export default function HeaderNavigation() {
         displayText="About"
       />
       <ThemeButton />
-      <SideNavigationButton
-        onClick={() => {
-          setIsSideNavigationActive(!isSideNavigationActive);
-        }}
-      />
-      <SideNavigation isActive={isSideNavigationActive} />
     </nav>
   );
 }
