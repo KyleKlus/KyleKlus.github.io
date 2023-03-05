@@ -1,5 +1,6 @@
 /** @format */
-import styles from '@/styles/Main.module.scss';
+import styles from '@/styles/Main.module.css';
+import { useEffect, useRef } from 'react';
 
 interface IMainProps {}
 

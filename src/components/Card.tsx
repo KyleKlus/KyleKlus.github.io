@@ -1,5 +1,5 @@
 /** @format */
-import styles from '@/styles/Card.module.scss';
+import styles from '@/styles/Card.module.css';
 
 interface ICardProps {
   className?: string;

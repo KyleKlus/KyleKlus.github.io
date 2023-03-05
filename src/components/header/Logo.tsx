@@ -1,11 +1,8 @@
 /** @format */
 
-import styles from '@/styles/header/Logo.module.scss';
+import styles from '@/styles/header/Logo.module.css';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
-import SideNavigationButton from '../buttons/SideNavigationButton';
-import SideNavigation from './SideNavigation';
 
 export default function Logo() {
   const router = useRouter();

@@ -4,7 +4,7 @@
   position: absolute;
   top: var(--header-height);
   left: 0px;
-  bottom: 0px;
+  height: calc(100vh - var(--header-height));
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -18,27 +18,31 @@
   width: 300px;
 
   overflow-x: auto;
-
-  &.isActive {
-    transform: translateX(0%);
-  }
-
-  .menuCard {
-    width: 100%;
-    gap: 12px;
-    padding: 24px;
-
-    h4 {
-      width: 100%;
-      border-bottom: 1px solid var(--bg-color-40);
-    }
-  }
-
-  .sideNavLink {
-    font-size: medium;
-    width: fit-content;
-  }
 }
+
+.sideNavMenu.isActive {
+  transform: translateX(0%);
+}
+
+.sideNavLink {
+  font-size: medium;
+  width: fit-content;
+}
+
+.menuCard {
+  width: 100%;
+  gap: 12px;
+  padding: 24px;
+
+
+}
+
+.menuCard h4 {
+  width: 100%;
+  border-bottom: 1px solid var(--bg-color-40);
+}
+
+
 
 @media (max-width: 600px) {
   .sideNavLink {
@@ -53,19 +57,14 @@
 }
 
 /* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-}
+@media (hover: hover) and (pointer: fine) {}
 
-@media (prefers-reduced-motion) {
-}
+@media (prefers-reduced-motion) {}
 
 /* Mobile */
-@media (max-width: 700px) {
-}
+@media (max-width: 700px) {}
 
 /* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-}
+@media (min-width: 701px) and (max-width: 1120px) {}
 
-@media (prefers-color-scheme: dark) {
-}
+@media (prefers-color-scheme: dark) {}

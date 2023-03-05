@@ -1,5 +1,5 @@
 /** @format */
-import styles from '@/styles/buttons/SideNavigationButton.module.scss';
+import styles from '@/styles/buttons/SideNavigationButton.module.css';
 
 interface ISideNavigationButtonProps {
   onClick?: any;

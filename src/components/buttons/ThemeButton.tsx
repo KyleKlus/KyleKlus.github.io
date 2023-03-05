@@ -1,5 +1,5 @@
 /** @format */
-import styles from '@/styles/buttons/ThemeButton.module.scss';
+import styles from '@/styles/buttons/ThemeButton.module.css';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 

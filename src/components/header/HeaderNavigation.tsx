@@ -1,10 +1,7 @@
 /** @format */
-import styles from '@/styles/header/HeaderNavigation.module.scss';
+import styles from '@/styles/header/HeaderNavigation.module.css';
 import dynamic from 'next/dynamic';
-import SideNavigationButton from '../buttons/SideNavigationButton';
 import NavLink from './NavLink';
-import { useState } from 'react';
-import SideNavigation from './SideNavigation';
 
 const ThemeButton = dynamic(() => import('../buttons/ThemeButton'), {
   ssr: false,

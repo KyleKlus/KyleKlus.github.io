@@ -1,0 +1,44 @@
+/** @format */
+
+.logoWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.logoWrapper > img {
+  border-radius: 50%;
+  box-shadow: 2px 2px 1px 0px hsla(0, 0, 0, 0.3);
+  filter: brightness(calc(100% - var(--color-accent-l-offset)));
+}
+
+.logoWrapper > p {
+  font-size: x-large;
+  color: var(--color-accent-10);
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .logoWrapper:hover > p {
+    color: var(--color-accent-00);
+  }
+
+  .logoWrapper:hover > img {
+    box-shadow: 2px 2px 1px 0px hsla(0, 0, 0, 0.4);
+    filter: brightness(calc(100% - 2 * var(--color-accent-l-offset)));
+  }
+}
+
+@media (prefers-reduced-motion) {}
+
+/* Mobile */
+@media (max-width: 700px) {}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {}
+
+@media (prefers-color-scheme: dark) {}

@@ -1,12 +1,10 @@
 /** @format */
 
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  min-height: calc(100dvh - var(--header-height) - var(--footer-height));
-  overflow: auto;
+.footer {
+  height: var(--footer-height);
+  width: 100%;
+  background-color: var(--bg-color-10);
+  border-top: 1px solid var(--bg-color-40);
 }
 
 /* Enable hover only on non-touch devices */

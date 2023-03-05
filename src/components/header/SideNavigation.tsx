@@ -1,7 +1,6 @@
 /** @format */
-import styles from '@/styles/header/SideNavigation.module.scss';
+import styles from '@/styles/header/SideNavigation.module.css';
 import Card from '../Card';
-import Logo from './Logo';
 import NavLink from './NavLink';
 
 interface ISideNavigationProps {

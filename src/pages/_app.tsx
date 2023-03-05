@@ -1,6 +1,6 @@
 /** @format */
 
-import '@/styles/globals.scss';
+import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import { Fira_Code } from '@next/font/google';
 
