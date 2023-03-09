@@ -7,6 +7,18 @@
   word-wrap: break-word;
 }
 
+.center {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {}
 
