@@ -48,13 +48,28 @@
   animation: slide-out 400ms ease;
 }
 
+.sideNavigationNegativeSpace {
+  position: absolute;
+  top: var(--header-height);
+  left: 0px;
+  width: calc(100vw - min(90%, var(--sideNav-width)));
+  height: 100vh;
+  transform: translateX(calc((100vw - min(90%, var(--sideNav-width))) * -1));
+  transform-origin: left;
+  transition: transform 300ms ease;
+}
+
+.sideNavigationNegativeSpace.isWrapperActive {
+  transform: translateX(min(90%, var(--sideNav-width)));
+}
+
 .headerLeft {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
 }
 
 /* Enable hover only on non-touch devices */

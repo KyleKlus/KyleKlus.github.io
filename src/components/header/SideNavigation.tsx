@@ -13,7 +13,7 @@ export default function SideNavigation(
   return (
     <nav className={styles.sideNavMenu + ' ' + isActiveClassName}>
       <Card className={styles.menuCard}>
-        <h4>Website</h4>
+        <h4>Main Site</h4>
         <NavLink
           className={styles.sideNavLink}
           pathName="/"
@@ -31,75 +31,6 @@ export default function SideNavigation(
         />
       </Card>
 
-      <Card className={styles.menuCard}>
-        <h4>Other Sites</h4>
-        <NavLink
-          className={styles.sideNavLink}
-          pathName="/projects"
-          displayText="Projects"
-        />
-        <NavLink
-          className={styles.sideNavLink}
-          pathName="/Kyles-Cookbook"
-          displayText="Cookbook"
-        />
-      </Card>
-
-      <Card className={styles.menuCard}>
-        <h4>Other Sites</h4>
-        <NavLink
-          className={styles.sideNavLink}
-          pathName="/projects"
-          displayText="Projects"
-        />
-        <NavLink
-          className={styles.sideNavLink}
-          pathName="/Kyles-Cookbook"
-          displayText="Cookbook"
-        />
-      </Card>
-
-      <Card className={styles.menuCard}>
-        <h4>Other Sites</h4>
-        <NavLink
-          className={styles.sideNavLink}
-          pathName="/projects"
-          displayText="Projects"
-        />
-        <NavLink
-          className={styles.sideNavLink}
-          pathName="/Kyles-Cookbook"
-          displayText="Cookbook"
-        />
-      </Card>
-
-      <Card className={styles.menuCard}>
-        <h4>Other Sites</h4>
-        <NavLink
-          className={styles.sideNavLink}
-          pathName="/projects"
-          displayText="Projects"
-        />
-        <NavLink
-          className={styles.sideNavLink}
-          pathName="/Kyles-Cookbook"
-          displayText="Cookbook"
-        />
-      </Card>
-
-      <Card className={styles.menuCard}>
-        <h4>Other Sites</h4>
-        <NavLink
-          className={styles.sideNavLink}
-          pathName="/projects"
-          displayText="Projects"
-        />
-        <NavLink
-          className={styles.sideNavLink}
-          pathName="/Kyles-Cookbook"
-          displayText="Cookbook"
-        />
-      </Card>
       <Card className={styles.menuCard}>
         <h4>Other Sites</h4>
         <NavLink

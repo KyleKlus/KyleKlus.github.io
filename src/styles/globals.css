@@ -7,7 +7,8 @@
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
   --header-height: 70px;
-  --footer-height: 100px;
+  --footer-height: 144px;
+  --sideNav-width: 300px;
 }
 
 body {
@@ -17,17 +18,18 @@ body {
   --color-accent-h: 7;
   --color-accent-s: 59%;
   --color-accent-l: 45%;
-  --color-accent-l-offset: 10%;
+  --color-accent-l-offset: 15%;
+  --color-accent-l-multiplier: -1;
 
   --color-accent-00: hsl(var(--color-accent-h),
       var(--color-accent-s),
-      calc(var(--color-accent-l) + var(--color-accent-l-offset) * -1));
+      calc(var(--color-accent-l) + var(--color-accent-l-offset) * -1 * var(--color-accent-l-multiplier)));
   --color-accent-10: hsl(var(--color-accent-h),
       var(--color-accent-s),
       calc(var(--color-accent-l) + 0%));
   --color-accent-20: hsl(var(--color-accent-h),
       var(--color-accent-s),
-      calc(var(--color-accent-l) + var(--color-accent-l-offset)));
+      calc(var(--color-accent-l) + var(--color-accent-l-offset) * var(--color-accent-l-multiplier)));
 
   --bg-color-h: 180;
   --bg-color-s: 3%;
@@ -74,6 +76,8 @@ body {
 body[data-theme='dark'] {
   --bg-color-l: 2%;
   --bg-color-multiplier: 1;
+  --color-accent-l-multiplier: 1;
+  --color-accent-l-offset: 8%;
 }
 
 /* width */
@@ -91,6 +95,10 @@ body[data-theme='dark'] {
   background: var(--bg-color-80);
   border: 3.5px solid var(--bg-color-40);
   border-radius: 8px;
+}
+
+::-webkit-scrollbar-corner {
+  color: var(--bg-color-80);
 }
 
 /* Handle on hover */
@@ -111,6 +119,23 @@ html,
 body {
   background-color: var(--bg-color-05);
 }
+
+a {
+  text-decoration: none;
+  color: var(--color-accent-10);
+  box-shadow: 0px 1px 0px var(--color-accent-10);
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+
+  a:hover,
+  a:focus-visible {
+    color: var(--color-accent-00);
+    box-shadow: 0px 1px 0px var(--color-accent-00);
+  }
+}
+
 
 @media (prefers-color-scheme: dark) {
   html {

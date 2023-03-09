@@ -1,6 +1,7 @@
 /** @format */
 
 import styles from '@/styles/header/Header.module.css';
+import React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import SideNavigationButton from '../buttons/SideNavigationButton';
 import HeaderNavigation from './HeaderNavigation';
@@ -11,8 +12,12 @@ export default function Header() {
   const [isSideNavigationActive, setIsSideNavigationActive] = useState(false);
   const [isHeaderHidden, setIsHeaderHidden] = useState(false);
   const lastScroll = useRef(0);
+  const SideNavRef: React.RefObject<HTMLInputElement> = React.createRef();
 
   const isHeaderHiddenClassName = useRef('');
+  const isActiveClassName = isSideNavigationActive
+    ? styles.isWrapperActive
+    : '';
 
   useEffect(() => {
     function hideAndShowHeader() {
@@ -36,7 +41,6 @@ export default function Header() {
         setIsHeaderHidden(false);
       }
     }
-
     window.addEventListener('scroll', hideAndShowHeader);
     return () => {
       window.removeEventListener('scroll', hideAndShowHeader);
@@ -55,6 +59,17 @@ export default function Header() {
             }
           }}
         />
+        <div
+          className={
+            styles.sideNavigationNegativeSpace + ' ' + isActiveClassName
+          }
+          onClick={() => {
+            if (!isSideNavigationActive) {
+              return;
+            }
+            setIsSideNavigationActive(false);
+          }}
+        ></div>
         <SideNavigation isActive={isSideNavigationActive} />
         <Logo />
       </div>

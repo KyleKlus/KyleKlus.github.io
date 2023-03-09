@@ -29,7 +29,7 @@
 
   .logoWrapper:hover > img {
     box-shadow: 2px 2px 1px 0px hsla(0, 0, 0, 0.4);
-    filter: brightness(calc(100% - 2 * var(--color-accent-l-offset)));
+    filter: brightness(calc(100% - 2 * var(--color-accent-l-offset) * var(--color-accent-l-multiplier)));
   }
 }
 

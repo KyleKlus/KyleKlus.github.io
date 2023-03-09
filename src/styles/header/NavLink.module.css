@@ -1,12 +1,11 @@
 /** @format */
 
-.navLink {
+a.navLink {
   text-decoration: none;
   position: relative;
   color: var(--color-accent-10);
   font-size: large;
-
-
+  box-shadow: none;
 }
 
 .navLink::after {

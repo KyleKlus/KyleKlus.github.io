@@ -1,6 +1,7 @@
 /** @format */
 
 .sideNavMenu {
+  --sideNav-final-width: min(90%, var(--sideNav-width));
   position: absolute;
   top: var(--header-height);
   left: 0px;
@@ -15,7 +16,7 @@
   padding: 24px 16px;
   background-color: var(--bg-color-20);
   border-left: 1px solid var(--bg-color-40);
-  width: min(90%, 300px);
+  width: var(--sideNav-final-width);
   overflow-x: auto;
 }
 
@@ -38,6 +39,7 @@
   width: 100%;
   border-bottom: 1px solid var(--bg-color-40);
 }
+
 
 
 
