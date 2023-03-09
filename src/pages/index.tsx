@@ -5,6 +5,7 @@ import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
 import Content from '@/components/Content';
 import Main from '@/components/Main';
+import Text from '@/components/Text';
 
 export default function Home() {
   return (
@@ -46,8 +47,16 @@ export default function Home() {
       <Header />
       <Main>
         <div id={'top'}></div>
-        <Content></Content>
-        <Footer></Footer>
+        <Content>
+          <Text>
+            <h1>Under Construction</h1>
+            <br />
+            <p>This site is currently under construction and exists solely for the purpose of not having missing pages. Please be patient until I finished creating this page.</p>
+            <br />
+            - With kind regards <q>Kyle Klus</q>
+          </Text>
+        </Content>
+        <Footer />
       </Main>
     </>
   );
