@@ -5,8 +5,6 @@ import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
 import Content from '@/components/Content';
 import Main from '@/components/Main';
-import Card from '@/components/Card';
-import NavLink from '@/components/header/NavLink';
 
 export default function Home() {
   return (

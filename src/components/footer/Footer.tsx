@@ -43,6 +43,11 @@ export default function Footer() {
             pathName="mailto:kyle.klus.2@gmail.com"
             displayText="Contact"
           />
+          <NavLink
+            className={styles.sideNavLink + ' ' + styles.footerNavLink}
+            pathName="/privacy"
+            displayText="Privacy"
+          />
         </div>
       </footer>
     </>
