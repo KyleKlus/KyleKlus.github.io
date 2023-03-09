@@ -10,7 +10,7 @@ export default function Footer() {
       <footer className={styles.footer}>
         <p>
           Copyright © 2023{' '}
-          <Link href={'https://github.com/MajorEnkidu'}>MajorEnkidu</Link>
+          <Link href={'https://github.com/MajorEnkidu'}>Kyle Klus</Link>
         </p>
         <div className={styles.navLinkWrapper}>
           <NavLink
