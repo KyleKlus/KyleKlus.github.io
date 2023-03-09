@@ -39,10 +39,6 @@
     background: var(--bg-color-30);
     outline: 1px solid var(--bg-color-40);
   }
-
-  .sideNav:hover .bar {
-    background-color: var(--bg-color-80);
-  }
 }
 
 @media (prefers-reduced-motion) {}

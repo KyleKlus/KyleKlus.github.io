@@ -3,6 +3,7 @@
 import styles from '@/styles/header/Header.module.css';
 import React from 'react';
 import { useEffect, useRef, useState } from 'react';
+import ScrollUpButton from '../buttons/ScrollUpButton';
 import SideNavigationButton from '../buttons/SideNavigationButton';
 import HeaderNavigation from './HeaderNavigation';
 import Logo from './Logo';
@@ -10,9 +11,9 @@ import SideNavigation from './SideNavigation';
 
 export default function Header() {
   const [isSideNavigationActive, setIsSideNavigationActive] = useState(false);
-  const [isHeaderHidden, setIsHeaderHidden] = useState(false);
+  const [isHeaderHidden, setIsHeaderHidden] = useState(true);
+  const [isScrollArrowHidden, setIsScrollArrowHidden] = useState(true);
   const lastScroll = useRef(0);
-  const SideNavRef: React.RefObject<HTMLInputElement> = React.createRef();
 
   const isHeaderHiddenClassName = useRef('');
   const isActiveClassName = isSideNavigationActive
@@ -31,10 +32,12 @@ export default function Header() {
       if (currentScrollPos <= 0) {
         isHeaderHiddenClassName.current = '';
         setIsHeaderHidden(false);
+        setIsScrollArrowHidden(true);
       } else if (currentScrollPos > lastScrollPos) {
         // down
         isHeaderHiddenClassName.current = styles.isHidden;
         setIsHeaderHidden(true);
+        setIsScrollArrowHidden(false);
       } else if (currentScrollPos < lastScrollPos) {
         // up
         isHeaderHiddenClassName.current = styles.isVisible;
@@ -48,7 +51,7 @@ export default function Header() {
   }, [isSideNavigationActive]);
 
   return (
-    <header className={styles.header + ' ' + isHeaderHiddenClassName.current}>
+    <div><header className={styles.header + ' ' + isHeaderHiddenClassName.current}>
       <div className={styles.headerLeft}>
         <SideNavigationButton
           onClick={() => {
@@ -75,5 +78,6 @@ export default function Header() {
       </div>
       <HeaderNavigation />
     </header>
+      <ScrollUpButton isVisible={!isScrollArrowHidden}></ScrollUpButton></div>
   );
 }
