@@ -1,0 +1,144 @@
+/** @format */
+
+:root {
+  --max-width: 1100px;
+  --border-radius: 12px;
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --header-height: 70px;
+  --footer-height: 144px;
+  --sideNav-width: 300px;
+}
+
+body {
+  --interaction-shadow: 2px 2px 1px 0px hsla(0, 0, 0, 0.3);
+  --interaction-shadow-hover: 2px 2px 1px 0px hsla(0, 0, 0, 0.4);
+
+  --color-accent-h: 7;
+  --color-accent-s: 59%;
+  --color-accent-l: 45%;
+  --color-accent-l-offset: 15%;
+  --color-accent-l-multiplier: -1;
+
+  --color-accent-00: hsl(var(--color-accent-h),
+      var(--color-accent-s),
+      calc(var(--color-accent-l) + var(--color-accent-l-offset) * -1 * var(--color-accent-l-multiplier)));
+  --color-accent-10: hsl(var(--color-accent-h),
+      var(--color-accent-s),
+      calc(var(--color-accent-l) + 0%));
+  --color-accent-20: hsl(var(--color-accent-h),
+      var(--color-accent-s),
+      calc(var(--color-accent-l) + var(--color-accent-l-offset) * var(--color-accent-l-multiplier)));
+
+  --bg-color-h: 180;
+  --bg-color-s: 3%;
+  --bg-color-l: 98%;
+  --bg-color-multiplier: -1;
+
+  --bg-color-00: hsl(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(0% * var(--bg-color-multiplier))));
+
+  --bg-color-05: hsl(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(3% * var(--bg-color-multiplier))));
+
+  --bg-color-10: hsl(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(5% * var(--bg-color-multiplier))));
+  --bg-color-20: hsl(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(9% * var(--bg-color-multiplier))));
+  --bg-color-30: hsl(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(12% * var(--bg-color-multiplier))));
+  --bg-color-40: hsl(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(18% * var(--bg-color-multiplier))));
+  --bg-color-50: hsl(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(25% * var(--bg-color-multiplier))));
+  --bg-color-60: hsl(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(30% * var(--bg-color-multiplier))));
+  --bg-color-70: hsl(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(40% * var(--bg-color-multiplier))));
+  --bg-color-80: hsl(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(70% * var(--bg-color-multiplier))));
+  --bg-color-90: hsl(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(90% * var(--bg-color-multiplier))));
+}
+
+body[data-theme='dark'] {
+  --bg-color-l: 2%;
+  --bg-color-multiplier: 1;
+  --color-accent-l-multiplier: 1;
+  --color-accent-l-offset: 8%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--bg-color-40);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--bg-color-80);
+  border: 3.5px solid var(--bg-color-40);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-corner {
+  color: var(--bg-color-80);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-color-90);
+}
+
+@media (prefers-color-scheme: dark) {}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: var(--bg-color-90);
+}
+
+html,
+body {
+  background-color: var(--bg-color-05);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-accent-10);
+  box-shadow: 0px 1px 0px var(--color-accent-10);
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+
+  a:hover,
+  a:focus-visible {
+    color: var(--color-accent-00);
+    box-shadow: 0px 1px 0px var(--color-accent-00);
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
