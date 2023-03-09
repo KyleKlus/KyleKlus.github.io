@@ -1,6 +1,5 @@
 /** @format */
 
-import { Inter } from '@next/font/google';
 import styles from '@/styles/footer/Footer.module.css';
 import Link from 'next/link';
 import NavLink from '../header/NavLink';

@@ -3,12 +3,9 @@
 import Head from 'next/head';
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
-import Main from '@/components/Main';
-import Card from '@/components/Card';
-import NavLink from '@/components/header/NavLink';
-
-import styles from '@/styles/header/SideNavigation.module.css';
 import Content from '@/components/Content';
+import Main from '@/components/Main';
+
 export default function Home() {
   return (
     <>

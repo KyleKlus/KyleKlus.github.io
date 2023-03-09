@@ -12,7 +12,6 @@ export default function Header() {
   const [isSideNavigationActive, setIsSideNavigationActive] = useState(false);
   const [isHeaderHidden, setIsHeaderHidden] = useState(false);
   const lastScroll = useRef(0);
-  const SideNavRef: React.RefObject<HTMLInputElement> = React.createRef();
 
   const isHeaderHiddenClassName = useRef('');
   const isActiveClassName = isSideNavigationActive
