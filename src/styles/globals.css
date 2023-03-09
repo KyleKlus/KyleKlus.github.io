@@ -19,84 +19,56 @@ body {
   --color-accent-l: 45%;
   --color-accent-l-offset: 10%;
 
-  --color-accent-00: hsl(
-    var(--color-accent-h),
-    var(--color-accent-s),
-    calc(var(--color-accent-l) + var(--color-accent-l-offset) * -1)
-  );
-  --color-accent-10: hsl(
-    var(--color-accent-h),
-    var(--color-accent-s),
-    calc(var(--color-accent-l) + 0%)
-  );
-  --color-accent-20: hsl(
-    var(--color-accent-h),
-    var(--color-accent-s),
-    calc(var(--color-accent-l) + var(--color-accent-l-offset))
-  );
+  --color-accent-00: hsl(var(--color-accent-h),
+      var(--color-accent-s),
+      calc(var(--color-accent-l) + var(--color-accent-l-offset) * -1));
+  --color-accent-10: hsl(var(--color-accent-h),
+      var(--color-accent-s),
+      calc(var(--color-accent-l) + 0%));
+  --color-accent-20: hsl(var(--color-accent-h),
+      var(--color-accent-s),
+      calc(var(--color-accent-l) + var(--color-accent-l-offset)));
 
   --bg-color-h: 180;
   --bg-color-s: 3%;
   --bg-color-l: 98%;
   --bg-color-multiplier: -1;
 
-  --bg-color-00: hsl(
-    var(--bg-color-h),
-    var(--bg-color-s),
-    calc(var(--bg-color-l) + calc(0% * var(--bg-color-multiplier)))
-  );
+  --bg-color-00: hsl(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(0% * var(--bg-color-multiplier))));
 
-  --bg-color-05: hsl(
-    var(--bg-color-h),
-    var(--bg-color-s),
-    calc(var(--bg-color-l) + calc(3% * var(--bg-color-multiplier)))
-  );
+  --bg-color-05: hsl(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(3% * var(--bg-color-multiplier))));
 
-  --bg-color-10: hsl(
-    var(--bg-color-h),
-    var(--bg-color-s),
-    calc(var(--bg-color-l) + calc(5% * var(--bg-color-multiplier)))
-  );
-  --bg-color-20: hsl(
-    var(--bg-color-h),
-    var(--bg-color-s),
-    calc(var(--bg-color-l) + calc(9% * var(--bg-color-multiplier)))
-  );
-  --bg-color-30: hsl(
-    var(--bg-color-h),
-    var(--bg-color-s),
-    calc(var(--bg-color-l) + calc(12% * var(--bg-color-multiplier)))
-  );
-  --bg-color-40: hsl(
-    var(--bg-color-h),
-    var(--bg-color-s),
-    calc(var(--bg-color-l) + calc(18% * var(--bg-color-multiplier)))
-  );
-  --bg-color-50: hsl(
-    var(--bg-color-h),
-    var(--bg-color-s),
-    calc(var(--bg-color-l) + calc(25% * var(--bg-color-multiplier)))
-  );
-  --bg-color-60: hsl(
-    var(--bg-color-h),
-    var(--bg-color-s),
-    calc(var(--bg-color-l) + calc(30% * var(--bg-color-multiplier)))
-  );
-  --bg-color-70: hsl(
-    var(--bg-color-h),
-    var(--bg-color-s),
-    calc(var(--bg-color-l) + calc(40% * var(--bg-color-multiplier)))
-  );
-  --bg-color-80: hsl(
-    var(--bg-color-h),
-    var(--bg-color-s),
-    calc(var(--bg-color-l) + calc(70% * var(--bg-color-multiplier)))
-  );
-  --bg-color-90: hsl(
-    var(--bg-color-h),
-    var(--bg-color-s),
-    calc(var(--bg-color-l) + calc(90% * var(--bg-color-multiplier)))
-  );
+  --bg-color-10: hsl(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(5% * var(--bg-color-multiplier))));
+  --bg-color-20: hsl(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(9% * var(--bg-color-multiplier))));
+  --bg-color-30: hsl(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(12% * var(--bg-color-multiplier))));
+  --bg-color-40: hsl(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(18% * var(--bg-color-multiplier))));
+  --bg-color-50: hsl(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(25% * var(--bg-color-multiplier))));
+  --bg-color-60: hsl(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(30% * var(--bg-color-multiplier))));
+  --bg-color-70: hsl(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(40% * var(--bg-color-multiplier))));
+  --bg-color-80: hsl(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(70% * var(--bg-color-multiplier))));
+  --bg-color-90: hsl(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(90% * var(--bg-color-multiplier))));
 }
 
 body[data-theme='dark'] {
@@ -104,8 +76,29 @@ body[data-theme='dark'] {
   --bg-color-multiplier: 1;
 }
 
-@media (prefers-color-scheme: dark) {
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
 }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--bg-color-40);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--bg-color-80);
+  border: 3.5px solid var(--bg-color-40);
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-color-90);
+}
+
+@media (prefers-color-scheme: dark) {}
 
 * {
   box-sizing: border-box;

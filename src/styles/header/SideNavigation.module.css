@@ -15,8 +15,7 @@
   padding: 24px 16px;
   background-color: var(--bg-color-20);
   border-left: 1px solid var(--bg-color-40);
-  width: 300px;
-
+  width: min(90%, 300px);
   overflow-x: auto;
 }
 
@@ -33,8 +32,6 @@
   width: 100%;
   gap: 12px;
   padding: 24px;
-
-
 }
 
 .menuCard h4 {

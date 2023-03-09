@@ -1,8 +1,6 @@
 /** @format */
 
 .card {
-  width: fit-content;
-  height: fit-content;
   border: 1px solid var(--bg-color-40);
   border-radius: var(--border-radius);
   background-color: var(--bg-color-10);

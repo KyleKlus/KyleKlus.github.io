@@ -33,6 +33,29 @@
   }
 }
 
+@media (max-width: 350px) {
+  .logoWrapper > p {
+    font-size: large;
+  }
+
+  .logoWrapper > img {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 300px) {
+  .logoWrapper > p {
+    font-size: medium;
+  }
+
+  .logoWrapper > img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+
 @media (prefers-reduced-motion) {}
 
 /* Mobile */
