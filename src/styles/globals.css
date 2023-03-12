@@ -6,7 +6,7 @@
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-  --header-height: 70px;
+  --header-height: 64px;
   --footer-height: 144px;
   --sideNav-width: 300px;
 }
@@ -47,12 +47,21 @@ body {
   --bg-color-10: hsl(var(--bg-color-h),
       var(--bg-color-s),
       calc(var(--bg-color-l) + calc(5% * var(--bg-color-multiplier))));
+  --bg-color-15: hsl(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(7% * var(--bg-color-multiplier))));
+  --bg-color-translucent-15: hsla(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(7% * var(--bg-color-multiplier))), 0.9);
   --bg-color-20: hsl(var(--bg-color-h),
       var(--bg-color-s),
       calc(var(--bg-color-l) + calc(9% * var(--bg-color-multiplier))));
+  --bg-color-25: hsl(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(11% * var(--bg-color-multiplier))));
   --bg-color-30: hsl(var(--bg-color-h),
       var(--bg-color-s),
-      calc(var(--bg-color-l) + calc(12% * var(--bg-color-multiplier))));
+      calc(var(--bg-color-l) + calc(13% * var(--bg-color-multiplier))));
   --bg-color-40: hsl(var(--bg-color-h),
       var(--bg-color-s),
       calc(var(--bg-color-l) + calc(18% * var(--bg-color-multiplier))));
@@ -74,7 +83,7 @@ body {
 }
 
 body[data-theme='dark'] {
-  --bg-color-l: 2%;
+  --bg-color-l: 4%;
   --bg-color-multiplier: 1;
   --color-accent-l-multiplier: 1;
   --color-accent-l-offset: 8%;

@@ -2,7 +2,7 @@
 
 .text {
   --text-width: 700px;
-  width: var(--text-width);
+  max-width: var(--text-width);
   white-space: pre-wrap;
   word-wrap: break-word;
 }

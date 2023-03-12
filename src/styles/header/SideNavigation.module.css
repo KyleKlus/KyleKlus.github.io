@@ -14,8 +14,8 @@
   transition: transform 300ms ease;
   gap: 32px;
   padding: 24px 16px;
-  background-color: var(--bg-color-20);
-  border-left: 1px solid var(--bg-color-40);
+  background-color: var(--bg-color-15);
+  border-right: 1px solid var(--bg-color-40);
   width: var(--sideNav-final-width);
   overflow-x: auto;
 }

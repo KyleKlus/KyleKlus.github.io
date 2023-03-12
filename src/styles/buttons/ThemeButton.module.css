@@ -21,6 +21,7 @@
   cursor: pointer;
   transition: background 0.25s ease-in-out;
   padding: var(--button-padding);
+  outline: 1px solid var(--bg-color-20);
 }
 
 /* Enable hover only on non-touch devices */
@@ -28,20 +29,16 @@
   .themeButton:hover {
     background: var(--bg-color-10);
     box-shadow: 2px 2px 1px 0px hsla(0, 0, 0, 0.4);
-    outline: 1px solid var(--bg-color-40);
+    outline: 1.5px solid var(--bg-color-40);
   }
 }
 
-@media (prefers-reduced-motion) {
-}
+@media (prefers-reduced-motion) {}
 
 /* Mobile */
-@media (max-width: 700px) {
-}
+@media (max-width: 700px) {}
 
 /* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-}
+@media (min-width: 701px) and (max-width: 1120px) {}
 
-@media (prefers-color-scheme: dark) {
-}
+@media (prefers-color-scheme: dark) {}
