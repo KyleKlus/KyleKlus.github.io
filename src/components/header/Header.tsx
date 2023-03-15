@@ -16,34 +16,38 @@ export default function Header() {
   const lastScroll = useRef(0);
 
   const isHeaderHiddenClassName = useRef('');
+
   const isActiveClassName = isSideNavigationActive
     ? styles.isWrapperActive
     : '';
 
-  useEffect(() => {
-    function hideAndShowHeader() {
-      if (isSideNavigationActive) {
-        return;
-      }
-      const currentScrollPos = window.pageYOffset;
-      const lastScrollPos = lastScroll.current;
-      lastScroll.current = currentScrollPos;
+  function hideAndShowHeader() {
+    if (isSideNavigationActive) { return; }
+    const currentScrollPos = window.pageYOffset;
+    const lastScrollPos = lastScroll.current;
+    lastScroll.current = currentScrollPos;
 
-      if (currentScrollPos <= 0) {
-        isHeaderHiddenClassName.current = '';
-        setIsHeaderHidden(false);
-        setIsScrollArrowHidden(true);
-      } else if (currentScrollPos > lastScrollPos) {
-        // down
-        isHeaderHiddenClassName.current = styles.isHidden;
-        setIsHeaderHidden(true);
-        setIsScrollArrowHidden(false);
-      } else if (currentScrollPos < lastScrollPos) {
-        // up
-        isHeaderHiddenClassName.current = styles.isVisible;
-        setIsHeaderHidden(false);
-      }
+    if (currentScrollPos <= 64) {
+      isHeaderHiddenClassName.current = '';
+
+      setIsHeaderHidden(false);
+      setIsScrollArrowHidden(true);
+    } else if (currentScrollPos > lastScrollPos) {
+      // down
+      isHeaderHiddenClassName.current = styles.isHidden;
+      setIsHeaderHidden(true);
+      setIsScrollArrowHidden(false);
+    } else if (currentScrollPos < lastScrollPos) {
+      // up
+      isHeaderHiddenClassName.current = styles.isVisible;
+
+      setIsHeaderHidden(false);
     }
+  }
+
+
+  useEffect(() => {
+
     window.addEventListener('scroll', hideAndShowHeader);
     return () => {
       window.removeEventListener('scroll', hideAndShowHeader);
@@ -57,8 +61,12 @@ export default function Header() {
           onClick={() => {
             setIsSideNavigationActive(!isSideNavigationActive);
             if (!isSideNavigationActive) {
-              isHeaderHiddenClassName.current = '';
+              isHeaderHiddenClassName.current = isHeaderHiddenClassName.current + ' ' + styles.isSolid;
               setIsHeaderHidden(false);
+            } else {
+              const currentScrollPos = window.pageYOffset;
+
+              isHeaderHiddenClassName.current = currentScrollPos <= 64 ? '' : styles.isVisible
             }
           }}
         />

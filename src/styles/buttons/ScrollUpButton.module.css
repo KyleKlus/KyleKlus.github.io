@@ -1,9 +1,9 @@
 /** @format */
 
 .scrollButton {
-  --button-padding: 16px;
-  --button-width: 42px;
-  --position-bottom: calc(var(--footer-height) + var(--button-width));
+  --button-padding: 18px;
+  --button-width: 36px;
+  --position-bottom: calc(var(--button-width));
   cursor: pointer;
   border: 0;
 
@@ -16,8 +16,10 @@
   aspect-ratio: 1/1;
   border-radius: 50%;
   padding: var(--button-padding);
+  box-shadow: 2px 2px 4px hsla(196, 3%, 3%, 0.8);
 
-  background-color: var(--bg-color-10);
+
+  background-color: var(--bg-color-05);
   position: fixed;
   right: var(--button-width);
   bottom: var(--position-bottom);
@@ -51,21 +53,21 @@
   --middle: calc(var(--bar-width) /2);
   width: calc(var(--bar-width) /2);
   position: absolute;
-  transform: matrix(0.71, 0.71, -0.71, 0.71, 5, -7);
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 3, -5);
 }
 
 
 .bar:last-of-type {
   width: calc(var(--bar-width) /2);
   position: absolute;
-  transform: matrix(0.71, -0.71, 0.71, 0.71, -5, -7);
+  transform: matrix(0.71, -0.71, 0.71, 0.71, -3, -5);
 }
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .scrollButton:hover {
-    background: var(--bg-color-05);
-    outline: 1px solid var(--bg-color-40);
+    background: var(--bg-color-10);
+    outline: 1.5px solid var(--bg-color-40);
   }
 }
 

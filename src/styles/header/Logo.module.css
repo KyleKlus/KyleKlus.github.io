@@ -13,6 +13,7 @@
 .logoWrapper > img {
   border-radius: 50%;
   box-shadow: 2px 2px 1px 0px hsla(0, 0, 0, 0.3);
+  outline: 1px solid var(--bg-color-20);
   filter: brightness(calc(100% - var(--color-accent-l-offset)));
 }
 

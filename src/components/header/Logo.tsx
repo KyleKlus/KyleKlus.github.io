@@ -18,8 +18,8 @@ export default function Logo() {
       <Image
         src="/KK_Logo.svg"
         alt="KK Logo"
-        width={'48'}
-        height={'48'}
+        width={'42'}
+        height={'42'}
         quality={100}
       ></Image>
       <p>Kyle Klus</p>
