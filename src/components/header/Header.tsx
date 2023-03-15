@@ -80,12 +80,6 @@ export default function Header() {
             }
             setIsSideNavigationActive(false);
           }}
-          onTouchStart={() => {
-            if (!isSideNavigationActive) {
-              return;
-            }
-            setIsSideNavigationActive(false);
-          }}
         ></div>
         <SideNavigation isActive={isSideNavigationActive} />
         <Logo />
