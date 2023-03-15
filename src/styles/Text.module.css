@@ -40,7 +40,7 @@
 }
 
 .slideInWrapper > p.slideInLeft {
-  transform: translateX(calc(100vw / -2 - 700px / -2));
+  transform: translateX(calc(100vw / -2 - min(700px, 100%) / -2));
   transform-origin: left;
   animation-name: slide-in-left;
   animation-timing-function: ease-in;
@@ -54,34 +54,34 @@
 }
 
 .slideInWrapper > p.slideInRight {
-  transform: translateX(calc(calc(calc(100vw - 700px) / 2)));
+  transform: translateX(calc(calc(calc(100vw - min(700px, 100%)) / 2)));
   transform-origin: right;
   animation-name: slide-in-right;
   animation-timing-function: ease-in;
 }
 
 .slideInWrapper > p:is(.slideInRight, .slideInLeft):nth-child(n) {
-  animation-duration: 1350ms;
+  animation-duration: 1050ms;
 }
 
 .slideInWrapper > p:is(.slideInRight, .slideInLeft):nth-child(3n) {
-  animation-duration: 1200ms;
+  animation-duration: 900ms;
 }
 
 .slideInWrapper > p:is(.slideInRight, .slideInLeft):nth-child(2n) {
-  animation-duration: 1300ms;
+  animation-duration: 1000ms;
 }
 
 .slideInWrapper > p:is(.slideInRight, .slideInLeft):nth-child(5n) {
-  animation-duration: 1280ms;
+  animation-duration: 980ms;
 }
 
 .slideInWrapper > p:is(.slideInRight, .slideInLeft):nth-child(6n) {
-  animation-duration: 1360ms;
+  animation-duration: 1060ms;
 }
 
 .slideInWrapper > p:is(.slideInRight, .slideInLeft):nth-child(4n) {
-  animation-duration: 1230ms;
+  animation-duration: 930ms;
 }
 
 @keyframes fade-in {
@@ -101,7 +101,7 @@
   }
 
   to {
-    transform: translateX(calc(calc(100vw - 700px) / -2));
+    transform: translateX(calc(calc(100vw - min(700px, 100%)) / -2));
     opacity: 1;
   }
 }
@@ -113,7 +113,7 @@
   }
 
   to {
-    transform: translateX(calc(calc(100vw - 700px) / 2));
+    transform: translateX(calc(calc(100vw - min(700px, 100%)) / 2));
     opacity: 1;
   }
 
