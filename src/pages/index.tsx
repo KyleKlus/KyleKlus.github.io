@@ -6,6 +6,7 @@ import Header from '@/components/header/Header';
 import Content from '@/components/Content';
 import Main from '@/components/Main';
 import Text from '@/components/Text';
+import styles from '@/styles/Text.module.css'
 
 export default function Home() {
   return (
@@ -48,13 +49,24 @@ export default function Home() {
       <Main>
         <div id={'top'}></div>
         <Content>
-          <Text>
-            <h1>Under Construction</h1>
+          <br />
+          <br />
+          <br />
+          <br />
+          <div className={styles.slideInWrapper}>
+            <p className={[styles.xxLarge, styles.left, styles.slideInRight].join(' ')}>Hi, I am Kyle!</p>
             <br />
-            <p>This site is currently under construction and exists solely for the purpose of not having missing pages. Please be patient until I finished creating this page.</p>
             <br />
-            - With kind regards <q>Kyle Klus</q>
-          </Text>
+            <p className={[styles.xLarge, styles.right, styles.slideInLeft].join(' ')}>I am a computer science student,</p>
+            <p className={[styles.large, styles.left, styles.slideInRight].join(' ')}>a passionate cook,</p>
+            <br />
+            <br />
+            <p className={[styles.xxLarge, styles.left, styles.slideInRight].join(' ')}>a frontend developer,</p>
+            <br />
+            <p className={[styles.xLarge, styles.center, styles.slideInLeft].join(' ')}>a woodworking hobbyist</p>
+            <br />
+            <p className={[styles.large, styles.right, styles.slideInLeft].join(' ')}>and overall a DIY lover.</p>
+          </div>
         </Content>
         <Footer />
       </Main>

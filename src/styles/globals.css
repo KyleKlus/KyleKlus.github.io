@@ -44,6 +44,10 @@ body {
       var(--bg-color-s),
       calc(var(--bg-color-l) + calc(3% * var(--bg-color-multiplier))));
 
+  --bg-color-translucent-05: hsla(var(--bg-color-h),
+      var(--bg-color-s),
+      calc(var(--bg-color-l) + calc(3% * var(--bg-color-multiplier))), 0.9);
+
   --bg-color-10: hsl(var(--bg-color-h),
       var(--bg-color-s),
       calc(var(--bg-color-l) + calc(5% * var(--bg-color-multiplier))));
@@ -83,7 +87,7 @@ body {
 }
 
 body[data-theme='dark'] {
-  --bg-color-l: 4%;
+  --bg-color-l: 5%;
   --bg-color-multiplier: 1;
   --color-accent-l-multiplier: 1;
   --color-accent-l-offset: 8%;
@@ -96,23 +100,23 @@ body[data-theme='dark'] {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--bg-color-40);
+  background: var(--bg-color-05);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--bg-color-80);
-  border: 3.5px solid var(--bg-color-40);
+  background: var(--bg-color-70);
+  border: 3.5px solid var(--bg-color-05);
   border-radius: 8px;
 }
 
 ::-webkit-scrollbar-corner {
-  color: var(--bg-color-80);
+  color: var(--bg-color-70);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--bg-color-90);
+  background: var(--bg-color-80);
 }
 
 @media (prefers-color-scheme: dark) {}

@@ -27,7 +27,7 @@ export default function Header() {
     const lastScrollPos = lastScroll.current;
     lastScroll.current = currentScrollPos;
 
-    if (currentScrollPos <= 0) {
+    if (currentScrollPos <= 64) {
       isHeaderHiddenClassName.current = '';
 
       setIsHeaderHidden(false);
@@ -66,7 +66,7 @@ export default function Header() {
             } else {
               const currentScrollPos = window.pageYOffset;
 
-              isHeaderHiddenClassName.current = currentScrollPos <= 0 ? '' : styles.isVisible
+              isHeaderHiddenClassName.current = currentScrollPos <= 64 ? '' : styles.isVisible
             }
           }}
         />

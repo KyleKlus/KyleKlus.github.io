@@ -19,13 +19,13 @@
   to {
     transform: translateY(calc(var(--header-height) * -1));
   }
-
 }
 
 .header {
   height: var(--header-height);
   width: 100vw;
-  background-color: var(--bg-color-05);
+  background-color: var(--bg-color-translucent-05);
+  backdrop-filter: blur(6px);
   padding: 0px 32px;
   display: flex;
   flex-wrap: wrap;
@@ -34,26 +34,26 @@
   position: fixed;
   top: 0px;
   z-index: 20;
-  backdrop-filter: blur(2px);
   transform: translateY(0px);
   border-bottom: 1px solid transparent;
-  transition: background-color 400ms ease, opacity 400ms ease, border-color 400ms ease;
+  transition: box-shadow 400ms ease, opacity 400ms ease, border-color 400ms ease;
 }
 
 .header.isSolid {
-  background-color: var(--bg-color-15) !important;
+  /* background-color: var(--bg-color-15) !important; */
   border-color: var(--bg-color-40);
 }
 
 .header.isVisible {
-  background-color: var(--bg-color-15);
+  /* background-color: var(--bg-color-15); */
+  box-shadow: 6px 2px 12px hsla(196, 3%, 3%, 0.8);
   transform: translateY(0px);
   animation: slide-in 400ms ease;
 }
 
 .header.isHidden {
   transform: translateY(calc(var(--header-height) * -1));
-  animation: slide-out 400ms ease;
+  animation: slide-out 250ms ease;
 }
 
 .sideNavigationNegativeSpace {
