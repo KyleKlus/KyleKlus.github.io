@@ -2,6 +2,7 @@
 import styles from '@/styles/header/SideNavigation.module.css';
 import Card from '../Card';
 import NavLink from './NavLink';
+import ScrollNavLink from './ScrollNavLink';
 
 interface ISideNavigationProps {
   isActive: boolean;
@@ -9,24 +10,24 @@ interface ISideNavigationProps {
 export default function SideNavigation(
   props: React.PropsWithChildren<ISideNavigationProps>
 ) {
-  const isActiveClassName = props.isActive ? styles.isActive : '';
+  const isActiveClassName = props.isActive ? styles.isActive : styles.isDisabled;
   return (
     <nav className={styles.sideNavMenu + ' ' + isActiveClassName}>
       <Card className={styles.menuCard}>
         <h4>Main Site</h4>
-        <NavLink
+        <ScrollNavLink
           className={styles.sideNavLink}
-          pathName="/"
+          elementName="heroPage"
           displayText="Home"
         />
-        <NavLink
+        <ScrollNavLink
           className={styles.sideNavLink}
-          pathName="/portfolio"
+          elementName="portfolioPage"
           displayText="Portfolio"
         />
-        <NavLink
+        <ScrollNavLink
           className={styles.sideNavLink}
-          pathName="/about"
+          elementName="aboutPage"
           displayText="About"
         />
       </Card>

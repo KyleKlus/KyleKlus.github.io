@@ -6,6 +6,7 @@
   align-items: center;
   min-height: 100vh;
   padding-top: var(--header-height);
+  scroll-behavior: smooth;
 }
 
 /* Enable hover only on non-touch devices */

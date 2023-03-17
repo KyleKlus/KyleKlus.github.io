@@ -1,11 +1,12 @@
 /** @format */
 
 .text {
-  --text-width: 700px;
+  --text-width: 800px;
   max-width: var(--text-width);
   width: 100%;
   white-space: pre-wrap;
   word-wrap: break-word;
+  padding: 0px 8px;
 }
 
 .xxLarge {
@@ -30,93 +31,6 @@
 
 .right {
   text-align: right;
-}
-
-.slideInWrapper {
-  overflow-x: hidden;
-  width: 100%;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-.slideInWrapper > p.slideInLeft {
-  transform: translateX(calc(100vw / -2 - min(700px, 100%) / -2));
-  transform-origin: left;
-  animation-name: slide-in-left;
-  animation-timing-function: ease-in;
-}
-
-.slideInWrapper > p.center.slideInLeft {
-  transform: translateX(0);
-  transform-origin: left;
-  animation-name: slide-in-left;
-  animation-timing-function: ease-in;
-}
-
-.slideInWrapper > p.slideInRight {
-  transform: translateX(calc(calc(calc(100vw - min(700px, 100%)) / 2)));
-  transform-origin: right;
-  animation-name: slide-in-right;
-  animation-timing-function: ease-in;
-}
-
-.slideInWrapper > p:is(.slideInRight, .slideInLeft):nth-child(n) {
-  animation-duration: 1050ms;
-}
-
-.slideInWrapper > p:is(.slideInRight, .slideInLeft):nth-child(3n) {
-  animation-duration: 900ms;
-}
-
-.slideInWrapper > p:is(.slideInRight, .slideInLeft):nth-child(2n) {
-  animation-duration: 1000ms;
-}
-
-.slideInWrapper > p:is(.slideInRight, .slideInLeft):nth-child(5n) {
-  animation-duration: 980ms;
-}
-
-.slideInWrapper > p:is(.slideInRight, .slideInLeft):nth-child(6n) {
-  animation-duration: 1060ms;
-}
-
-.slideInWrapper > p:is(.slideInRight, .slideInLeft):nth-child(4n) {
-  animation-duration: 930ms;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slide-in-left {
-  from {
-    transform: translateX(calc(100vw * -1));
-    opacity: 0;
-  }
-
-  to {
-    transform: translateX(calc(calc(100vw - min(700px, 100%)) / -2));
-    opacity: 1;
-  }
-}
-
-@keyframes slide-in-right {
-  from {
-    transform: translateX(calc(100vw * 1));
-    opacity: 0;
-  }
-
-  to {
-    transform: translateX(calc(calc(100vw - min(700px, 100%)) / 2));
-    opacity: 1;
-  }
-
 }
 
 /* Enable hover only on non-touch devices */
