@@ -91,12 +91,66 @@
   .sideNavLink {
     display: unset;
   }
+
+  .sideNavMenu {
+    --sideNav-final-width: min(90vw, var(--sideNav-width));
+    width: var(--sideNav-final-width);
+    height: 100vh;
+    padding: 24px 16px;
+    overflow-y: auto;
+    gap: 32px;
+
+    z-index: 0;
+
+    position: absolute;
+    top: var(--header-height);
+    left: 0px;
+
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+
+    background-color: var(--bg-color-10);
+    border-radius: 0;
+    box-shadow: none;
+
+    /* border-top: 1px solid var(--bg-color-40);
+    border-right: 1px solid var(--bg-color-40); */
+
+
+    transform: translateX(calc(var(--sideNav-final-width) * -1));
+    transform-origin: left;
+    transition: transform 300ms ease-in;
+  }
+
+  .sideNavMenu.isActive {
+    transform: translateX(0);
+    animation: slide-in 300ms ease-in;
+  }
+
+  .sideNavMenu.isDisabled {
+    transform: translateX(calc(var(--sideNav-final-width) * -1));
+    animation: slide-out 300ms ease-out;
+    animation-duration: 300ms;
+    box-shadow: none;
+  }
+
+  .menuCard {
+    background-color: var(--bg-color-05) !important;
+    border-color: var(--bg-color-40) !important;
+    width: 100%;
+    gap: 12px;
+    padding: 24px;
+  }
+
 }
 
 @media (min-width: 601px) {
   .sideNavMenu > *:nth-child(1) {
     display: none;
   }
+
+
 }
 
 /* Enable hover only on non-touch devices */
