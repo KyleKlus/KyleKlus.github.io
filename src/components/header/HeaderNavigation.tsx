@@ -1,7 +1,7 @@
 /** @format */
 import styles from '@/styles/header/HeaderNavigation.module.css';
 import dynamic from 'next/dynamic';
-import NavLink from './NavLink';
+import ScrollNavLink from './ScrollNavLink';
 
 const ThemeButton = dynamic(() => import('../buttons/ThemeButton'), {
   ssr: false,
@@ -10,16 +10,16 @@ const ThemeButton = dynamic(() => import('../buttons/ThemeButton'), {
 export default function HeaderNavigation() {
   return (
     <nav className={styles.nav}>
-      <NavLink
-        pathName="/"
+      <ScrollNavLink
+        elementName="heroPage"
         displayText="Home"
       />
-      <NavLink
-        pathName="/portfolio"
+      <ScrollNavLink
+        elementName="portfolioPage"
         displayText="Portfolio"
       />
-      <NavLink
-        pathName="/about"
+      <ScrollNavLink
+        elementName="aboutPage"
         displayText="About"
       />
       <ThemeButton />

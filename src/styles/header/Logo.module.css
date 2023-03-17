@@ -8,6 +8,12 @@
   align-items: center;
   gap: 16px;
   cursor: pointer;
+
+  /* background-color: var(--bg-color-00);
+  box-shadow: 2px 2px 1px 0px hsla(0, 0, 0, 0.4);
+
+  border-radius: 42px;
+  padding: 1px 8px 1px 1px; */
 }
 
 .logoWrapper > img {
@@ -32,6 +38,12 @@
     box-shadow: 2px 2px 1px 0px hsla(0, 0, 0, 0.4);
     filter: brightness(calc(100% - 2 * var(--color-accent-l-offset) * var(--color-accent-l-multiplier)));
   }
+
+  .logoWrapper > img:hover {
+    box-shadow: 2px 2px 1px 0px hsla(0, 0, 0, 0.4);
+    filter: brightness(calc(100% - 2 * var(--color-accent-l-offset) * var(--color-accent-l-multiplier)));
+    outline: 1px solid var(--bg-color-30);
+  }
 }
 
 @media (max-width: 350px) {
@@ -40,8 +52,8 @@
   }
 
   .logoWrapper > img {
-    width: 42px;
-    height: 42px;
+    width: 38px;
+    height: 38px;
   }
 }
 

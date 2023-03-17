@@ -36,7 +36,7 @@
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .sideNav:hover {
-    background: var(--bg-color-30);
+    background: var(--bg-color-15);
     outline: 1px solid var(--bg-color-40);
   }
 }

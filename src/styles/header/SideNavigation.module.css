@@ -1,27 +1,71 @@
 /** @format */
 
+@keyframes slide-in {
+  from {
+    transform: translateX(calc(var(--sideNav-final-width) * -1 - 16px));
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateX(calc(var(--sideNav-final-width) * -1 - 16px));
+  }
+}
+
 .sideNavMenu {
-  --sideNav-final-width: min(90%, var(--sideNav-width));
+  --sideNav-final-width: min(90vw, var(--sideNav-width));
+  width: var(--sideNav-final-width);
+  height: min(80vh, fit-content);
+  padding: 24px 16px;
+  overflow-y: auto;
+  gap: 32px;
+
+  z-index: 21;
+
   position: absolute;
-  top: var(--header-height);
-  left: 0px;
-  height: calc(100vh - var(--header-height));
+  top: calc(var(--header-height) - 6px);
+  left: 16px;
+
   display: flex;
+  opacity: 0;
   flex-wrap: nowrap;
   flex-direction: column;
-  transform: translateX(-100%);
+
+
+  background-color: var(--bg-color-10);
+  border-radius: var(--border-radius);
+  box-shadow: 6px 2px 12px hsla(196, 3%, 3%, 0.5);
+
+  /* border: 1px solid var(--bg-color-40); */
+
+  transform: translateX(calc(var(--sideNav-final-width) * -1 - 16px));
   transform-origin: left;
-  transition: transform 300ms ease;
-  gap: 32px;
-  padding: 24px 16px;
-  background-color: var(--bg-color-15);
-  border-right: 1px solid var(--bg-color-40);
-  width: var(--sideNav-final-width);
-  overflow-x: auto;
+  transition: opacity 100ms ease-in;
+
 }
 
 .sideNavMenu.isActive {
-  transform: translateX(0%);
+  transform: translateX(0);
+  animation: slide-in 1ms ease;
+  opacity: 1;
+}
+
+.sideNavMenu.isDisabled {
+  transform: translateX(calc(var(--sideNav-final-width) * -1 - 16px));
+  animation: slide-out 1ms ease;
+  animation-delay: 100ms;
+  box-shadow: none;
+
+  opacity: 0;
 }
 
 .sideNavLink {
@@ -30,6 +74,8 @@
 }
 
 .menuCard {
+  background-color: transparent !important;
+  border-color: transparent !important;
   width: 100%;
   gap: 12px;
   padding: 24px;
@@ -39,8 +85,6 @@
   width: 100%;
   border-bottom: 1px solid var(--bg-color-40);
 }
-
-
 
 
 @media (max-width: 600px) {

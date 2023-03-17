@@ -22,7 +22,10 @@ export default function Header() {
     : '';
 
   function hideAndShowHeader() {
-    if (isSideNavigationActive) { return; }
+    let slideInClass = ' ' + styles.slideIn
+    let scrollDownClass = styles.isHidden
+
+    if (isSideNavigationActive) { slideInClass = ''; scrollDownClass = styles.isVisible; }
     const currentScrollPos = window.pageYOffset;
     const lastScrollPos = lastScroll.current;
     lastScroll.current = currentScrollPos;
@@ -34,12 +37,12 @@ export default function Header() {
       setIsScrollArrowHidden(true);
     } else if (currentScrollPos > lastScrollPos) {
       // down
-      isHeaderHiddenClassName.current = styles.isHidden;
+      isHeaderHiddenClassName.current = scrollDownClass;
       setIsHeaderHidden(true);
       setIsScrollArrowHidden(false);
     } else if (currentScrollPos < lastScrollPos) {
       // up
-      isHeaderHiddenClassName.current = styles.isVisible;
+      isHeaderHiddenClassName.current = styles.isVisible + slideInClass;
 
       setIsHeaderHidden(false);
     }
@@ -61,7 +64,7 @@ export default function Header() {
           onClick={() => {
             setIsSideNavigationActive(!isSideNavigationActive);
             if (!isSideNavigationActive) {
-              isHeaderHiddenClassName.current = isHeaderHiddenClassName.current + ' ' + styles.isSolid;
+              isHeaderHiddenClassName.current = isHeaderHiddenClassName.current;
               setIsHeaderHidden(false);
             } else {
               const currentScrollPos = window.pageYOffset;
