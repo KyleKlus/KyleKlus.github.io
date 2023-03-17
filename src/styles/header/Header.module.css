@@ -98,7 +98,7 @@
 @media (max-width: 600px) {
 
   .header {
-    background-color: var(--bg-color-translucent-10);
+    background-color: var(--bg-color-10);
     box-shadow: 6px 2px 12px hsla(196, 3%, 3%, 0.5);
 
   }
