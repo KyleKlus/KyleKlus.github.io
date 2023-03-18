@@ -1,7 +1,7 @@
 /** @format */
 
 .text {
-  --text-width: 800px;
+  --text-width: 750px;
   max-width: var(--text-width);
   width: 100%;
   white-space: pre-wrap;
@@ -39,31 +39,54 @@
 @media (prefers-reduced-motion) {}
 
 /* Mobile */
-@media (max-width: 600px) {
+
+@media (max-width: 800px) {
   .xxLarge {
-    font-size: 2.6rem;
+    font-size: 2.3rem;
   }
 
   .xLarge {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   .large {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+  }
+
+  .text {
+    padding: 0px 24px 18px 24px;
   }
 }
 
 @media (max-width: 600px) {
   .xxLarge {
-    font-size: 1.8rem;
+    font-size: 2.3rem;
   }
 
   .xLarge {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .large {
     font-size: 1.1rem;
+  }
+
+  .text {
+    padding: 0px 24px 18px 24px;
+  }
+}
+
+@media (max-width: 450px) {
+  .xxLarge {
+    font-size: 1.6rem;
+  }
+
+  .xLarge {
+    font-size: 1.1rem;
+  }
+
+  .large {
+    font-size: 0.9rem;
   }
 }
 

@@ -3,7 +3,6 @@
 button.navLink {
   text-decoration: none;
   position: relative;
-  color: var(--color-accent-10);
   font-size: large;
   box-shadow: none;
   background-color: transparent;
@@ -37,10 +36,6 @@ button.navLink {
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
-
-  .navLink:hover {
-    color: var(--color-accent-00);
-  }
 
   .navLink:hover::after {
     visibility: visible;

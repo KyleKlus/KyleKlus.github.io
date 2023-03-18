@@ -9,7 +9,9 @@ import HeaderNavigation from './HeaderNavigation';
 import Logo from './Logo';
 import SideNavigation from './SideNavigation';
 
-export default function Header() {
+interface IHeaderProps { }
+
+export default function Header(props: React.PropsWithChildren<IHeaderProps>) {
   const [isSideNavigationActive, setIsSideNavigationActive] = useState(false);
   const [isHeaderHidden, setIsHeaderHidden] = useState(true);
   const [isScrollArrowHidden, setIsScrollArrowHidden] = useState(true);
@@ -58,43 +60,45 @@ export default function Header() {
   }, [isSideNavigationActive]);
 
   return (
-    <div><header className={styles.header + ' ' + isHeaderHiddenClassName.current}>
-      <div className={styles.headerLeft}>
-        <SideNavigationButton
-          onClick={() => {
-            setIsSideNavigationActive(!isSideNavigationActive);
-            if (!isSideNavigationActive) {
-              isHeaderHiddenClassName.current = isHeaderHiddenClassName.current;
-              setIsHeaderHidden(false);
-            } else {
-              const currentScrollPos = window.pageYOffset;
+    <div>
+      <header className={styles.header + ' ' + isHeaderHiddenClassName.current}>
+        <div className={styles.headerLeft}>
+          <SideNavigationButton
+            onClick={() => {
+              setIsSideNavigationActive(!isSideNavigationActive);
+              if (!isSideNavigationActive) {
+                isHeaderHiddenClassName.current = isHeaderHiddenClassName.current;
+                setIsHeaderHidden(false);
+              } else {
+                const currentScrollPos = window.pageYOffset;
 
-              isHeaderHiddenClassName.current = currentScrollPos <= 64 ? '' : styles.isVisible
+                isHeaderHiddenClassName.current = currentScrollPos <= 64 ? '' : styles.isVisible
+              }
+            }}
+          />
+          <div
+            className={
+              styles.sideNavigationNegativeSpace + ' ' + isActiveClassName
             }
-          }}
-        />
-        <div
-          className={
-            styles.sideNavigationNegativeSpace + ' ' + isActiveClassName
-          }
-          onClick={() => {
-            if (!isSideNavigationActive) {
-              return;
-            }
-            setIsSideNavigationActive(false);
-          }}
-          onTouchStart={() => {
-            if (!isSideNavigationActive) {
-              return;
-            }
-            setIsSideNavigationActive(false);
-          }}
-        ></div>
-        <SideNavigation isActive={isSideNavigationActive} />
-        <Logo />
-      </div>
-      <HeaderNavigation />
-    </header>
-      <ScrollUpButton isVisible={!isScrollArrowHidden}></ScrollUpButton></div>
+            onClick={() => {
+              if (!isSideNavigationActive) {
+                return;
+              }
+              setIsSideNavigationActive(false);
+            }}
+            onTouchStart={() => {
+              if (!isSideNavigationActive) {
+                return;
+              }
+              setIsSideNavigationActive(false);
+            }}
+          ></div>
+          <SideNavigation isActive={isSideNavigationActive} />
+          <Logo />
+        </div>
+        <HeaderNavigation>{props.children}</HeaderNavigation>
+      </header>
+      <ScrollUpButton isVisible={!isScrollArrowHidden}></ScrollUpButton>
+    </div>
   );
 }

@@ -153,12 +153,22 @@ html,
 body {
   background-color: var(--bg-color-05);
   scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  scroll-padding-block-end: var(--footer-height);
 }
 
 a {
   text-decoration: none;
   color: var(--color-accent-10);
   box-shadow: 0px 1px 0px var(--color-accent-10);
+}
+
+@media (max-width: 600px) {
+
+  html,
+  body {
+    scroll-snap-type: y mandatory;
+  }
 }
 
 /* Enable hover only on non-touch devices */

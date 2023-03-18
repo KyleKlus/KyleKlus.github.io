@@ -87,9 +87,9 @@
 }
 
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .sideNavLink {
-    display: unset;
+    display: unset !important;
   }
 
   .sideNavMenu {
@@ -113,10 +113,6 @@
     background-color: var(--bg-color-10);
     border-radius: 0;
     box-shadow: none;
-
-    /* border-top: 1px solid var(--bg-color-40);
-    border-right: 1px solid var(--bg-color-40); */
-
 
     transform: translateX(calc(var(--sideNav-final-width) * -1));
     transform-origin: left;
@@ -142,15 +138,12 @@
     gap: 12px;
     padding: 24px;
   }
-
 }
 
 @media (min-width: 601px) {
   .sideNavMenu > *:nth-child(1) {
     display: none;
   }
-
-
 }
 
 /* Enable hover only on non-touch devices */

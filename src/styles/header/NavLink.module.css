@@ -3,7 +3,6 @@
 a.navLink {
   text-decoration: none;
   position: relative;
-  color: var(--color-accent-10);
   font-size: large;
   box-shadow: none;
 }
@@ -35,10 +34,6 @@ a.navLink {
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
-
-  .navLink:hover {
-    color: var(--color-accent-00);
-  }
 
   .navLink:focus-within::after,
   .navLink:hover::after {
