@@ -19,6 +19,8 @@
   box-shadow: 2px 2px 4px hsla(196, 3%, 3%, 0.8);
 
 
+  z-index: 22;
+
   background-color: var(--bg-color-05);
   position: fixed;
   right: var(--button-width);

@@ -1,8 +1,10 @@
 /** @format */
 import styles from '@/styles/Text.module.css';
 
-interface ITextProps { }
+interface ITextProps {
+  className?: string
+}
 
 export default function Text(props: React.PropsWithChildren<ITextProps>) {
-  return <div className={styles.text}>{props.children}</div>;
+  return <div className={[styles.text, props.className].join(' ')}>{props.children}</div>;
 }
