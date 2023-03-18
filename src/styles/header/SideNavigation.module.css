@@ -45,12 +45,11 @@
   border-radius: var(--border-radius);
   box-shadow: 6px 2px 12px hsla(196, 3%, 3%, 0.5);
 
-  /* border: 1px solid var(--bg-color-40); */
+  border: 1px solid var(--bg-color-30);
 
   transform: translateX(calc(var(--sideNav-final-width) * -1 - 16px));
   transform-origin: left;
   transition: opacity 100ms ease-in;
-
 }
 
 .sideNavMenu.isActive {
@@ -111,6 +110,8 @@
 
 
     background-color: var(--bg-color-10);
+    border: none;
+    border-right: 1px solid var(--bg-color-30);
     border-radius: 0;
     box-shadow: none;
 
