@@ -47,7 +47,7 @@ export default function ScrollNavLink(props: React.PropsWithChildren<INavLinkPro
       onClick={(e) => {
         const element = document.getElementById(props.elementName)
         if (element) {
-          element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
+          element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
           setIsInView(true)
         }
         e.preventDefault()
