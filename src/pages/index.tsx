@@ -11,6 +11,8 @@ import Main from '@/components/Main';
 
 import textStyles from '@/styles/Text.module.css'
 import homeStyles from '@/styles/Home.module.css'
+import globalStyles from '@/styles/globals.module.css'
+
 
 import ScrollNavLink from '@/components/header/ScrollNavLink';
 import dynamic from 'next/dynamic';
@@ -89,18 +91,18 @@ export default function Home() {
           </div>
 
           <div className={homeStyles.slideInWrapper}>
-            <p className={[textStyles.xxLarge, textStyles.left, homeStyles.slideInRight, homeStyles.whiteText].join(' ')}>Hi there👋, I am Kyle!</p>
+            <p className={[textStyles.xxLarge, textStyles.left, homeStyles.slideInRight].join(' ')}>Hi there👋, I am Kyle!</p>
             <br />
             <br />
-            <p className={[textStyles.xLarge, textStyles.right, homeStyles.slideInLeft, homeStyles.whiteText].join(' ')}>I am a computer science student,</p>
-            <p className={[textStyles.large, textStyles.left, homeStyles.slideInRight, homeStyles.whiteText].join(' ')}>a passionate cook 🍳,</p>
+            <p className={[textStyles.xLarge, textStyles.right, homeStyles.slideInLeft].join(' ')}>I am a computer science student,</p>
+            <p className={[textStyles.large, textStyles.left, homeStyles.slideInRight].join(' ')}>a passionate cook 🍳,</p>
             <br />
             <br />
-            <p className={[textStyles.xxLarge, textStyles.left, homeStyles.slideInRight, homeStyles.whiteText].join(' ')}>a frontend developer🚀,</p>
+            <p className={[textStyles.xxLarge, textStyles.left, homeStyles.slideInRight].join(' ')}>a frontend developer🚀,</p>
             <br />
-            <p className={[textStyles.xLarge, textStyles.center, homeStyles.slideInLeftToCenter, homeStyles.whiteText].join(' ')}>a woodworking hobbyist</p>
+            <p className={[textStyles.xLarge, textStyles.center, homeStyles.slideInLeftToCenter].join(' ')}>a woodworking hobbyist</p>
             <br />
-            <p className={[textStyles.large, textStyles.right, homeStyles.slideInLeft, homeStyles.whiteText].join(' ')}>and overall a DIY lover ❤️.</p>
+            <p className={[textStyles.large, textStyles.right, homeStyles.slideInLeft].join(' ')}>and overall a DIY lover ❤️.</p>
           </div>
         </Content>
         <Content id="portfolioPage" className={homeStyles.portfolioPage}>
@@ -134,7 +136,7 @@ export default function Home() {
             <br />
             <br />
             <br />
-            <h1 className={homeStyles.whiteText}>About Me 🧑🏻‍💻</h1>
+            <h1 >About Me 🧑🏻‍💻</h1>
             <br />
             <br />
           </Text>

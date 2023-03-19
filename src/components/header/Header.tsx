@@ -37,17 +37,19 @@ export default function Header(props: React.PropsWithChildren<IHeaderProps>) {
 
       setIsHeaderHidden(false);
       setIsScrollArrowHidden(true);
-    } else if (currentScrollPos > lastScrollPos) {
-      // down
-      isHeaderHiddenClassName.current = scrollDownClass;
-      setIsHeaderHidden(true);
-      setIsScrollArrowHidden(false);
     } else if (currentScrollPos < lastScrollPos) {
       // up
-      isHeaderHiddenClassName.current = styles.isVisible + slideInClass;
+      isHeaderHiddenClassName.current = styles.isVisible;
 
       setIsHeaderHidden(false);
+    } else if (currentScrollPos > lastScrollPos) {
+      // down
+      isHeaderHiddenClassName.current = styles.isVisible;
+      setIsHeaderHidden(true);
+      setIsScrollArrowHidden(false);
     }
+
+
   }
 
 
@@ -93,11 +95,11 @@ export default function Header(props: React.PropsWithChildren<IHeaderProps>) {
               setIsSideNavigationActive(false);
             }}
           ></div>
-          <SideNavigation isActive={isSideNavigationActive} />
           <Logo />
         </div>
         <HeaderNavigation>{props.children}</HeaderNavigation>
       </header>
+      <SideNavigation isActive={isSideNavigationActive} />
       <ScrollUpButton isVisible={!isScrollArrowHidden}></ScrollUpButton>
     </div>
   );

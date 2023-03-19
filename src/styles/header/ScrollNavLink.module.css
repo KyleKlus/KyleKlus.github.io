@@ -18,8 +18,8 @@ button.navLink {
   left: 0px;
   right: 0px;
   visibility: hidden;
+  transform-origin: 50% 0;
   transform: scale(0);
-  transform-origin: 0 50%;
   transition: transform 200ms ease;
 }
 
@@ -38,11 +38,11 @@ button.navLink {
 @media (hover: hover) and (pointer: fine) {
 
   .navLink:hover::after {
+    transform-origin: 0 50%;
     visibility: visible;
     transform: scaleX(1);
     background-color: var(--color-accent-00);
   }
-
 }
 
 @media (prefers-reduced-motion) {
