@@ -9,6 +9,14 @@ button.navLink {
   border: none;
 }
 
+a.navLink {
+  box-shadow: none;
+  text-decoration: none;
+  position: relative;
+  font-size: large;
+  color: var(--bg-color-90);
+}
+
 .navLink::after {
   content: '';
   position: absolute;

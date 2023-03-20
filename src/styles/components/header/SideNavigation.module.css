@@ -71,6 +71,7 @@
 .sideNavLink {
   font-size: medium;
   width: fit-content;
+  color: var(--color-accent-10) !important;
 }
 
 .menuCard {

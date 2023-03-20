@@ -1,5 +1,5 @@
 /** @format */
-import styles from '@/styles/Content.module.css';
+import styles from '@/styles/components/Content.module.css';
 
 interface IContentProps {
   id?: string;

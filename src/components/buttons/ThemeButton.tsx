@@ -1,9 +1,9 @@
 /** @format */
-import styles from '@/styles/buttons/ThemeButton.module.css';
+import styles from '@/styles/components/buttons/ThemeButton.module.css';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
-interface IThemeButtonProps {}
+interface IThemeButtonProps { }
 
 export default function ThemeButton(
   props: React.PropsWithChildren<IThemeButtonProps>

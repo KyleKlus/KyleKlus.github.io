@@ -1,9 +1,9 @@
 /** @format */
 
-import styles from '@/styles/header/ScrollNavLink.module.css';
+import styles from '@/styles/components/header/ScrollNavLink.module.css';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import HeaderNavigation from './HeaderNavigation';
 
 interface INavLinkProps {
   className?: string;
@@ -12,14 +12,15 @@ interface INavLinkProps {
 }
 
 export default function ScrollNavLink(props: React.PropsWithChildren<INavLinkProps>) {
+  const router = useRouter();
   const [isInView, setIsInView] = useState(false)
   const styleClass = props.className ? ' ' + props.className : ''
   const classes =
-    isInView ? ' ' + styles.isCurrentWindow + styleClass : styleClass;
+    isInView || router.pathname.match('(' + props.elementName + ')+') ? ' ' + styles.isCurrentWindow + styleClass : styleClass;
 
   useEffect(() => {
     function determineCurrentPage() {
-      const element = document.getElementById(props.elementName)
+      const element = document.getElementById(props.elementName.replace('/#', ''))
       if (element) {
         const top = element.offsetTop
         const bottom = element.offsetHeight + top
@@ -42,18 +43,27 @@ export default function ScrollNavLink(props: React.PropsWithChildren<INavLinkPro
   }, []);
 
   return (
-    <button
-      className={styles.navLink + classes}
-      onClick={(e) => {
-        const element = document.getElementById(props.elementName)
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
-          setIsInView(true)
-        }
-        e.preventDefault()
-      }}
-    >
-      {props.displayText}
-    </button>
+    <div>{props.elementName.startsWith('/') || props.elementName.startsWith('www.') || props.elementName.startsWith('https')
+      ? <Link
+        className={styles.navLink + classes}
+        href={props.elementName}
+      >
+        {props.displayText}
+      </Link>
+      : <button
+        className={styles.navLink + classes}
+        onClick={(e) => {
+          const element = document.getElementById(props.elementName)
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
+            setIsInView(true)
+          }
+          e.preventDefault()
+        }}
+      >
+        {props.displayText}
+      </button>}</div>
+
+
   );
 }

@@ -6,6 +6,13 @@ import Header from '@/components/header/Header';
 import Content from '@/components/Content';
 import Text from '@/components/Text';
 import Main from '@/components/Main';
+import ScrollNavLink from '@/components/header/ScrollNavLink';
+import styles from '@/styles/Privacy.module.css'
+import dynamic from 'next/dynamic';
+
+const ThemeButton = dynamic(() => import('@/components/buttons/ThemeButton'), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
@@ -44,11 +51,27 @@ export default function Home() {
           href="/favicon-16x16.png"
         />
       </Head>
-      <Header />
+      <Header>
+        <ScrollNavLink
+          elementName="/#heroPage"
+          displayText="Home"
+        />
+        <ScrollNavLink
+          elementName="/#portfolioPage"
+          displayText="Portfolio"
+        />
+        <ScrollNavLink
+          elementName="/#aboutPage"
+          displayText="About"
+        />
+        <ThemeButton />
+      </Header>
       <Main>
         <div id={'top'}></div>
-        <Content>
+        <Content className={[styles.privacyPage, 'applyHeaderOffset'].join(' ')}>
           <Text>
+            <br />
+            <br />
             <h1>Cookies Policy</h1>
             <br />
             <p>Last updated: March 09, 2023</p>
@@ -59,11 +82,15 @@ export default function Home() {
             <p>We do not store sensitive personal information, such as mailing addresses, account passwords, etc. in the Cookies We use.</p>
             <br />
             <br />
+            <br />
             <h1>Interpretation and Definitions</h1>
+            <br />
             <br />
             <h2>Interpretation</h2>
             <br />
             <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+            <br />
+            <br />
             <h2>Definitions</h2>
             <br />
             <p>For the purposes of this Cookies Policy:</p>
@@ -75,7 +102,9 @@ export default function Home() {
             </ul>
             <br />
             <br />
+            <br />
             <h1>The use of the Cookies</h1>
+            <br />
             <br />
             <h2>Type of Cookies We Use</h2>
             <br />
@@ -95,6 +124,7 @@ export default function Home() {
                 <p>Purpose: These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website.</p>
               </li>
             </ul>
+            <br />
             <br />
             <h2>Your Choices Regarding Cookies</h2>
             <br />
@@ -117,9 +147,11 @@ export default function Home() {
             </ul>
             <p>For any other web browser, please visit your web browsers official web pages.</p>
             <br />
+            <br />
             <h2>More Information about Cookies</h2>
             <br />
             <p>You can learn more about cookies here: <a href="https://www.termsfeed.com/blog/cookies/" target="_blank" rel="noreferrer">All About Cookies by TermsFeed</a>.</p>
+            <br />
             <br />
             <h2>Contact Me</h2>
             <br />

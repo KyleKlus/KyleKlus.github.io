@@ -1,6 +1,6 @@
 /** @format */
 
-import styles from '@/styles/footer/Footer.module.css';
+import styles from '@/styles/components/footer/Footer.module.css';
 import Link from 'next/link';
 import NavLink from '../header/NavLink';
 import ScrollNavLink from '@/components/header/ScrollNavLink';
@@ -16,17 +16,17 @@ export default function Footer() {
         <div className={styles.navLinkWrapper}>
           <ScrollNavLink
             className={styles.footerNavLink}
-            elementName="heroPage"
+            elementName="/#heroPage"
             displayText="Home"
           />
           <ScrollNavLink
             className={styles.footerNavLink}
-            elementName="portfolioPage"
+            elementName="/#portfolioPage"
             displayText="Portfolio"
           />
           <ScrollNavLink
             className={styles.footerNavLink}
-            elementName="aboutPage"
+            elementName="/#aboutPage"
             displayText="About"
           />
           <Link href={'https://github.com/MajorEnkidu'} className={styles.footerNavLink}>GitHub</Link>

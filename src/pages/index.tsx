@@ -9,9 +9,8 @@ import Image from 'next/image';
 
 import Main from '@/components/Main';
 
-import textStyles from '@/styles/Text.module.css'
+import textStyles from '@/styles/components/Text.module.css'
 import homeStyles from '@/styles/Home.module.css'
-import globalStyles from '@/styles/globals.module.css'
 
 
 import ScrollNavLink from '@/components/header/ScrollNavLink';

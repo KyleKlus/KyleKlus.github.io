@@ -1,5 +1,5 @@
 /** @format */
-import styles from '@/styles/header/HeaderNavigation.module.css';
+import styles from '@/styles/components/header/HeaderNavigation.module.css';
 
 interface IHeaderNavigationProps { }
 
