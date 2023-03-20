@@ -1,6 +1,6 @@
 /** @format */
 
-import styles from '@/styles/header/NavLink.module.css';
+import styles from '@/styles/components/header/NavLink.module.css';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 

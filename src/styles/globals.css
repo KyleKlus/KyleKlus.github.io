@@ -179,6 +179,10 @@ a {
   box-shadow: 0px 1px 0px var(--color-accent-10);
 }
 
+li {
+  margin-left: 1rem;
+}
+
 .whiteColor {
   color: hsl(180, 3%, 98%);
 }
@@ -187,6 +191,9 @@ a {
   color: hsl(180, 3%, 5%);
 }
 
+.applyHeaderOffset {
+  padding-top: var(--header-height);
+}
 
 @media (max-width: 600px) {
 

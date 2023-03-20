@@ -1,6 +1,6 @@
 /** @format */
 
-import styles from '@/styles/header/Header.module.css';
+import styles from '@/styles/components/header/Header.module.css';
 import React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import ScrollUpButton from '../buttons/ScrollUpButton';
@@ -9,7 +9,7 @@ import HeaderNavigation from './HeaderNavigation';
 import Logo from './Logo';
 import SideNavigation from './SideNavigation';
 
-interface IHeaderProps { }
+interface IHeaderProps { sideNavChildren?: JSX.Element }
 
 export default function Header(props: React.PropsWithChildren<IHeaderProps>) {
   const [isSideNavigationActive, setIsSideNavigationActive] = useState(false);
@@ -99,7 +99,7 @@ export default function Header(props: React.PropsWithChildren<IHeaderProps>) {
         </div>
         <HeaderNavigation>{props.children}</HeaderNavigation>
       </header>
-      <SideNavigation isActive={isSideNavigationActive} />
+      <SideNavigation isActive={isSideNavigationActive}>{props.sideNavChildren}</SideNavigation>
       <ScrollUpButton isVisible={!isScrollArrowHidden}></ScrollUpButton>
     </div>
   );

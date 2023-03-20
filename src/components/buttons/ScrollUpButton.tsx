@@ -1,6 +1,5 @@
 /** @format */
-import styles from '@/styles/buttons/ScrollUpButton.module.css';
-import { Smooch } from '@next/font/google';
+import styles from '@/styles/components/buttons/ScrollUpButton.module.css';
 
 interface IScrollUpButtonProps {
   isVisible: boolean;
