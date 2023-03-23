@@ -37,7 +37,6 @@
     z-index: -1;
 }
 
-
 .heroPageBG,
 .aboutPageBG {
     width: 100%;
@@ -100,7 +99,17 @@
     animation-duration: 930ms;
 }
 
+.xxLarge {
+    font-size: 2.8rem;
+}
 
+.xLarge {
+    font-size: 1.8rem;
+}
+
+.large {
+    font-size: 1.3rem;
+}
 
 @keyframes fade-in {
     from {
@@ -162,6 +171,90 @@
 
     .slideInWrapper {
         padding: 0px 24px 18px 24px;
+    }
+}
+
+@media (max-width: 800px) {
+    .xxLarge {
+        font-size: 2.6rem;
+    }
+
+    .xLarge {
+        font-size: 1.6rem;
+    }
+
+    .large {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .xxLarge {
+        font-size: 2.4rem;
+    }
+
+    .xLarge {
+        font-size: 1.4rem;
+    }
+
+    .large {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 620px) {
+    .xxLarge {
+        font-size: 1.7rem;
+    }
+
+    .xLarge {
+        font-size: 1.2rem;
+    }
+
+    .large {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .xxLarge {
+        font-size: 1.3rem;
+    }
+
+    .xLarge {
+        font-size: 1.1rem;
+    }
+
+    .large {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 470px) {
+    .xxLarge {
+        font-size: 1.1rem;
+    }
+
+    .xLarge {
+        font-size: 1rem;
+    }
+
+    .large {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 376px) {
+    .xxLarge {
+        font-size: 1.0rem;
+    }
+
+    .xLarge {
+        font-size: 0.9rem;
+    }
+
+    .large {
+        font-size: 0.7rem;
     }
 }
 

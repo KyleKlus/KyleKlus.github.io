@@ -11,6 +11,7 @@ import Main from '@/components/Main';
 
 import textStyles from '@/styles/components/Text.module.css'
 import homeStyles from '@/styles/Home.module.css'
+import headerStyles from '@/styles/components/header/Header.module.css'
 
 
 import ScrollNavLink from '@/components/header/ScrollNavLink';
@@ -62,14 +63,17 @@ export default function Home() {
       </Head>
       <Header>
         <ScrollNavLink
+          className={headerStyles.headerNavLink}
           elementName="heroPage"
           displayText="Home"
         />
         <ScrollNavLink
+          className={headerStyles.headerNavLink}
           elementName="portfolioPage"
           displayText="Portfolio"
         />
         <ScrollNavLink
+          className={headerStyles.headerNavLink}
           elementName="aboutPage"
           displayText="About"
         />
@@ -90,18 +94,18 @@ export default function Home() {
           </div>
 
           <div className={homeStyles.slideInWrapper}>
-            <p className={[textStyles.xxLarge, textStyles.left, homeStyles.slideInRight].join(' ')}>Hi there👋, I am Kyle!</p>
+            <p className={[homeStyles.xxLarge, textStyles.left, homeStyles.slideInRight].join(' ')}>Hi there👋, I am Kyle!</p>
             <br />
             <br />
-            <p className={[textStyles.xLarge, textStyles.right, homeStyles.slideInLeft].join(' ')}>I am a computer science student,</p>
-            <p className={[textStyles.large, textStyles.left, homeStyles.slideInRight].join(' ')}>a passionate cook 🍳,</p>
+            <p className={[homeStyles.xLarge, textStyles.right, homeStyles.slideInLeft].join(' ')}>I am a computer science student,</p>
+            <p className={[homeStyles.large, textStyles.left, homeStyles.slideInRight].join(' ')}>a passionate cook 🍳,</p>
             <br />
             <br />
-            <p className={[textStyles.xxLarge, textStyles.left, homeStyles.slideInRight].join(' ')}>a frontend developer🚀,</p>
+            <p className={[homeStyles.xxLarge, textStyles.left, homeStyles.slideInRight].join(' ')}>a frontend developer🚀,</p>
             <br />
-            <p className={[textStyles.xLarge, textStyles.center, homeStyles.slideInLeftToCenter].join(' ')}>a woodworking hobbyist</p>
+            <p className={[homeStyles.xLarge, textStyles.center, homeStyles.slideInLeftToCenter].join(' ')}>a woodworking hobbyist</p>
             <br />
-            <p className={[textStyles.large, textStyles.right, homeStyles.slideInLeft].join(' ')}>and overall a DIY lover ❤️.</p>
+            <p className={[homeStyles.large, textStyles.right, homeStyles.slideInLeft].join(' ')}>and overall a DIY lover ❤️.</p>
           </div>
         </Content>
         <Content id="portfolioPage" className={homeStyles.portfolioPage}>
@@ -135,13 +139,13 @@ export default function Home() {
             <br />
             <br />
             <br />
-            <h1 >About Me 🧑🏻‍💻</h1>
             <br />
             <br />
           </Text>
           <div className={homeStyles.aboutPageBGColor}>
             <Text>
               <br />
+              <h1 >About Me 🧑🏻‍💻</h1>
               <br />
               <p>Hi there! I&apos;m Kyle Klus, a free time software developer and a student at the University of Hanover, where I&apos;m pursuing a degree in technical computer science.</p>
               <br />

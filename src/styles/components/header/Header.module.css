@@ -107,6 +107,10 @@
     box-shadow: 6px 2px 12px hsla(196, 3%, 3%, 0.5);
 
   }
+
+  .headerNavLink {
+    display: none;
+  }
 }
 
 /* Tablet and Smaller Desktop */

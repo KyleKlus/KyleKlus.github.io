@@ -48,8 +48,6 @@ export default function Header(props: React.PropsWithChildren<IHeaderProps>) {
       setIsHeaderHidden(true);
       setIsScrollArrowHidden(false);
     }
-
-
   }
 
 

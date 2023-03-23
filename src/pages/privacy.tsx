@@ -1,6 +1,7 @@
 /** @format */
 
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
 import Content from '@/components/Content';
@@ -8,7 +9,7 @@ import Text from '@/components/Text';
 import Main from '@/components/Main';
 import ScrollNavLink from '@/components/header/ScrollNavLink';
 import styles from '@/styles/Privacy.module.css'
-import dynamic from 'next/dynamic';
+import headerStyles from '@/styles/components/header/Header.module.css'
 
 const ThemeButton = dynamic(() => import('@/components/buttons/ThemeButton'), {
   ssr: false,
@@ -53,14 +54,17 @@ export default function Home() {
       </Head>
       <Header>
         <ScrollNavLink
+          className={headerStyles.headerNavLink}
           elementName="/#heroPage"
           displayText="Home"
         />
         <ScrollNavLink
+          className={headerStyles.headerNavLink}
           elementName="/#portfolioPage"
           displayText="Portfolio"
         />
         <ScrollNavLink
+          className={headerStyles.headerNavLink}
           elementName="/#aboutPage"
           displayText="About"
         />
