@@ -8,6 +8,7 @@ import Content from '@/components/Content';
 import Text from '@/components/Text';
 import ThemeButton from '@/components/buttons/ThemeButton';
 import ScrollNavLink from '@/components/header/ScrollNavLink';
+import headerStyles from '@/styles/components/header/Header.module.css'
 
 export default function Home() {
   return (
@@ -47,19 +48,24 @@ export default function Home() {
         />
       </Head>
       <Header>
-        <ScrollNavLink
-          elementName="heroPage"
-          displayText="Home"
-        />
-        <ScrollNavLink
-          elementName="portfolioPage"
-          displayText="Portfolio"
-        />
-        <ScrollNavLink
-          elementName="aboutPage"
-          displayText="About"
-        />
-        <ThemeButton />
+        <Header>
+          <ScrollNavLink
+            className={headerStyles.headerNavLink}
+            elementName="heroPage"
+            displayText="Home"
+          />
+          <ScrollNavLink
+            className={headerStyles.headerNavLink}
+            elementName="portfolioPage"
+            displayText="Portfolio"
+          />
+          <ScrollNavLink
+            className={headerStyles.headerNavLink}
+            elementName="aboutPage"
+            displayText="About"
+          />
+          <ThemeButton />
+        </Header>
       </Header>
       <Main>
         <div id={'top'}></div>
