@@ -51,24 +51,22 @@ export default function Home() {
         />
       </Head>
       <Header>
-        <Header>
-          <ScrollNavLink
-            className={headerStyles.headerNavLink}
-            elementName="heroPage"
-            displayText="Home"
-          />
-          <ScrollNavLink
-            className={headerStyles.headerNavLink}
-            elementName="portfolioPage"
-            displayText="Portfolio"
-          />
-          <ScrollNavLink
-            className={headerStyles.headerNavLink}
-            elementName="aboutPage"
-            displayText="About"
-          />
-          <ThemeButton />
-        </Header>
+        <ScrollNavLink
+          className={headerStyles.headerNavLink}
+          elementName="heroPage"
+          displayText="Home"
+        />
+        <ScrollNavLink
+          className={headerStyles.headerNavLink}
+          elementName="portfolioPage"
+          displayText="Portfolio"
+        />
+        <ScrollNavLink
+          className={headerStyles.headerNavLink}
+          elementName="aboutPage"
+          displayText="About"
+        />
+        <ThemeButton />
       </Header>
       <Main>
         <div id={'top'}></div>
