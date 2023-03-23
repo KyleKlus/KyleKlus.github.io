@@ -6,10 +6,12 @@ import Header from '@/components/header/Header';
 import Main from '@/components/Main';
 import Content from '@/components/Content';
 import Text from '@/components/Text';
-import ThemeButton from '@/components/buttons/ThemeButton';
 import ScrollNavLink from '@/components/header/ScrollNavLink';
 import headerStyles from '@/styles/components/header/Header.module.css'
-
+import dynamic from 'next/dynamic';
+const ThemeButton = dynamic(() => import('@/components/buttons/ThemeButton'), {
+  ssr: false,
+});
 export default function Home() {
   return (
     <>
