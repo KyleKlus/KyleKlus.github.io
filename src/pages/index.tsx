@@ -1,4 +1,8 @@
 /** @format */
+import fs from 'fs';
+import path from 'path';
+
+import Markdown from 'markdown-to-jsx'
 
 import Head from 'next/head';
 import Footer from '@/components/footer/Footer';
@@ -19,12 +23,19 @@ import dynamic from 'next/dynamic';
 
 import heroPic from '../../public/2023-02-13T20-29-47-521568.jpg'
 import aboutPic from '../../public/2023-02-13T20-30-00-388829.jpg'
+import redSolitudePic from '../../public/redsolitude.png'
+import solitudePic from '../../public/solitude.png'
+
+
+import Card from '@/components/Card';
+import Link from 'next/link';
 
 const ThemeButton = dynamic(() => import('@/components/buttons/ThemeButton'), {
   ssr: false,
 });
 
-export default function Home() {
+export default function Home(props: { posts: string }) {
+  console.log(props.posts)
   return (
     <>
       <Head>
@@ -108,16 +119,47 @@ export default function Home() {
             <p className={[homeStyles.large, textStyles.right, homeStyles.slideInLeft].join(' ')}>and overall a DIY lover ❤️.</p>
           </div>
         </Content>
-        <Content id="portfolioPage" className={homeStyles.portfolioPage}>
+        <Content id="portfolioPage" className={[homeStyles.portfolioPage, 'applyHeaderOffset'].join(' ')}>
           <Text>
             <br />
             <br />
-            <br />
-            <br />
             <h1>Portfolio</h1>
-            <br />
-            <p>Coming soon!</p>
+            {/* <Markdown className>{props.posts}
+            </Markdown> */}
+
           </Text>
+          <div className={[homeStyles.portfolioCardWrapper].join(' ')}>
+            <Card className={[homeStyles.portfolioCard].join(' ')}>
+              <h2>Obsidian &quot;Solitude Theme&quot;</h2>
+              <br />
+              <div className={[homeStyles.portfolioCardImgWrapper].join(' ')}>
+                <Image
+                  className={[homeStyles.portfolioCardImg].join(' ')}
+                  src={solitudePic} alt={'Solitude Promo Screenshot'}
+                  priority={true}
+                  loading={'eager'}
+                  quality={100}></Image>
+                <Text className={[homeStyles.portfolioCardText].join(' ')}>
+                  <Link href={'https://github.com/MajorEnkidu/solitude-obsidian-theme'}>Solitude</Link> is a modern looking Obsidian theme, which is optimized for desktop, mobile and tablet. It is highly customizable via the <Link href={'https://github.com/mgmeyers/obsidian-style-settings'}>Style Settings</Link> Plugin and has many extra features.
+                </Text>
+              </div>
+            </Card>
+            <Card className={[homeStyles.portfolioCard].join(' ')}>
+              <h2>Visual Studio Code &quot;Red Solitude&quot; Theme</h2>
+              <br />
+              <div className={[homeStyles.portfolioCardImgWrapper].join(' ')}>
+                <Image
+                  className={[homeStyles.portfolioCardImg].join(' ')}
+                  src={redSolitudePic} alt={'Red Solitude Promo Screenshot'}
+                  priority={true}
+                  loading={'eager'}
+                  quality={100}></Image>
+                <Text className={[homeStyles.portfolioCardText].join(' ')}>
+                  <Link href={'https://marketplace.visualstudio.com/items?itemName=MajorEnkidu.red-solitude'}>Red Solitude</Link> is a dark theme with a green-blueish tint. It uses a <mark className='accent-marker'>red</mark> accent color and has a colorful syntax highlighting.
+                </Text>
+              </div>
+            </Card>
+          </div>
         </Content>
         <Content id="aboutPage" className={homeStyles.aboutPage}>
           <div className={homeStyles.blurredImageWrapper}>
@@ -161,4 +203,19 @@ export default function Home() {
       </Main>
     </>
   );
+}
+
+export async function getStaticProps() {
+  // get files
+  const files = fs.readFileSync(path.join('posts/test.md'))
+
+
+  // console.log(files.toString());
+
+
+  return {
+    props: {
+      posts: files.toString()
+    }
+  }
 }
