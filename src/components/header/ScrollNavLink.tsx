@@ -42,28 +42,28 @@ export default function ScrollNavLink(props: React.PropsWithChildren<INavLinkPro
     };
   }, []);
 
+  const correctElement = props.elementName.startsWith('/') || props.elementName.startsWith('www.') || props.elementName.startsWith('https')
+    ? <Link
+      className={styles.navLink + classes}
+      href={props.elementName}
+    >
+      {props.displayText}
+    </Link>
+    : <button
+      className={styles.navLink + classes}
+      onClick={(e) => {
+        const element = document.getElementById(props.elementName)
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
+          setIsInView(true)
+        }
+        e.preventDefault()
+      }}
+    >
+      {props.displayText}
+    </button>
+
   return (
-    <div>{props.elementName.startsWith('/') || props.elementName.startsWith('www.') || props.elementName.startsWith('https')
-      ? <Link
-        className={styles.navLink + classes}
-        href={props.elementName}
-      >
-        {props.displayText}
-      </Link>
-      : <button
-        className={styles.navLink + classes}
-        onClick={(e) => {
-          const element = document.getElementById(props.elementName)
-          if (element) {
-            element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
-            setIsInView(true)
-          }
-          e.preventDefault()
-        }}
-      >
-        {props.displayText}
-      </button>}</div>
-
-
+    { ...correctElement }
   );
 }

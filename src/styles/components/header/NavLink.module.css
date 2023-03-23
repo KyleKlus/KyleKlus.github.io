@@ -26,12 +26,6 @@ a.navLink {
   transform: scaleX(1);
 }
 
-@media screen and (max-width: 600px) {
-  .navLink {
-    display: none;
-  }
-}
-
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
 

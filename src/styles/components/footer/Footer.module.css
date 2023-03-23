@@ -28,8 +28,8 @@
 
 .footerNavLink {
   font-size: small !important;
-  color: var(--color-accent-10);
-  box-shadow: none;
+  color: var(--color-accent-10) !important;
+  box-shadow: none !important;
 }
 
 .footerNavLink::after {
@@ -41,8 +41,8 @@
 
   .footerNavLink:hover,
   .footerNavLink:focus-visible {
-    color: var(--color-accent-00);
-    box-shadow: 0px 1px 0px var(--color-accent-00);
+    color: var(--color-accent-00) !important;
+    box-shadow: 0px 1px 0px var(--color-accent-00) !important;
   }
 }
 
@@ -50,10 +50,6 @@
 
 /* Mobile */
 @media screen and (max-width: 600px) {
-  .footerNavLink {
-    display: unset !important;
-  }
-
   .footer .navLinkWrapper {
     margin-top: 24px;
     margin-left: 16px;

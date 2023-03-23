@@ -8,13 +8,12 @@
   align-items: center;
   gap: 16px;
   cursor: pointer;
+  padding-right: 5px;
+  transition: filter 200ms ease;
 }
 
 .logoWrapper > img {
   border-radius: 50%;
-  box-shadow: 2px 2px 1px 0px hsla(0, 0, 0, 0.3);
-  /* outline: 1px solid var(--bg-color-20); */
-  filter: brightness(calc(100% - var(--color-accent-l-offset)));
 }
 
 .logoWrapper > p {
@@ -24,17 +23,22 @@
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .logoWrapper:hover > p {
-    filter: brightness(calc(100% - 2 * var(--color-accent-l-offset) * var(--color-accent-l-multiplier)));
+    filter: invert(1) brightness(0.09);
+  }
+
+  body[data-theme='dark'] .logoWrapper:hover > p {
+    filter: brightness(0.8);
   }
 
   .logoWrapper:hover > img {
-    filter: brightness(calc(100% - 2 * var(--color-accent-l-offset) * var(--color-accent-l-multiplier)));
+    filter: brightness(1.2);
   }
 
-  .logoWrapper > img:hover {
-    filter: brightness(calc(100% - 2 * var(--color-accent-l-offset) * var(--color-accent-l-multiplier)));
-    outline: 1px solid var(--bg-color-80);
+  body[data-theme='dark'] .logoWrapper:hover > img {
+    filter: brightness(0.8);
   }
+
+
 }
 
 @media (max-width: 350px) {
