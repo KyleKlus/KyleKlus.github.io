@@ -120,10 +120,11 @@ export default function Home(props: { posts: string }) {
           </div>
         </Content>
         <Content id="portfolioPage" className={[homeStyles.portfolioPage, 'applyHeaderOffset'].join(' ')}>
+          <div className={homeStyles.portfolioPageBG}></div>
           <Text>
             <br />
             <br />
-            <h1>Portfolio</h1>
+            <h1 className={textStyles.center}>Portfolio</h1>
             {/* <Markdown className>{props.posts}
             </Markdown> */}
 
