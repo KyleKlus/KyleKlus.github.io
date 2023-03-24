@@ -23,7 +23,7 @@ export default function ThemeButton(
       onClick={() => setActiveTheme(inactiveTheme)}
     >
       <Image
-        src={'/' + activeTheme + '-mode.svg'}
+        src={process.env.basePath + '/' + activeTheme + '-mode.svg'}
         alt=""
         width={'16'}
         height={'16'}
