@@ -5,6 +5,7 @@ a.navLink {
   position: relative;
   font-size: large;
   box-shadow: none;
+  cursor: pointer;
 }
 
 .navLink::after {

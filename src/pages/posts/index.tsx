@@ -63,17 +63,17 @@ export default function MarkdownPostListTemplate(props: { posts: IPost[] }) {
       <Header>
         <ScrollNavLink
           className={headerStyles.headerNavLink}
-          elementName="heroPage"
+          elementName="/#heroPage"
           displayText="Home"
         />
         <ScrollNavLink
           className={headerStyles.headerNavLink}
-          elementName="portfolioPage"
+          elementName="/#portfolioPage"
           displayText="Portfolio"
         />
         <ScrollNavLink
           className={headerStyles.headerNavLink}
-          elementName="aboutPage"
+          elementName="/#aboutPage"
           displayText="About"
         />
         <ThemeButton />
