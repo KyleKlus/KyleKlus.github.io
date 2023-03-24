@@ -15,7 +15,7 @@ const ThemeButton = dynamic(() => import('@/components/buttons/ThemeButton'), {
   ssr: false,
 });
 
-export default function Home() {
+export default function PrivacyPage() {
   return (
     <>
       <Head>

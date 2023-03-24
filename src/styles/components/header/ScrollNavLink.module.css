@@ -7,6 +7,7 @@ button.navLink {
   box-shadow: none;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 a.navLink {

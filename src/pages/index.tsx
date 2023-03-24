@@ -1,9 +1,4 @@
 /** @format */
-import fs from 'fs';
-import path from 'path';
-
-import Markdown from 'markdown-to-jsx'
-
 import Head from 'next/head';
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
@@ -16,6 +11,7 @@ import Main from '@/components/Main';
 import textStyles from '@/styles/components/Text.module.css'
 import homeStyles from '@/styles/Home.module.css'
 import headerStyles from '@/styles/components/header/Header.module.css'
+import sideNavStyles from '@/styles/components/header/SideNavigation.module.css'
 
 
 import ScrollNavLink from '@/components/header/ScrollNavLink';
@@ -29,13 +25,14 @@ import solitudePic from '../../public/solitude.png'
 
 import Card from '@/components/Card';
 import Link from 'next/link';
+import NavLink from '@/components/header/NavLink';
 
 const ThemeButton = dynamic(() => import('@/components/buttons/ThemeButton'), {
   ssr: false,
 });
 
-export default function Home(props: { posts: string }) {
-  console.log(props.posts)
+export default function Home() {
+
   return (
     <>
       <Head>
@@ -120,10 +117,11 @@ export default function Home(props: { posts: string }) {
           </div>
         </Content>
         <Content id="portfolioPage" className={[homeStyles.portfolioPage, 'applyHeaderOffset'].join(' ')}>
+          <div className={homeStyles.portfolioPageBG}></div>
           <Text>
             <br />
             <br />
-            <h1>Portfolio</h1>
+            <h1 className={textStyles.center}>Portfolio</h1>
             {/* <Markdown className>{props.posts}
             </Markdown> */}
 
@@ -203,19 +201,4 @@ export default function Home(props: { posts: string }) {
       </Main>
     </>
   );
-}
-
-export async function getStaticProps() {
-  // get files
-  const files = fs.readFileSync(path.join('posts/test.md'))
-
-
-  // console.log(files.toString());
-
-
-  return {
-    props: {
-      posts: files.toString()
-    }
-  }
 }
