@@ -8,7 +8,10 @@ import Content from '@/components/Content';
 import Text from '@/components/Text';
 import ScrollNavLink from '@/components/header/ScrollNavLink';
 import headerStyles from '@/styles/components/header/Header.module.css'
+import footerStyles from '@/styles/components/footer/Footer.module.css'
 import dynamic from 'next/dynamic';
+import NavLink from '@/components/header/NavLink';
+import Link from 'next/link';
 const ThemeButton = dynamic(() => import('@/components/buttons/ThemeButton'), {
   ssr: false,
 });
@@ -78,7 +81,31 @@ export default function Home() {
             - With kind regards <q>Kyle Klus</q>
           </Text>
         </Content>
-        <Footer />
+        <Footer>
+          <ScrollNavLink
+            className={footerStyles.footerNavLink}
+            elementName="/#heroPage"
+            displayText="Home"
+          />
+          <ScrollNavLink
+            className={footerStyles.footerNavLink}
+            elementName="/#portfolioPage"
+            displayText="Portfolio"
+          />
+          <ScrollNavLink
+            className={footerStyles.footerNavLink}
+            elementName="/#aboutPage"
+            displayText="About"
+          />
+          <Link href={'https://github.com/MajorEnkidu'} className={footerStyles.footerNavLink}>GitHub</Link>
+          <Link href={'https://ko-fi.com/majorenkidu'} className={footerStyles.footerNavLink}>Ko-fi</Link>
+          <Link href={'mailto:kyle.klus.2@gmail.com'} className={footerStyles.footerNavLink}>Contact</Link>
+          <NavLink
+            className={footerStyles.sideNavLink + ' ' + footerStyles.footerNavLink}
+            pathName="/privacy"
+            displayText="Privacy"
+          />
+        </Footer>
       </Main>
     </>
   );
