@@ -12,6 +12,7 @@ import textStyles from '@/styles/components/Text.module.css'
 import homeStyles from '@/styles/Home.module.css'
 import headerStyles from '@/styles/components/header/Header.module.css'
 import footerStyles from '@/styles/components/footer/Footer.module.css'
+import sideNavStyles from '@/styles/components/header/SideNavigation.module.css'
 
 import ScrollNavLink from '@/components/header/ScrollNavLink';
 import dynamic from 'next/dynamic';
@@ -31,6 +32,28 @@ const ThemeButton = dynamic(() => import('@/components/buttons/ThemeButton'), {
 });
 
 export default function Home() {
+  function getSideNavChildren() {
+    return (
+      <Card className={sideNavStyles.menuCard}>
+        <h4>Other Sites</h4>
+        <NavLink
+          className={sideNavStyles.sideNavLink}
+          pathName="/projects"
+          displayText="Projects"
+        />
+        <NavLink
+          className={sideNavStyles.sideNavLink}
+          pathName="/Kyles-Cookbook/en"
+          displayText="Cookbook 🇬🇧"
+        />
+        <NavLink
+          className={sideNavStyles.sideNavLink}
+          pathName="/Kyles-Cookbook/de"
+          displayText="Cookbook 🇩🇪"
+        />
+      </Card>
+    );
+  }
 
   return (
     <>
@@ -68,7 +91,7 @@ export default function Home() {
           href="/favicon-16x16.png"
         />
       </Head>
-      <Header>
+      <Header sideNavChildren={getSideNavChildren()}>
         <ScrollNavLink
           className={headerStyles.headerNavLink}
           elementName="heroPage"

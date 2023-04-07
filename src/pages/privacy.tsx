@@ -11,8 +11,10 @@ import ScrollNavLink from '@/components/header/ScrollNavLink';
 import styles from '@/styles/Privacy.module.css'
 import headerStyles from '@/styles/components/header/Header.module.css'
 import footerStyles from '@/styles/components/footer/Footer.module.css'
+import sideNavStyles from '@/styles/components/header/SideNavigation.module.css'
 import NavLink from '@/components/header/NavLink';
 import Link from 'next/link';
+import Card from '@/components/Card';
 
 
 const ThemeButton = dynamic(() => import('@/components/buttons/ThemeButton'), {
@@ -20,10 +22,32 @@ const ThemeButton = dynamic(() => import('@/components/buttons/ThemeButton'), {
 });
 
 export default function PrivacyPage() {
+  function getSideNavChildren() {
+    return (
+      <Card className={sideNavStyles.menuCard}>
+        <h4>Other Sites</h4>
+        <NavLink
+          className={sideNavStyles.sideNavLink}
+          pathName="/projects"
+          displayText="Projects"
+        />
+        <NavLink
+          className={sideNavStyles.sideNavLink}
+          pathName="/Kyles-Cookbook/en"
+          displayText="Cookbook 🇬🇧"
+        />
+        <NavLink
+          className={sideNavStyles.sideNavLink}
+          pathName="/Kyles-Cookbook/de"
+          displayText="Cookbook 🇩🇪"
+        />
+      </Card>
+    );
+  }
   return (
     <>
       <Head>
-        <title>Kyle Klus | Website</title>
+        <title>Kyle Klus | Privacy</title>
         <meta
           name="description"
           content="Website of Kyle Klus."
@@ -56,7 +80,7 @@ export default function PrivacyPage() {
           href="/favicon-16x16.png"
         />
       </Head>
-      <Header>
+      <Header sideNavChildren={getSideNavChildren()}>
         <ScrollNavLink
           className={headerStyles.headerNavLink}
           elementName="/#heroPage"
