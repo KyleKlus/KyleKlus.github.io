@@ -209,7 +209,7 @@ export default function Home() {
               <br />
               <h1 >About Me 🧑🏻‍💻</h1>
               <br />
-              <p>Hi there! I&apos;m Kyle Klus, a free time software developer and a student at the University of Hanover, where I&apos;m pursuing a degree in technical computer science.</p>
+              <p>Hi there! I&apos;m Kyle Klus, a free time software developer and a student at the Leibniz University of Hanover, where I&apos;m pursuing a degree in technical computer science.</p>
               <br />
               <p>I love coding in various languages such as React, C/C++, Java and Python. I also enjoy woodworking and DIY projects in my free time. When I&apos;m not coding, you can find me in my workshop, crafting woodworking and in general DIY projects with my own hands.</p>
               <br />
@@ -236,6 +236,7 @@ export default function Home() {
             displayText="About"
           />
           <Link href={'https://github.com/MajorEnkidu'} className={footerStyles.footerNavLink}>GitHub</Link>
+          <Link href={'https://www.linkedin.com/in/kyle-klus-9a2588275'} className={footerStyles.footerNavLink}>LinkedIn</Link>
           <Link href={'https://ko-fi.com/majorenkidu'} className={footerStyles.footerNavLink}>Ko-fi</Link>
           <Link href={'mailto:kyle.klus.2@gmail.com'} className={footerStyles.footerNavLink}>Contact</Link>
           <NavLink
