@@ -21,8 +21,11 @@
     width: 900px;
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
-
+    border-top: 1px solid var(--bg-color-30);
+    border-right: 1px solid var(--bg-color-30);
+    border-left: 1px solid var(--bg-color-30);
     background-color: var(--bg-color-translucent-05);
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.15);
 }
 
 @keyframes slide-out-dotted {
@@ -90,8 +93,8 @@
 
     background-image:
         radial-gradient(circle, transparent var(--cross-width), var(--bg-color-05) var(--cross-width)),
-        linear-gradient(var(--bg-color-50) var(--cross-arm-width), transparent var(--cross-arm-width)),
-        linear-gradient(90deg, var(--bg-color-50) var(--cross-arm-width), transparent var(--cross-arm-width));
+        linear-gradient(var(--bg-color-70) var(--cross-arm-width), transparent var(--cross-arm-width)),
+        linear-gradient(90deg, var(--bg-color-70) var(--cross-arm-width), transparent var(--cross-arm-width));
     background-size: var(--spacing) var(--spacing);
     background-position:
         var(--circle-pos-w) var(--circle-pos-h),
@@ -184,7 +187,7 @@
 .slideInWrapper > p.slideInLeft {
     transform: translateX(calc(100vw / -2 - min(800px, 100%) / -2));
     transform-origin: left;
-    animation-name: slide-in-left;
+    animation-name: fade-in;
     animation-timing-function: ease-in;
 }
 
@@ -192,14 +195,14 @@
     transform: translateX(0);
     animation-duration: 980ms;
     transform-origin: left;
-    animation-name: slide-in-left-to-center;
+    animation-name: fade-in;
     animation-timing-function: ease-in;
 }
 
 .slideInWrapper > p.slideInRight {
     transform: translateX(calc(calc(calc(100vw - min(800px, 100%)) / 2)));
     transform-origin: right;
-    animation-name: slide-in-right;
+    animation-name: fade-in;
     animation-timing-function: ease-in;
 }
 
