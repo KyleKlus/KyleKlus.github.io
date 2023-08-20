@@ -9,7 +9,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid var(--bg-color-30);
+  border-top: 1px solid var(--bg-color-40);
 }
 
 .footer p {
