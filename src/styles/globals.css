@@ -182,6 +182,11 @@ body {
   scroll-padding-block-end: var(--footer-height);
 }
 
+hr {
+  border: 0.75px solid var(--bg-color-60);
+  border-radius: 1px;
+}
+
 button,
 input {
   font-family: inherit;
