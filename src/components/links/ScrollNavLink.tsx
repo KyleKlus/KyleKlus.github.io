@@ -45,13 +45,13 @@ export default function ScrollNavLink(props: React.PropsWithChildren<INavLinkPro
 
   const correctElement = props.elementName.startsWith('/') || props.elementName.startsWith('www.') || props.elementName.startsWith('https')
     ? <Link
-      className={[navStyles.scrollNavLink, navStyles.navLink, classes].join(' ')}
+      className={[navStyles.navLink, classes].join(' ')}
       href={props.elementName}
     >
       {props.displayText}
     </Link>
     : <button
-      className={navStyles.navLink + classes}
+      className={[scrollStyles.scrollNavLink, navStyles.navLink, classes].join(' ')}
       onClick={(e) => {
         const element = document.getElementById(props.elementName)
         if (element) {
