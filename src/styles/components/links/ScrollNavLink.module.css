@@ -1,3 +1,4 @@
-.scrollNavLink {
-    text-decoration: none;
+.scrollNavLink,
+.scrollNavLink:hover{
+    outline: none;
 }
