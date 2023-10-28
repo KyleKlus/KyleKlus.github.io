@@ -7,12 +7,12 @@ import Header from '@/components/header/Header';
 import Content from '@/components/Content';
 import Text from '@/components/Text';
 import Main from '@/components/Main';
-import ScrollNavLink from '@/components/header/ScrollNavLink';
-import styles from '@/styles/Privacy.module.css'
-import headerStyles from '@/styles/components/header/Header.module.css'
-import footerStyles from '@/styles/components/footer/Footer.module.css'
-import sideNavStyles from '@/styles/components/header/SideNavigation.module.css'
-import NavLink from '@/components/header/NavLink';
+import ScrollNavLink from '@/components/links/ScrollNavLink';
+import styles from '@/styles/Privacy.module.css';
+import headerStyles from '@/styles/components/header/Header.module.css';
+import footerStyles from '@/styles/components/footer/Footer.module.css';
+import sideNavStyles from '@/styles/components/header/SideNavigation.module.css';
+import NavLink from '@/components/links/NavLink';
 import Link from 'next/link';
 import Card from '@/components/Card';
 
@@ -193,32 +193,7 @@ export default function PrivacyPage() {
             </ul>
           </Text>
         </Content>
-        <Footer>
-          <ScrollNavLink
-            className={footerStyles.footerNavLink}
-            elementName="/#heroPage"
-            displayText="Home"
-          />
-          <ScrollNavLink
-            className={footerStyles.footerNavLink}
-            elementName="/#portfolioPage"
-            displayText="Portfolio"
-          />
-          <ScrollNavLink
-            className={footerStyles.footerNavLink}
-            elementName="/#aboutPage"
-            displayText="About"
-          />
-          <Link href={'https://github.com/MajorEnkidu'} className={footerStyles.footerNavLink}>GitHub</Link>
-          <Link href={'https://www.linkedin.com/in/kyle-klus-9a2588275'} className={footerStyles.footerNavLink}>LinkedIn</Link>
-          <Link href={'https://ko-fi.com/majorenkidu'} className={footerStyles.footerNavLink}>Ko-fi</Link>
-          <Link href={'mailto:kyle.klus.2@gmail.com'} className={footerStyles.footerNavLink}>Contact</Link>
-          <NavLink
-            className={footerStyles.sideNavLink + ' ' + footerStyles.footerNavLink}
-            pathName="/privacy"
-            displayText="Privacy"
-          />
-        </Footer>
+        <Footer />
       </Main>
     </>
   );

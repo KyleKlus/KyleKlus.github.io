@@ -1,0 +1,51 @@
+/** @format */
+
+
+.portfolioCard{
+  max-width: clamp(600px, 100%, 900px);
+  height: fit-content;
+
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+
+  gap: 16px;
+  line-height: 1.5rem;
+}
+
+.portfolioCardImg {
+  width: calc(60% - 16px);
+  height: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadowElevation_5);
+  outline: 1px solid var(--bg-color-40)
+}
+
+.portfolioCardText {
+  padding: 0;
+  max-width: calc(40% - 16px);
+}
+
+
+@media (max-width: 600px) {
+
+  .portfolioCard {
+      width: 85%;
+  }
+
+  .portfolioCardText > h4 {
+      text-align: center;
+  }
+
+  .portfolioCard {
+      flex-direction: column;
+  }
+
+  .portfolioCardImg {
+      width: 100%;
+  }
+
+  .portfolioCardText {
+      max-width: 100%;
+  }
+}

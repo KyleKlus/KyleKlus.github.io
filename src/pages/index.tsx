@@ -8,25 +8,23 @@ import Image from 'next/image';
 
 import Main from '@/components/Main';
 
-import textStyles from '@/styles/components/Text.module.css'
-import homeStyles from '@/styles/Home.module.css'
-import headerStyles from '@/styles/components/header/Header.module.css'
-import footerStyles from '@/styles/components/footer/Footer.module.css'
-import sideNavStyles from '@/styles/components/header/SideNavigation.module.css'
+import textStyles from '@/styles/components/Text.module.css';
+import homeStyles from '@/styles/Home.module.css';
+import headerStyles from '@/styles/components/header/Header.module.css';
+import sideNavStyles from '@/styles/components/header/SideNavigation.module.css';
 
-import ScrollNavLink from '@/components/header/ScrollNavLink';
+import ScrollNavLink from '@/components/links/ScrollNavLink';
 import dynamic from 'next/dynamic';
 
-import heroPic from '../../public/2023-02-13T20-29-47-521568.jpg'
-import aboutPic from '../../public/2023-02-13T20-30-00-388829.jpg'
-import redSolitudePic from '../../public/redsolitude.png'
-import solitudePic from '../../public/solitude.png'
-import solitudeVSCPic from '../../public/screenshot_red.png'
+import redSolitudePic from '../../public/redsolitude.png';
+import solitudePic from '../../public/solitude.png';
+import solitudeVSCPic from '../../public/screenshot_red.png';
 
 
 import Card from '@/components/Card';
 import Link from 'next/link';
-import NavLink from '@/components/header/NavLink';
+import NavLink from '@/components/links/NavLink';
+import PortfolioCard from '@/components/PortfolioCard';
 
 const ThemeButton = dynamic(() => import('@/components/buttons/ThemeButton'), {
   ssr: false,
@@ -113,17 +111,6 @@ export default function Home() {
       <Main>
         <div id={'top'}></div>
         <Content id="heroPage" className={[homeStyles.heroPage, homeStyles.dotted].join(' ')}>
-          {/* <div className={homeStyles.blurredImageWrapper}>
-            <Image
-              className={homeStyles.heroPageBG}
-              alt="travel"
-              src={heroPic}
-              priority={true}
-              loading={'eager'}
-              quality={50}
-            />
-          </div> */}
-
           <div className={homeStyles.slideInWrapper}>
             <p className={[homeStyles.xxLarge, textStyles.left, homeStyles.slideInRight].join(' ')}>Hi there👋, I am Kyle!</p>
             <br />
@@ -140,86 +127,32 @@ export default function Home() {
           </div>
         </Content>
         <Content id="portfolioPage" className={[homeStyles.portfolioPage, 'applyHeaderOffset'].join(' ')}>
-          <div className={homeStyles.portfolioPageBG}></div>
           <Text>
             <br />
             <br />
-            <h1 className={[textStyles.center].join(' ')}>Portfolio</h1>
-            {/* <Markdown className>{props.posts}
-            </Markdown> */}
-
+            <h1 className={[textStyles.left].join(' ')}>Portfolio 🪄</h1>
           </Text>
           <div className={[homeStyles.portfolioCardWrapper].join(' ')}>
-            <Card className={[homeStyles.portfolioCard].join(' ')}>
-              <h2>&quot;Solitude&quot; Theme for Visual Studio Code </h2>
+            <PortfolioCard image={solitudeVSCPic} alt='Solitude Promo Screenshot'>
+              <h4>&quot;Solitude&quot; Theme for Visual Studio Code </h4>
               <br />
-              <div className={[homeStyles.portfolioCardImgWrapper].join(' ')}>
-                <Image
-                  className={[homeStyles.portfolioCardImg].join(' ')}
-                  src={solitudeVSCPic} alt={'Solitude Promo Screenshot'}
-                  priority={true}
-                  loading={'eager'}
-                  quality={100}></Image>
-                <Text className={[homeStyles.portfolioCardText].join(' ')}>
-                  <Link href={'https://github.com/MajorEnkidu/solitude-vs-code-color-theme'}>Solitude</Link> is a custom dark theme for Visual Studio Code that features 3 accent colors (red, green, blue) and 2 different brightness levels to choose from.
-                </Text>
-              </div>
-            </Card>
-            <Card className={[homeStyles.portfolioCard].join(' ')}>
-              <h2>&quot;Solitude&quot; Theme for Obsidian</h2>
+              <Link href={'https://github.com/MajorEnkidu/solitude-vs-code-color-theme'}>Solitude</Link> is a custom dark theme for Visual Studio Code that features 3 accent colors (red, green, blue) and 2 different brightness levels to choose from.
+            </PortfolioCard>
+
+            <PortfolioCard image={solitudePic} alt='Solitude Promo Screenshot'>
+              <h4>&quot;Solitude&quot; Theme for Obsidian</h4>
               <br />
-              <div className={[homeStyles.portfolioCardImgWrapper].join(' ')}>
-                <Image
-                  className={[homeStyles.portfolioCardImg].join(' ')}
-                  src={solitudePic} alt={'Solitude Promo Screenshot'}
-                  priority={true}
-                  loading={'eager'}
-                  quality={100}></Image>
-                <Text className={[homeStyles.portfolioCardText].join(' ')}>
-                  <Link href={'https://github.com/MajorEnkidu/solitude-obsidian-theme'}>Solitude</Link> is a modern looking Obsidian theme, which is optimized for desktop, mobile and tablet. It is highly customizable via the <Link href={'https://github.com/mgmeyers/obsidian-style-settings'}>Style Settings</Link> Plugin and has many extra features.
-                </Text>
-              </div>
-            </Card>
-            <Card className={[homeStyles.portfolioCard].join(' ')}>
-              <h2>&quot;Red Solitude&quot; Theme for Visual Studio Code </h2>
+              <Link href={'https://github.com/MajorEnkidu/solitude-obsidian-theme'}>Solitude</Link> is a modern looking Obsidian theme, which is optimized for desktop, mobile and tablet. It is highly customizable via the <Link href={'https://github.com/mgmeyers/obsidian-style-settings'}>Style Settings</Link> Plugin.
+            </PortfolioCard>
+
+            <PortfolioCard image={redSolitudePic} alt='Solitude Promo Screenshot'>
+              <h4>&quot;Red Solitude&quot; Theme for Visual Studio Code </h4>
               <br />
-              <div className={[homeStyles.portfolioCardImgWrapper].join(' ')}>
-                <Image
-                  className={[homeStyles.portfolioCardImg].join(' ')}
-                  src={redSolitudePic} alt={'Red Solitude Promo Screenshot'}
-                  priority={true}
-                  loading={'eager'}
-                  quality={100}></Image>
-                <Text className={[homeStyles.portfolioCardText].join(' ')}>
-                  <Link href={'https://marketplace.visualstudio.com/items?itemName=MajorEnkidu.red-solitude'}>Red Solitude</Link> is a dark theme with a green-blueish tint. It uses a <mark className='accent-marker'>red</mark> accent color and has a colorful syntax highlighting.
-                </Text>
-              </div>
-            </Card>
+              <Link href={'https://marketplace.visualstudio.com/items?itemName=MajorEnkidu.red-solitude'}>Red Solitude</Link> is a dark theme with a green-blueish tint. It uses a <mark className='accent-marker'>red</mark> accent color and has a colorful syntax highlighting.
+            </PortfolioCard>
           </div>
         </Content>
         <Content id="aboutPage" className={[homeStyles.aboutPage, homeStyles.dotted].join(' ')}>
-          {/* <div className={homeStyles.blurredImageWrapper}>
-            <Image
-              className={homeStyles.aboutPageBG}
-              alt="travel"
-              src={aboutPic}
-              priority={true}
-              loading={'eager'}
-              quality={50}
-            />
-          </div> */}
-          <Text>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-          </Text>
           <div className={homeStyles.aboutPageBGColor}>
             <Text>
               <br />
@@ -237,32 +170,7 @@ export default function Home() {
             </Text>
           </div>
         </Content>
-        <Footer>
-          <ScrollNavLink
-            className={footerStyles.footerNavLink}
-            elementName="/#heroPage"
-            displayText="Home"
-          />
-          <ScrollNavLink
-            className={footerStyles.footerNavLink}
-            elementName="/#portfolioPage"
-            displayText="Portfolio"
-          />
-          <ScrollNavLink
-            className={footerStyles.footerNavLink}
-            elementName="/#aboutPage"
-            displayText="About"
-          />
-          <Link href={'https://github.com/MajorEnkidu'} className={footerStyles.footerNavLink}>GitHub</Link>
-          <Link href={'https://www.linkedin.com/in/kyle-klus-9a2588275'} className={footerStyles.footerNavLink}>LinkedIn</Link>
-          <Link href={'https://ko-fi.com/majorenkidu'} className={footerStyles.footerNavLink}>Ko-fi</Link>
-          <Link href={'mailto:kyle.klus.2@gmail.com'} className={footerStyles.footerNavLink}>Contact</Link>
-          <NavLink
-            className={footerStyles.sideNavLink + ' ' + footerStyles.footerNavLink}
-            pathName="/privacy"
-            displayText="Privacy"
-          />
-        </Footer>
+        <Footer />
       </Main>
     </>
   );
