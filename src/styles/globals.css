@@ -200,7 +200,7 @@ button,
   border-radius: 5px;
   background: var(--bg-color-00);
   box-shadow: var(--shadowElevation_3);
-  transition: background 250ms ease-in-out;
+  transition: background 250ms ease;
 }
 
 a {

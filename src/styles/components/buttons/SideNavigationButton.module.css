@@ -16,7 +16,7 @@
   border-radius: 50%;
   cursor: pointer;
   padding: var(--button-padding);
-  transition: transform 250ms ease, gap 250ms ease;
+  transition: transform 250ms ease, gap 250ms ease, background-color 250ms ease;
 }
 
 .bar {
