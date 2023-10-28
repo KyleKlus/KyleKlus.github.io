@@ -19,6 +19,7 @@ import dynamic from 'next/dynamic';
 import redSolitudePic from '../../public/redsolitude.png';
 import solitudePic from '../../public/solitude.png';
 import solitudeVSCPic from '../../public/screenshot_red.png';
+import receiptManagerPic from '../../public/screenshot_receipt_manager.png';
 
 
 import Card from '@/components/Card';
@@ -31,28 +32,6 @@ const ThemeButton = dynamic(() => import('@/components/buttons/ThemeButton'), {
 });
 
 export default function Home() {
-  function getSideNavChildren() {
-    return (
-      <Card className={sideNavStyles.menuCard}>
-        <h4>Other Sites</h4>
-        <NavLink
-          className={sideNavStyles.sideNavLink}
-          pathName="/projects"
-          displayText="Projects"
-        />
-        <NavLink
-          className={sideNavStyles.sideNavLink}
-          pathName="/Kyles-Cookbook/en"
-          displayText="Cookbook 🇬🇧"
-        />
-        <NavLink
-          className={sideNavStyles.sideNavLink}
-          pathName="/Kyles-Cookbook/de"
-          displayText="Cookbook 🇩🇪"
-        />
-      </Card>
-    );
-  }
 
   return (
     <>
@@ -90,7 +69,7 @@ export default function Home() {
           href="/favicon-16x16.png"
         />
       </Head>
-      <Header sideNavChildren={getSideNavChildren()}>
+      <Header>
         <ScrollNavLink
           className={headerStyles.headerNavLink}
           elementName="heroPage"
@@ -135,20 +114,22 @@ export default function Home() {
           <div className={[homeStyles.portfolioCardWrapper].join(' ')}>
             <PortfolioCard image={solitudeVSCPic} alt='Solitude Promo Screenshot'>
               <h4>&quot;Solitude&quot; Theme for Visual Studio Code </h4>
-              <br />
               <Link href={'https://github.com/MajorEnkidu/solitude-vs-code-color-theme'}>Solitude</Link> is a custom dark theme for Visual Studio Code that features 3 accent colors (red, green, blue) and 2 different brightness levels to choose from.
             </PortfolioCard>
 
             <PortfolioCard image={solitudePic} alt='Solitude Promo Screenshot'>
               <h4>&quot;Solitude&quot; Theme for Obsidian</h4>
-              <br />
               <Link href={'https://github.com/MajorEnkidu/solitude-obsidian-theme'}>Solitude</Link> is a modern looking Obsidian theme, which is optimized for desktop, mobile and tablet. It is highly customizable via the <Link href={'https://github.com/mgmeyers/obsidian-style-settings'}>Style Settings</Link> Plugin.
             </PortfolioCard>
 
             <PortfolioCard image={redSolitudePic} alt='Solitude Promo Screenshot'>
               <h4>&quot;Red Solitude&quot; Theme for Visual Studio Code </h4>
-              <br />
               <Link href={'https://marketplace.visualstudio.com/items?itemName=MajorEnkidu.red-solitude'}>Red Solitude</Link> is a dark theme with a green-blueish tint. It uses a <mark className='accent-marker'>red</mark> accent color and has a colorful syntax highlighting.
+            </PortfolioCard>
+
+            <PortfolioCard image={receiptManagerPic} alt='Receipt Manager Promo Screenshot'>
+              <h4>Receipt Manager</h4>
+              <Link href={'https://github.com/MajorEnkidu/receipt-manager'}>The receipt manager</Link> is a web app, which helps you calculate the amount of money a person gets from another person, when they and the other person have an occasion where both paid for some expenses and then need to split the bills again.
             </PortfolioCard>
           </div>
         </Content>
