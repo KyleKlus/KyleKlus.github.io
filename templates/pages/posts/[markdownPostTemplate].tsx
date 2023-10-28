@@ -17,7 +17,7 @@ import headerStyles from '@/styles/components/header/Header.module.css'
 import sideNavStyles from '@/styles/components/header/SideNavigation.module.css'
 import footerStyles from '@/styles/components/footer/Footer.module.css'
 
-import ScrollNavLink from '@/components/header/ScrollNavLink';
+import ScrollNavLink from '@/components/links/ScrollNavLink';
 import dynamic from 'next/dynamic';
 
 import Card from '@/components/Card';
