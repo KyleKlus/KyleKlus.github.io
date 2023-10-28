@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Kyle Klus | Projects</title>
+        <title>Kyle Klus | Projects 🛠️</title>
         <meta
           name="description"
           content="Website of Kyle Klus."

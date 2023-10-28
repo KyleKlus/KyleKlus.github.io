@@ -25,7 +25,7 @@ export default function PrivacyPage() {
   return (
     <>
       <Head>
-        <title>Kyle Klus | Privacy</title>
+        <title>Kyle Klus | Privacy 🥸</title>
         <meta
           name="description"
           content="Website of Kyle Klus."

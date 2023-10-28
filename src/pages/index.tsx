@@ -4,14 +4,12 @@ import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
 import Content from '@/components/Content';
 import Text from '@/components/Text';
-import Image from 'next/image';
 
 import Main from '@/components/Main';
 
 import textStyles from '@/styles/components/Text.module.css';
 import homeStyles from '@/styles/Home.module.css';
 import headerStyles from '@/styles/components/header/Header.module.css';
-import sideNavStyles from '@/styles/components/header/SideNavigation.module.css';
 
 import ScrollNavLink from '@/components/links/ScrollNavLink';
 import dynamic from 'next/dynamic';
@@ -22,9 +20,7 @@ import solitudeVSCPic from '../../public/screenshot_red.png';
 import receiptManagerPic from '../../public/screenshot_receipt_manager.png';
 
 
-import Card from '@/components/Card';
 import Link from 'next/link';
-import NavLink from '@/components/links/NavLink';
 import PortfolioCard from '@/components/PortfolioCard';
 
 const ThemeButton = dynamic(() => import('@/components/buttons/ThemeButton'), {
@@ -36,7 +32,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Kyle Klus | Website</title>
+        <title>Kyle Klus | Website 🚀</title>
         <meta
           name="description"
           content="Website of Kyle Klus."
