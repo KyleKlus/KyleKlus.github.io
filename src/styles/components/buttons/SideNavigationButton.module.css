@@ -3,12 +3,12 @@
 .sideNav {
   --toggle-width: 24px;
   --toggle-height: 24px;
-  --button-padding: 5px;
+  --button-padding: 4px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3px;
+  gap: 2px;
   font-size: 1.5rem;
   line-height: 1;
   width: var(--toggle-width);
@@ -16,25 +16,27 @@
   border-radius: 50%;
   cursor: pointer;
   padding: var(--button-padding);
-  transition: transform 250ms ease;
+  transition: transform 250ms ease, gap 250ms ease;
 }
 
 .bar {
   display: block;
   background-color: var(--bg-color-90);
   height: 2px;
-  width: 2px;
-  border-radius: 50%;
+  width: calc(100% - var(--button-padding));
+  border-radius: 3px;
+  transition: border-radius 250ms ease, width 250ms ease, height 250ms ease;
 }
 
-.bar:first-of-type,
-.bar:last-of-type {
-  height: 3px;
+.isActive .bar {
   width: 3px;
+  height: 3px;
+  border-radius: 50%;
 }
 
 .isActive {
   transform: rotate(90deg);
+  gap: 4px;
 }
 
 .isDisabled {
