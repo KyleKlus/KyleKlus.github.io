@@ -30,11 +30,12 @@
 @media (max-width: 600px) {
 
   .portfolioCard {
-      width: 85%;
+      width: 95%;
   }
 
   .portfolioCardText > h4 {
       text-align: center;
+      font-size: medium;
   }
 
   .portfolioCard {
@@ -47,5 +48,22 @@
 
   .portfolioCardText {
       max-width: 100%;
+      font-size: medium;
+  }
+}
+
+@media (max-width: 520px) {
+
+  .portfolioCard {
+      width: 100%;
+  }
+
+  .portfolioCardText > h4 {
+      font-size: small;
+  }
+
+
+  .portfolioCardText {
+      font-size: small;
   }
 }

@@ -8,10 +8,8 @@ import Content from '@/components/Content';
 import Text from '@/components/Text';
 import ScrollNavLink from '@/components/links/ScrollNavLink';
 import headerStyles from '@/styles/components/header/Header.module.css';
-import sideNavStyles from '@/styles/components/header/SideNavigation.module.css';
 import dynamic from 'next/dynamic';
-import NavLink from '@/components/links/NavLink';
-import Card from '@/components/Card';
+
 const ThemeButton = dynamic(() => import('@/components/buttons/ThemeButton'), {
   ssr: false,
 });

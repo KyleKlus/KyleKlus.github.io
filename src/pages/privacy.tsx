@@ -10,12 +10,6 @@ import Main from '@/components/Main';
 import ScrollNavLink from '@/components/links/ScrollNavLink';
 import styles from '@/styles/Privacy.module.css';
 import headerStyles from '@/styles/components/header/Header.module.css';
-import footerStyles from '@/styles/components/footer/Footer.module.css';
-import sideNavStyles from '@/styles/components/header/SideNavigation.module.css';
-import NavLink from '@/components/links/NavLink';
-import Link from 'next/link';
-import Card from '@/components/Card';
-
 
 const ThemeButton = dynamic(() => import('@/components/buttons/ThemeButton'), {
   ssr: false,

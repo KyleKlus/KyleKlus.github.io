@@ -102,15 +102,18 @@ export default function Home() {
           </div>
         </Content>
         <Content id="portfolioPage" className={[homeStyles.portfolioPage, 'applyHeaderOffset'].join(' ')}>
-          <Text>
-            <br />
-            <br />
-            <h1 className={[textStyles.left].join(' ')}>Portfolio 🪄</h1>
-          </Text>
+          <h1 className={[textStyles.left].join(' ')}>Portfolio 🪄</h1>
           <div className={[homeStyles.portfolioCardWrapper].join(' ')}>
+            <h2 className={[homeStyles.leftHeading].join(' ')}>Webapps 🔗</h2>
+
+            <PortfolioCard image={receiptManagerPic} alt='Receipt Manager Promo Screenshot'>
+              <h4>Receipt Manager</h4>
+              <Link href={'https://github.com/MajorEnkidu/receipt-manager'}>The receipt manager</Link> is a web app, which helps you calculate the amount of money a person gets from another person, when they and the other person have an occasion where both paid for some expenses and then need to split the bills again.
+            </PortfolioCard>
+            <h2 className={[homeStyles.leftHeading].join(' ')}>Themes 🎨</h2>
             <PortfolioCard image={solitudeVSCPic} alt='Solitude Promo Screenshot'>
               <h4>&quot;Solitude&quot; Theme for Visual Studio Code </h4>
-              <Link href={'https://github.com/MajorEnkidu/solitude-vs-code-color-theme'}>Solitude</Link> is a custom dark theme for Visual Studio Code that features 3 accent colors (red, green, blue) and 2 different brightness levels to choose from.
+              <Link href={'https://github.com/MajorEnkidu/solitude-vs-code-color-theme'}>Solitude</Link> is a dark theme for Visual Studio Code that features 3 accent colors (red, green, blue) and 2 different brightness levels to choose from.
             </PortfolioCard>
 
             <PortfolioCard image={solitudePic} alt='Solitude Promo Screenshot'>
@@ -120,18 +123,14 @@ export default function Home() {
 
             <PortfolioCard image={redSolitudePic} alt='Solitude Promo Screenshot'>
               <h4>&quot;Red Solitude&quot; Theme for Visual Studio Code </h4>
-              <Link href={'https://marketplace.visualstudio.com/items?itemName=MajorEnkidu.red-solitude'}>Red Solitude</Link> is a dark theme with a green-blueish tint. It uses a <mark className='accent-marker'>red</mark> accent color and has a colorful syntax highlighting.
+              <Link href={'https://marketplace.visualstudio.com/items?itemName=MajorEnkidu.red-solitude'}>Red Solitude</Link> is a very dark theme with a green-blueish tint. It uses a <mark className='accent-marker'>red</mark> accent color and has a colorful syntax highlighting.
             </PortfolioCard>
 
-            <PortfolioCard image={receiptManagerPic} alt='Receipt Manager Promo Screenshot'>
-              <h4>Receipt Manager</h4>
-              <Link href={'https://github.com/MajorEnkidu/receipt-manager'}>The receipt manager</Link> is a web app, which helps you calculate the amount of money a person gets from another person, when they and the other person have an occasion where both paid for some expenses and then need to split the bills again.
-            </PortfolioCard>
           </div>
         </Content>
         <Content id="aboutPage" className={[homeStyles.aboutPage, homeStyles.dotted].join(' ')}>
           <div className={homeStyles.aboutPageBGColor}>
-            <Text>
+            <Text  className={homeStyles.aboutPageText}>
               <br />
               <h1 >About Me 🧑🏻‍💻</h1>
               <br />
