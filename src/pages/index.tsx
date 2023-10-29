@@ -129,14 +129,14 @@ export default function Home() {
           </div>
         </Content>
         <Content id="aboutPage" className={[homeStyles.aboutPage, homeStyles.dotted].join(' ')}>
-          <div className={homeStyles.aboutPageBGColor}>
+          <div className={homeStyles.aboutPageBG}>
             <Text  className={homeStyles.aboutPageText}>
               <br />
               <h1 >About Me 🧑🏻‍💻</h1>
               <br />
               <p>Hi there! I&apos;m Kyle Klus, a free time software developer and a student at the Leibniz University of Hanover, where I&apos;m pursuing a degree in technical computer science.</p>
               <br />
-              <p>I love coding in various languages such as React, C/C++, Java and Python. I also enjoy woodworking and DIY projects in my free time. When I&apos;m not coding, you can find me in my workshop, crafting woodworking and in general DIY projects with my own hands.</p>
+              <p>I love coding in various languages such as React, C/C++, Java and Python. I also enjoy woodworking and DIY projects in my free time. When I&apos;m not coding, you can find me in my workshop, crafting stuff, woodworking or in general doing DIY projects.</p>
               <br />
               <p>Currently, I work as a part-time frontend developer for the &quot;Finanz Informatik&quot;, where I create user-friendly WebParts for Microsoft SharePoint sites. And when I need a break from all that, I like to cook delicious meals for myself and my friends. Whether it&apos;s software development, woodworking or cooking, I always strive to do my best and have fun along the way. </p>
               <br />
