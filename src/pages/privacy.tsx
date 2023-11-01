@@ -101,7 +101,7 @@ export default function PrivacyPage() {
             <ul>
               <li><strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Cookies Policy) refers to Kyle Klus | Website.</li>
               <li><strong>Cookies</strong> means small files that are placed on Your computer, mobile device or any other device by a website, containing details of your browsing history on that website among its many uses.</li>
-              <li><strong>Website</strong> refers to Kyle Klus | Website, accessible from <a href="https://majorenkidu.github.io/" rel="external nofollow noopener noreferrer" target="_blank">https://majorenkidu.github.io/</a></li>
+              <li><strong>Website</strong> refers to Kyle Klus | Website, accessible from <a href="https://kyleklus.github.io/" rel="external nofollow noopener noreferrer" target="_blank">https://kyleklus.github.io/</a></li>
               <li><strong>You</strong> means the individual accessing or using the Website, or a company, or any legal entity on behalf of which such individual is accessing or using the Website, as applicable.</li>
             </ul>
             <br />

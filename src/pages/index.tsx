@@ -108,17 +108,17 @@ export default function Home() {
 
             <PortfolioCard image={receiptManagerPic} alt='Receipt Manager Promo Screenshot'>
               <h4>Receipt Manager</h4>
-              <Link href={'https://github.com/MajorEnkidu/receipt-manager'}>The receipt manager</Link> is a web app, which helps you calculate the amount of money a person gets from another person, when they and the other person have an occasion where both paid for some expenses and then need to split the bills again.
+              <Link href={'https://github.com/KyleKlus/receipt-manager'}>The receipt manager</Link> is a web app, which helps you calculate the amount of money a person gets from another person, when they and the other person have an occasion where both paid for some expenses and then need to split the bills again.
             </PortfolioCard>
             <h2 className={[homeStyles.leftHeading].join(' ')}>Themes 🎨</h2>
             <PortfolioCard image={solitudeVSCPic} alt='Solitude Promo Screenshot'>
               <h4>&quot;Solitude&quot; Theme for Visual Studio Code </h4>
-              <Link href={'https://github.com/MajorEnkidu/solitude-vs-code-color-theme'}>Solitude</Link> is a dark theme for Visual Studio Code that features 3 accent colors (red, green, blue) and 2 different brightness levels to choose from.
+              <Link href={'https://github.com/KyleKlus/solitude-vs-code-color-theme'}>Solitude</Link> is a dark theme for Visual Studio Code that features 3 accent colors (red, green, blue) and 2 different brightness levels to choose from.
             </PortfolioCard>
 
             <PortfolioCard image={solitudePic} alt='Solitude Promo Screenshot'>
               <h4>&quot;Solitude&quot; Theme for Obsidian</h4>
-              <Link href={'https://github.com/MajorEnkidu/solitude-obsidian-theme'}>Solitude</Link> is a modern looking Obsidian theme, which is optimized for desktop, mobile and tablet. It is highly customizable via the <Link href={'https://github.com/mgmeyers/obsidian-style-settings'}>Style Settings</Link> Plugin.
+              <Link href={'https://github.com/KyleKlus/solitude-obsidian-theme'}>Solitude</Link> is a modern looking Obsidian theme, which is optimized for desktop, mobile and tablet. It is highly customizable via the <Link href={'https://github.com/mgmeyers/obsidian-style-settings'}>Style Settings</Link> Plugin.
             </PortfolioCard>
 
             <PortfolioCard image={redSolitudePic} alt='Solitude Promo Screenshot'>
