@@ -4,6 +4,8 @@ import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
 import Content from '@/components/Content';
 import Text from '@/components/Text';
+import Image from 'next/image';
+
 
 import Main from '@/components/Main';
 
@@ -22,6 +24,7 @@ import receiptManagerPic from '../../public/screenshot_receipt_manager.png';
 
 import Link from 'next/link';
 import PortfolioCard from '@/components/PortfolioCard';
+import Logo from '@/components/header/Logo';
 
 const ThemeButton = dynamic(() => import('@/components/buttons/ThemeButton'), {
   ssr: false,
@@ -130,18 +133,46 @@ export default function Home() {
         </Content>
         <Content id="aboutPage" className={[homeStyles.aboutPage, homeStyles.dotted].join(' ')}>
           <div className={homeStyles.aboutPageBG}>
-            <Text  className={homeStyles.aboutPageText}>
+            <div className={homeStyles.aboutPageInfo}>
+            <Image
+              src={process.env.basePath + "/KK_Profile_Photo.jpg"}
+              alt="KK Profile Image"
+              width={'150'}
+              height={'150'}
+              quality={100}
+              className={[homeStyles.aboutPageProfilePic].join(' ')} />
+              <h2 className={[homeStyles.aboutPageProfileName].join(' ')} >Kyle Klus</h2>
+              <p className={[homeStyles.aboutPageProfileSkillText].join(' ')}>Web Development 🔗</p>
+              <progress className={[homeStyles.aboutPageProfileSkillBar].join(' ')} max={100} value={84}></progress>
+              <p className={[homeStyles.aboutPageProfileSkillText].join(' ')}>Embedded Systems Dev. 🤖</p>
+              <progress className={[homeStyles.aboutPageProfileSkillBar].join(' ')} max={100} value={42}></progress>
+              <p className={[homeStyles.aboutPageProfileSkillText].join(' ')}>App Development 📱</p>
+              <progress className={[homeStyles.aboutPageProfileSkillBar].join(' ')} max={100} value={32}></progress>
+              <p className={[homeStyles.aboutPageProfileSkillText].join(' ')}>Programm Development 🧑🏻‍💻</p>
+              <progress className={[homeStyles.aboutPageProfileSkillBar].join(' ')} max={100} value={64}></progress>
+              <p className={[homeStyles.aboutPageProfileSkillText].join(' ')}>Building Stuff 🛠️</p>
+              <progress className={[homeStyles.aboutPageProfileSkillBar].join(' ')} max={100} value={75}></progress>
+              <p className={[homeStyles.aboutPageProfileSkillText].join(' ')}>Woodworking 🪚</p>
+              <progress className={[homeStyles.aboutPageProfileSkillBar].join(' ')} max={100} value={55}></progress>
+              <p className={[homeStyles.aboutPageProfileSkillText].join(' ')}>Perseverance 🚀</p>
+              <progress className={[homeStyles.aboutPageProfileSkillBar].join(' ')} max={100} value={100}></progress>
+            </div>
+            <Text className={homeStyles.aboutPageText}>
               <br />
-              <h1 >About Me 🧑🏻‍💻</h1>
+              <h2 >About Me 🧑🏻‍💻</h2>
+              <br />
               <br />
               <p>Hi there! I&apos;m Kyle Klus, a free time software developer and a student at the Leibniz University of Hanover, where I&apos;m pursuing a degree in technical computer science.</p>
               <br />
               <p>I love coding in various languages such as React, C/C++, Java and Python. I also enjoy woodworking and DIY projects in my free time. When I&apos;m not coding, you can find me in my workshop, crafting stuff, woodworking or in general doing DIY projects.</p>
               <br />
-              <p>Currently, I work as a part-time frontend developer for the &quot;Finanz Informatik&quot;, where I create user-friendly WebParts for Microsoft SharePoint sites. And when I need a break from all that, I like to cook delicious meals for myself and my friends. Whether it&apos;s software development, woodworking or cooking, I always strive to do my best and have fun along the way. </p>
+              <p>Currently, I work as a part-time frontend developer for the &quot;Finanz Informatik&quot;, where I create user-friendly WebParts for Microsoft SharePoint sites. And when I need a break from all that, I like to cook delicious meals for myself and my friends. </p>
+              <br />
+              <p>
+              Whether it&apos;s software development, woodworking or cooking, I always strive to do my best and have fun along the way. </p>
+              <br />
               <br />
               <p>Welcome to my website! 🎉</p>
-              <br />
               <br />
             </Text>
           </div>
