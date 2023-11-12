@@ -1,5 +1,9 @@
 /** @format */
 
+.portfolioPage hr {
+    border-color: var(--bg-color-40);
+}
+
 .heroPage,
 .aboutPage {
     justify-content: center;
