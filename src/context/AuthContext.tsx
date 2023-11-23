@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import React from 'react';
 import { UserCredential, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged, User, signInWithRedirect, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import auth from '@/services/firebaseAuth';
+import firebase_auth from '@/services/firebaseAuth';
 import { useRouter } from 'next/router';
 
 export interface IAuthContext {
@@ -15,8 +15,8 @@ export interface IAuthContext {
 const defaultValue: IAuthContext = {
     user: null,
     googleSignIn: () => { },
-    emailRegister: (email: string, password: string) => { return new Promise(()=>{});},
-    emailLogin: (email: string, password: string) => { return new Promise(()=>{});},
+    emailRegister: (email: string, password: string) => { return new Promise(() => { }); },
+    emailLogin: (email: string, password: string) => { return new Promise(() => { }); },
     logOut: () => { }
 }
 
@@ -28,23 +28,23 @@ const AuthProvider: React.FC<{ children: React.ReactNode }> = (props) => {
 
     const googleSignIn = () => {
         const provider: GoogleAuthProvider = new GoogleAuthProvider();
-        signInWithRedirect(auth, provider);
+        signInWithRedirect(firebase_auth, provider);
     };
 
     const emailRegister = (email: string, password: string) => {
-        return createUserWithEmailAndPassword(auth, email, password);
+        return createUserWithEmailAndPassword(firebase_auth, email, password);
     };
 
     const emailLogin = (email: string, password: string) => {
-        return signInWithEmailAndPassword(auth, email, password);
+        return signInWithEmailAndPassword(firebase_auth, email, password);
     };
 
     const logOut = () => {
-        signOut(auth);
+        signOut(firebase_auth);
     }
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (currentUser: User | null) => {
+        const unsubscribe = onAuthStateChanged(firebase_auth, (currentUser: User | null) => {
             setUser(currentUser);
         });
         return () => unsubscribe();
@@ -55,6 +55,6 @@ const AuthProvider: React.FC<{ children: React.ReactNode }> = (props) => {
 
 export default AuthProvider;
 
-export const UserAuth = () => {
+export const useAuth = () => {
     return useContext(AuthContext);
 }

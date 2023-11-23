@@ -1,6 +1,7 @@
 /** @format */
 'use client';
 import AuthProvider from '@/context/AuthContext';
+import DataBaseProvider from '@/context/DatabaseContext';
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import { Fira_Code } from "next/font/google";
@@ -19,7 +20,9 @@ export default function App({ Component, pageProps }: AppProps) {
         }
       `}</style>
       <AuthProvider>
-      <Component {...pageProps} />
+        <DataBaseProvider>
+          <Component {...pageProps} />
+        </DataBaseProvider>
       </AuthProvider>
     </>
   );

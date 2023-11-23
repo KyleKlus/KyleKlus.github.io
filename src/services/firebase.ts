@@ -13,7 +13,7 @@ const firebaseConfig = {
 // Initialize Firebase
 let firebase_app: FirebaseApp = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
 
-export function initFirebase(){
+export function initFirebase() {
     firebase_app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
 }
 

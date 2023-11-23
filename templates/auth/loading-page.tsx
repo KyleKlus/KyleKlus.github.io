@@ -13,10 +13,10 @@ import styles from '@/styles/LoadingPage.module.css'
 import ScrollNavLink from '@/components/links/ScrollNavLink';
 import dynamic from 'next/dynamic';
 
-import { IAuthContext, UserAuth } from '@/context/AuthContext';
+import { IAuthContext, useAuth } from '@/context/AuthContext';
 import { useRouter } from 'next/router';
 import { GoogleAuthProvider, getRedirectResult } from 'firebase/auth';
-import auth from '@/services/firebaseAuth';
+import firebase_auth from '@/services/firebaseAuth';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
@@ -27,7 +27,7 @@ const ThemeButton = dynamic(() => import('@/components/buttons/ThemeButton'), {
 });
 
 export default function Home() {
-  const authContext: IAuthContext = UserAuth();
+  const authContext: IAuthContext = useAuth();
   const router = useRouter();
   // TODO: redirect if wrong use of loading page
   // const timerRef = useRef<NodeJS.Timeout>();
@@ -43,7 +43,7 @@ export default function Home() {
     }
   });
 
-  getRedirectResult(auth).then((result) => {
+  getRedirectResult(firebase_auth).then((result) => {
     // This gives you a Google Access Token. You can use it to access Google APIs.
     if (result !== null) {
       // clearTimeout(timerRef.current);

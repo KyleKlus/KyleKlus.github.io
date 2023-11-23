@@ -16,9 +16,9 @@ import Image from 'next/image';
 import Card from '@/components/Card';
 
 import { initFirebase } from '@/services/firebase';
-import { IAuthContext, UserAuth } from '@/context/AuthContext';
+import { IAuthContext, useAuth } from '@/context/AuthContext';
 import { getRedirectResult, GoogleAuthProvider, UserCredential } from 'firebase/auth';
-import auth from '@/services/firebaseAuth';
+import firebase_auth from '@/services/firebaseAuth';
 import { useRouter } from 'next/router';
 
 import googleLogo from '../../../public/google.png';
@@ -36,10 +36,10 @@ export default function Home() {
   const [errorMsg, setErrorMsg] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  const authContext: IAuthContext = UserAuth();
+  const authContext: IAuthContext = useAuth();
   const router = useRouter();
 
-  getRedirectResult(auth).then((result) => {
+  getRedirectResult(firebase_auth).then((result) => {
     // This gives you a Google Access Token. You can use it to access Google APIs.
     if (result === null) { return; }
     const credential = GoogleAuthProvider.credentialFromResult(result);
