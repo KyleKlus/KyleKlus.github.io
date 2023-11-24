@@ -5,7 +5,7 @@
 
 const nextConfig = {
   reactStrictMode: true,
-  output: 'export',
+  // output: 'export',
   basePath: '',
   env: {
     basePath: '',
