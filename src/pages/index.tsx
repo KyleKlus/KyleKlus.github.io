@@ -6,7 +6,6 @@ import Content from '@/components/Content';
 import Text from '@/components/Text';
 import Image from 'next/image';
 
-
 import Main from '@/components/Main';
 
 import textStyles from '@/styles/components/Text.module.css';
@@ -88,7 +87,7 @@ export default function Home() {
       </Header>
       <Main>
         <div id={'top'}></div>
-        <Content id="heroPage" className={[homeStyles.heroPage, homeStyles.dotted].join(' ')}>
+        <Content id="heroPage" className={[homeStyles.heroPage, 'dotted'].join(' ')}>
           <div className={homeStyles.slideInWrapper}>
             <p className={[homeStyles.xxLarge, textStyles.left, homeStyles.slideInRight].join(' ')}>Hi there👋, I am Kyle!</p>
             <br />
@@ -111,7 +110,7 @@ export default function Home() {
 
             <PortfolioCard image={receiptManagerPic} alt='Receipt Manager Promo Screenshot'>
               <h4>Receipt Manager</h4>
-              <Link href={'https://github.com/KyleKlus/receipt-manager'}>The receipt manager</Link> is a web app, which helps you calculate the amount of money a person gets from another person, when they and the other person have an occasion where both paid for some expenses and then need to split the bills again.
+              The <Link href={'https://github.com/KyleKlus/receipt-manager'}>receipt manager</Link> is a web app, which helps you calculate the amount of money a person gets from another person, when they and the other person have an occasion where both paid for some expenses and then need to split the bills again.
             </PortfolioCard>
             <h2 className={[homeStyles.leftHeading].join(' ')}>Themes 🎨</h2>
             <PortfolioCard image={solitudeVSCPic} alt='Solitude Promo Screenshot'>
@@ -131,7 +130,7 @@ export default function Home() {
 
           </div>
         </Content>
-        <Content id="aboutPage" className={[homeStyles.aboutPage, homeStyles.dotted].join(' ')}>
+        <Content id="aboutPage" className={[homeStyles.aboutPage, 'dotted'].join(' ')}>
           <div className={homeStyles.aboutPageBG}>
             <div className={homeStyles.aboutPageInfo}>
               <div className={[homeStyles.aboutPage_firstBreak].join(' ')}>
