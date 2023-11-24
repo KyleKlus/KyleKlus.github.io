@@ -91,7 +91,7 @@ export default function PrivacyPage() {
               <li>use the materials for any commercial purpose or for any public display;</li>
               <li>attempt to reverse engineer any software contained on Kyle Klus&apos;s Website;</li>
               <li>remove any copyright or other proprietary notations from the materials; or</li>
-              <li>transferring the materials to another person or &quot;mirror&quot; the materials on any other server;</li>
+              <li>transferring the materials to another person or &quot;mirror&quot; the materials on any other server.</li>
             </ul>
 
             <p>This will let Kyle Klus to terminate upon violations of any of these restrictions. Upon termination, your viewing right will also be terminated and you should destroy any downloaded materials in your possession whether it is printed or electronic format. These Terms of Service has been created with the help of the <a href="https://www.termsofservicegenerator.net">Terms Of Service Generator</a>.</p>
