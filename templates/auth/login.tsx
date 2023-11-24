@@ -16,9 +16,9 @@ import Image from 'next/image';
 import Card from '@/components/Card';
 import { getRedirectResult, GoogleAuthProvider, UserCredential } from 'firebase/auth';
 import { useRouter } from 'next/router';
-import { IAuthContext, useAuth } from '@/context/AuthContext';
-import { initFirebase } from '@/services/firebase';
-import firebase_auth from '@/services/firebaseAuth';
+import { IAuthContext, useAuth } from 'templates/context/AuthContext';
+import { initFirebase } from 'templates/services/firebase';
+import firebase_auth from 'templates/services/firebaseAuth';
 
 import googleLogo from '../../../public/google.png';
 import { useState } from 'react';
