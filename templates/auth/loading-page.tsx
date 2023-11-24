@@ -13,10 +13,10 @@ import styles from '@/styles/LoadingPage.module.css'
 import ScrollNavLink from '@/components/links/ScrollNavLink';
 import dynamic from 'next/dynamic';
 
-import { IAuthContext, useAuth } from '@/context/AuthContext';
+import { IAuthContext, useAuth } from 'templates/context/AuthContext';
 import { useRouter } from 'next/router';
 import { GoogleAuthProvider, getRedirectResult } from 'firebase/auth';
-import firebase_auth from '@/services/firebaseAuth';
+import firebase_auth from 'templates/services/firebaseAuth';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 

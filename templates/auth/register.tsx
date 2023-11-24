@@ -15,10 +15,10 @@ import Image from 'next/image';
 
 import Card from '@/components/Card';
 
-import { initFirebase } from '@/services/firebase';
-import { IAuthContext, useAuth } from '@/context/AuthContext';
+import { initFirebase } from 'templates/services/firebase';
+import { IAuthContext, useAuth } from 'templates/context/AuthContext';
 import { getRedirectResult, GoogleAuthProvider, UserCredential } from 'firebase/auth';
-import firebase_auth from '@/services/firebaseAuth';
+import firebase_auth from 'templates/services/firebaseAuth';
 import { useRouter } from 'next/router';
 
 import googleLogo from '../../../public/google.png';
