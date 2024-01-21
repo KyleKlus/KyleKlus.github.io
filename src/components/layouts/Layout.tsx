@@ -22,14 +22,15 @@ const ThemeButton = dynamic(() => import('@/components/buttons/ThemeButton'), {
 });
 
 interface ILayoutProps {
-    className?: string
+    title?: string;
+    className?: string;
 }
 
 export default function Layout(props: React.PropsWithChildren<ILayoutProps>) {
     return (
         <>
             <Head>
-                <title>Kyle Klus | Website</title>
+                <title>Kyle Klus | {props.title !== undefined ? props.title : 'Website'}</title>
                 <meta
                     name="description"
                     content="Website of Kyle Klus."

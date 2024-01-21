@@ -10,7 +10,7 @@ interface IMarkdownImageProps {
 }
 
 export default function MarkdownImage(props: React.PropsWithChildren<IMarkdownImageProps>) {
-  return <div className={[styles.markdownImage, props.className].join(' ')}>
-    <img src={props.src} alt={props.alt} title={props.title}/>
-  </div>;
+  return <span className={[styles.markdownImage, props.className].join(' ')}>
+    <img src={props.src} alt={props.alt} title={props.title} />
+  </span>;
 }
