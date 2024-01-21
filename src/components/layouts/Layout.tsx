@@ -1,5 +1,5 @@
 /** @format */
-import styles from '@/styles/components/container/Layout.module.css';
+import styles from '@/styles/components/layouts/Layout.module.css';
 
 import Head from 'next/head';
 import Footer from '@/components/footer/Footer';
@@ -30,7 +30,7 @@ export default function Layout(props: React.PropsWithChildren<ILayoutProps>) {
     return (
         <>
             <Head>
-                <title>Kyle Klus | {props.title !== undefined ? props.title : 'Website'}</title>
+                <title>{'Kyle Klus | ' + props.title !== undefined ? props.title : 'Website'}</title>
                 <meta
                     name="description"
                     content="Website of Kyle Klus."
