@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 interface IPortfolioCardProps {
   className?: string;
-  image: StaticImageData;
+  image: StaticImageData | string;
   alt: string;
 }
 
