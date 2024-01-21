@@ -18,7 +18,7 @@ import dynamic from 'next/dynamic';
 import redSolitudePic from '../../public/redsolitude.png';
 import solitudePic from '../../public/solitude.png';
 import solitudeVSCPic from '../../public/screenshot_red.png';
-import receiptManagerPic from '../../public/projectPostFiles/ReceiptManagerBillEditor.png';
+import receiptManagerPic from 'https://kyleklus.github.io/projectPostFiles/ReceiptManagerBillEditor.png';
 
 
 import Link from 'next/link';
