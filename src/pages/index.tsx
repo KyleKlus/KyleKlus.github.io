@@ -106,7 +106,7 @@ export default function Home() {
           <div className={[homeStyles.portfolioCardWrapper].join(' ')}>
             <h2 className={[homeStyles.leftHeading].join(' ')}>Webapps 🔗</h2>
 
-            <PortfolioCard image={'https://kyleklus.github.io/projectPostFiles/ReceiptManagerBillEditor.png'} alt='Receipt Manager Promo Screenshot'>
+            <PortfolioCard image={'https://kyleklus.github.io/projects/postFiles/ReceiptManagerBillEditor.png'} alt='Receipt Manager Promo Screenshot'>
               <h4>Receipt Manager (<Link href={'https://github.com/KyleKlus/receipt-manager'}>GitRepo</Link>) </h4>
               The <Link href={'/projectPosts/coding/website/Receipt-Manager'}>receipt manager</Link> is a web app, which helps you calculate the amount of money a person gets from another person, when they and the other person have an occasion where both paid for some expenses and then need to split the bills again.
             </PortfolioCard>
