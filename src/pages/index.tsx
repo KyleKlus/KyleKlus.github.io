@@ -2,14 +2,14 @@
 import Head from 'next/head';
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
-import Content from '@/components/Content';
-import Text from '@/components/Text';
+import Content from '@/components/container/Content';
+import Text from '@/components/container/Text';
 import Image from 'next/image';
 
-import Main from '@/components/Main';
+import Main from '@/components/container/Main';
 
-import textStyles from '@/styles/components/Text.module.css';
-import homeStyles from '@/styles/Home.module.css';
+import textStyles from '@/styles/components/container/Text.module.css';
+import homeStyles from '@/styles/pages/Home.module.css';
 import headerStyles from '@/styles/components/header/Header.module.css';
 
 import ScrollNavLink from '@/components/links/ScrollNavLink';
@@ -18,11 +18,11 @@ import dynamic from 'next/dynamic';
 import redSolitudePic from '../../public/redsolitude.png';
 import solitudePic from '../../public/solitude.png';
 import solitudeVSCPic from '../../public/screenshot_red.png';
-import receiptManagerPic from '../../public/screenshot_receipt_manager.png';
+import receiptManagerPic from '../../public/projectPostFiles/ReceiptManagerBillEditor.png';
 
 
 import Link from 'next/link';
-import PortfolioCard from '@/components/PortfolioCard';
+import PortfolioCard from '@/components/container/PortfolioCard';
 import Logo from '@/components/header/Logo';
 
 const ThemeButton = dynamic(() => import('@/components/buttons/ThemeButton'), {
@@ -104,28 +104,28 @@ export default function Home() {
           </div>
         </Content>
         <Content id="portfolioPage" className={[homeStyles.portfolioPage, 'applyHeaderOffset'].join(' ')}>
-          <h1 className={[textStyles.left].join(' ')}>Portfolio 🪄</h1>
+          <h1 className={[textStyles.center].join(' ')}>Portfolio 🪄</h1>
           <div className={[homeStyles.portfolioCardWrapper].join(' ')}>
             <h2 className={[homeStyles.leftHeading].join(' ')}>Webapps 🔗</h2>
 
             <PortfolioCard image={receiptManagerPic} alt='Receipt Manager Promo Screenshot'>
-              <h4>Receipt Manager</h4>
-              The <Link href={'https://github.com/KyleKlus/receipt-manager'}>receipt manager</Link> is a web app, which helps you calculate the amount of money a person gets from another person, when they and the other person have an occasion where both paid for some expenses and then need to split the bills again.
+              <h4>Receipt Manager (<Link href={'https://github.com/KyleKlus/receipt-manager'}>GitRepo</Link>) </h4>
+              The <Link href={'/projectPosts/coding/website/Receipt-Manager'}>receipt manager</Link> is a web app, which helps you calculate the amount of money a person gets from another person, when they and the other person have an occasion where both paid for some expenses and then need to split the bills again.
             </PortfolioCard>
             <h2 className={[homeStyles.leftHeading].join(' ')}>Themes 🎨</h2>
             <PortfolioCard image={solitudeVSCPic} alt='Solitude Promo Screenshot'>
-              <h4>&quot;Solitude&quot; Theme for Visual Studio Code </h4>
-              <Link href={'https://github.com/KyleKlus/solitude-vs-code-color-theme'}>Solitude</Link> is a dark theme for Visual Studio Code that features 3 accent colors (red, green, blue) and 2 different brightness levels to choose from.
+              <h4>&quot;Solitude&quot; Theme for Visual Studio Code (<Link href={'https://github.com/KyleKlus/solitude-vs-code-color-theme'}>GitRepo</Link>)</h4>
+              Solitude is a dark theme for Visual Studio Code that features 3 accent colors (red, green, blue) and 2 different brightness levels to choose from.
             </PortfolioCard>
 
             <PortfolioCard image={solitudePic} alt='Solitude Promo Screenshot'>
-              <h4>&quot;Solitude&quot; Theme for Obsidian</h4>
-              <Link href={'https://github.com/KyleKlus/solitude-obsidian-theme'}>Solitude</Link> is a modern looking Obsidian theme, which is optimized for desktop, mobile and tablet. It is highly customizable via the <Link href={'https://github.com/mgmeyers/obsidian-style-settings'}>Style Settings</Link> Plugin.
+              <h4>&quot;Solitude&quot; Theme for Obsidian (<Link href={'https://github.com/KyleKlus/solitude-obsidian-theme'}>GitRepo</Link>)</h4>
+              Solitude is a modern looking Obsidian theme, which is optimized for desktop, mobile and tablet. It is highly customizable via the <Link href={'https://github.com/mgmeyers/obsidian-style-settings'}>Style Settings</Link> Plugin.
             </PortfolioCard>
 
             <PortfolioCard image={redSolitudePic} alt='Solitude Promo Screenshot'>
-              <h4>&quot;Red Solitude&quot; Theme for Visual Studio Code </h4>
-              <Link href={'https://marketplace.visualstudio.com/items?itemName=MajorEnkidu.red-solitude'}>Red Solitude</Link> is a very dark theme with a green-blueish tint. It uses a <mark className='accent-marker'>red</mark> accent color and has a colorful syntax highlighting.
+              <h4>&quot;Red Solitude&quot; Theme for Visual Studio Code (<Link href={'https://marketplace.visualstudio.com/items?itemName=MajorEnkidu.red-solitude'}>VSC Marketplace</Link>)</h4>
+              Red Solitude is a very dark theme with a green-blueish tint. It uses a <mark className='accent-marker'>red</mark> accent color and has a colorful syntax highlighting.
             </PortfolioCard>
 
           </div>
@@ -173,8 +173,8 @@ export default function Home() {
                     <progress className={[homeStyles.aboutPageProfileSkillBar].join(' ')} max={100} value={55}></progress>
                   </div>
                   <div className={[homeStyles.aboutPageSkillWrapper].join(' ')}>
-                  <p className={[homeStyles.aboutPageProfileSkillText].join(' ')}>Perseverance 🚀</p>
-                  <progress className={[homeStyles.aboutPageProfileSkillBar].join(' ')} max={100} value={100}></progress>
+                    <p className={[homeStyles.aboutPageProfileSkillText].join(' ')}>Perseverance 🚀</p>
+                    <progress className={[homeStyles.aboutPageProfileSkillBar].join(' ')} max={100} value={100}></progress>
                   </div>
                 </div>
               </div>

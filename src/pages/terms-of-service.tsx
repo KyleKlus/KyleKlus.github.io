@@ -4,11 +4,11 @@ import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
-import Content from '@/components/Content';
-import Text from '@/components/Text';
-import Main from '@/components/Main';
+import Content from '@/components/container/Content';
+import Text from '@/components/container/Text';
+import Main from '@/components/container/Main';
 import ScrollNavLink from '@/components/links/ScrollNavLink';
-import styles from '@/styles/TermsOfService.module.css';
+import styles from '@/styles/pages/TermsOfService.module.css';
 import headerStyles from '@/styles/components/header/Header.module.css';
 
 const ThemeButton = dynamic(() => import('@/components/buttons/ThemeButton'), {
