@@ -1,12 +1,13 @@
 /** @format */
 import fs from 'fs';
 
+
 import Head from 'next/head';
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
-import Content from '@/components/container/Content';
+import Content from '@/components/Content';
 
-import Main from '@/components/container/Main';
+import Main from '@/components/Main';
 
 import headerStyles from '@/styles/components/header/Header.module.css';
 
