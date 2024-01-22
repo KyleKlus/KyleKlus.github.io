@@ -15,13 +15,15 @@ interface IPortfolioCardProps {
 export default function PortfolioCard(props: React.PropsWithChildren<IPortfolioCardProps>) {
   return (
     <div className={[styles.portfolioCard].join(' ')}>
-      <Image
-        className={[styles.portfolioCardImg].join(' ')}
-        src={props.image} alt={props.alt}
-        priority={true}
-        loading={'eager'}
-        quality={100}
-      />
+      <div className={[styles.portfolioCardImg].join(' ')}>
+        <Image
+          src={props.image} alt={props.alt}
+          priority={true}
+          loading={'eager'}
+          quality={100}
+          fill
+        />
+      </div>
       <hr />
       <Text className={[styles.portfolioCardText].join(' ')}>
         {props.children}

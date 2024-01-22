@@ -98,7 +98,7 @@
 
 .aboutPage_thirdBreak,
 .aboutPage_fourthBreak,
-.aboutPage_secondBreak{
+.aboutPage_secondBreak {
     gap: 24px;
 }
 
@@ -221,6 +221,209 @@
     background-repeat: repeat;
     animation: slide-out-dotted 60s linear infinite;
 }
+
+@keyframes slide-left-rotate-right {
+    from {
+        rotate: 0deg;
+        translate: 0px;
+    }
+
+    25% {
+        rotate: 0.9deg;
+        translate: -5px;
+    }
+
+    60% {
+        rotate: 0deg;
+        translate: -8px;
+    }
+
+    80% {
+        rotate: 1.3deg;
+        translate: -4px;
+    }
+
+    to {
+        rotate: 0deg;
+        translate: 0px;
+    }
+}
+
+@keyframes slide-right-rotate-right {
+    from {
+        rotate: 0deg;
+        translate: 0px;
+    }
+
+    25% {
+        rotate: 1deg;
+        translate: 5px;
+    }
+
+    60% {
+        rotate: 0deg;
+        translate: 8px;
+    }
+
+    80% {
+        rotate: 1.5deg;
+        translate: 2px;
+    }
+
+    to {
+        rotate: 0deg;
+        translate: 0px;
+    }
+}
+
+@keyframes slide-right-rotate-left {
+    from {
+        rotate: 0deg;
+        translate: 0px;
+    }
+
+    25% {
+        rotate: -1.4deg;
+        translate: 5px;
+    }
+
+    60% {
+        rotate: 0deg;
+        translate: 8px;
+    }
+
+    80% {
+        rotate: -1deg;
+        translate: 4px;
+    }
+
+    to {
+        rotate: 0deg;
+        translate: 0px;
+    }
+}
+
+@keyframes slide-left-rotate-left {
+    from {
+        rotate: 0deg;
+        translate: 0px;
+    }
+
+    25% {
+        rotate: -1deg;
+        translate: -15px;
+    }
+
+    60% {
+        rotate: 0deg;
+        translate: -10px;
+    }
+
+    80% {
+        rotate: -1.5deg;
+        translate: -6px;
+    }
+
+    to {
+        rotate: 0deg;
+        translate: 0px;
+    }
+}
+
+.jiggleWrapper > * {
+    animation: slide-left-rotate-left 12s linear infinite;
+}
+
+.jiggleWrapper > *:nth-child(n) {
+    animation-name: slide-right-rotate-right;
+}
+
+.jiggleWrapper > *:nth-child(2n) {
+    animation-name: slide-right-rotate-left;
+}
+
+.jiggleWrapper > *:nth-child(3n) {
+    animation-name: slide-left-rotate-right;
+}
+
+.jiggleWrapper > *:nth-child(5n) {
+    animation-name: slide-left-rotate-left;
+}
+
+@keyframes glitch {
+
+    2%,
+    64% {
+        transform: translate(2px, 0) skew(0deg);
+    }
+
+    4%,
+    60% {
+        transform: translate(-2px, 0) skew(0deg);
+    }
+
+    62% {
+        transform: translate(0, 0) skew(5deg);
+    }
+}
+
+.glitchWrapper > * {
+    animation: glitch 1s linear infinite;
+}
+
+.glitchWrapper > *::before,
+.glitchWrapper > *::after {
+    content: attr(content);
+    position: absolute;
+    left: 0;
+}
+
+@keyframes glitchTop {
+
+    2%,
+    64% {
+        transform: translate(2px, -2px);
+    }
+
+    4%,
+    60% {
+        transform: translate(-2px, 2px);
+    }
+
+    62% {
+        transform: translate(13px, -1px) skew(-13deg);
+    }
+}
+
+.glitchWrapper > *::before {
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchBottom {
+
+    2%,
+    64% {
+        transform: translate(-2px, 0);
+    }
+
+    4%,
+    60% {
+        transform: translate(-2px, 0);
+    }
+
+    62% {
+        transform: translate(-22px, 5px) skew(21deg);
+    }
+}
+
+.glitchWrapper > *::after {
+    animation: glitchBottom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
 
 .blurredImageWrapper {
     width: 100%;
@@ -421,7 +624,7 @@
         font-size: large;
     }
 
-    .aboutPageProfileSkillText{
+    .aboutPageProfileSkillText {
         font-size: small;
     }
 

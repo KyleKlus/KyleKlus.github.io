@@ -86,19 +86,19 @@ export default function Home() {
       <Main>
         <div id={'top'}></div>
         <Content id="heroPage" className={[homeStyles.heroPage, 'dotted'].join(' ')}>
-          <div className={homeStyles.slideInWrapper}>
-            <p className={[homeStyles.xxLarge, textStyles.left, homeStyles.slideInRight].join(' ')}>Hi there👋, I am Kyle!</p>
+          <div className={homeStyles.jiggleWrapper}>
+            <p className={[homeStyles.xxLarge, textStyles.left].join(' ')} content={'Hi there👋, I am Kyle!'}>Hi there👋, I am Kyle!</p>
             <br />
             <br />
-            <p className={[homeStyles.xLarge, textStyles.right, homeStyles.slideInLeft].join(' ')}>I am a computer science student,</p>
-            <p className={[homeStyles.large, textStyles.left, homeStyles.slideInRight].join(' ')}>a passionate cook 🍳,</p>
+            <p className={[homeStyles.xLarge, textStyles.right].join(' ')} content={'I am a computer science student,'}>I am a computer science student,</p>
+            <p className={[homeStyles.large, textStyles.left].join(' ')} content={'a passionate cook 🍳,'}>a passionate cook 🍳,</p>
             <br />
             <br />
-            <p className={[homeStyles.xxLarge, textStyles.left, homeStyles.slideInRight].join(' ')}>a software developer🚀,</p>
+            <p className={[homeStyles.xxLarge, textStyles.left].join(' ')} content={'a software developer🚀,'}>a software developer🚀,</p>
             <br />
-            <p className={[homeStyles.xLarge, textStyles.center, homeStyles.slideInLeftToCenter].join(' ')}>a woodworking hobbyist</p>
+            <p className={[homeStyles.xLarge, textStyles.center].join(' ')} content={'a woodworking hobbyist'}>a woodworking hobbyist</p>
             <br />
-            <p className={[homeStyles.large, textStyles.right, homeStyles.slideInLeft].join(' ')}>and overall a DIY lover ❤️.</p>
+            <p className={[homeStyles.large, textStyles.right].join(' ')} content={'and overall a DIY lover ❤️.'}>and overall a DIY lover ❤️.</p>
           </div>
         </Content>
         <Content id="portfolioPage" className={[homeStyles.portfolioPage, 'applyHeaderOffset'].join(' ')}>
