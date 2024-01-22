@@ -223,17 +223,17 @@
 @keyframes slide-left-rotate-right {
     from {
         rotate: 0deg;
-        translate: 0px;
+        translate: 0px 0px;
     }
 
     25% {
         rotate: 0.9deg;
-        translate: -5px;
+        translate: -5px 2px;
     }
 
     60% {
         rotate: 0deg;
-        translate: -8px;
+        translate: -8px 3px;
     }
 
     80% {
@@ -243,24 +243,24 @@
 
     to {
         rotate: 0deg;
-        translate: 0px;
+        translate: 0px 0px;
     }
 }
 
 @keyframes slide-right-rotate-right {
     from {
         rotate: 0deg;
-        translate: 0px;
+        translate: 0px 0px;
     }
 
     25% {
         rotate: 1deg;
-        translate: 5px;
+        translate: 5px 2px;
     }
 
     60% {
         rotate: 0deg;
-        translate: 8px;
+        translate: 8px 3px;
     }
 
     80% {
@@ -270,7 +270,7 @@
 
     to {
         rotate: 0deg;
-        translate: 0px;
+        translate: 0px 0px;
     }
 }
 
@@ -282,12 +282,12 @@
 
     25% {
         rotate: -1.4deg;
-        translate: 5px;
+        translate: 5px -2px;
     }
 
     60% {
         rotate: 0deg;
-        translate: 8px;
+        translate: 8px -3px;
     }
 
     80% {
@@ -297,24 +297,24 @@
 
     to {
         rotate: 0deg;
-        translate: 0px;
+        translate: 0px 0px;
     }
 }
 
 @keyframes slide-left-rotate-left {
     from {
         rotate: 0deg;
-        translate: 0px;
+        translate: 0px 0px;
     }
 
     25% {
         rotate: -1deg;
-        translate: -15px;
+        translate: -15px -5px;
     }
 
     60% {
         rotate: 0deg;
-        translate: -10px;
+        translate: -10px -9px;
     }
 
     80% {
@@ -324,7 +324,7 @@
 
     to {
         rotate: 0deg;
-        translate: 0px;
+        translate: 0px 0px;
     }
 }
 
