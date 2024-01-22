@@ -45,9 +45,9 @@
 .aboutPageBG {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     width: min(950px, 90vw);
-    height: min(750px, 75vh);
+    min-height: min(750px, 75vh);
     border-radius: var(--border-radius);
     border: 1px solid var(--bg-color-40);
     background-color: var(--bg-color-translucent-05);
@@ -58,7 +58,6 @@
 
 .aboutPageInfo {
     width: 45%;
-    height: 100%;
     padding: 64px 32px 32px 32px;
     border-top-left-radius: var(--border-radius);
     border-bottom-left-radius: var(--border-radius);
@@ -143,7 +142,6 @@
 
 .aboutPageText {
     width: 60%;
-    height: 100%;
     padding: 32px;
 }
 
@@ -551,6 +549,7 @@
     .aboutPageInfo {
         width: 100%;
         border-radius: 0;
+        border-right: none;
         padding: 0;
     }
 

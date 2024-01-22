@@ -9,7 +9,7 @@ import Image from 'next/image';
 import Main from '@/components/container/Main';
 
 import textStyles from '@/styles/components/container/Text.module.css';
-import homeStyles from '@/styles/pages/Home.module.css';
+import homeStyles from '@/styles/website/pages/Home.module.css';
 import headerStyles from '@/styles/components/header/Header.module.css';
 
 import ScrollNavLink from '@/components/links/ScrollNavLink';
@@ -20,7 +20,7 @@ import solitudePic from '../../public/solitude.png';
 import solitudeVSCPic from '../../public/screenshot_red.png';
 
 import Link from 'next/link';
-import PortfolioCard from '@/components/container/PortfolioCard';
+import PortfolioCard from '@/components/website/container/PortfolioCard';
 import Logo from '@/components/header/Logo';
 
 const ThemeButton = dynamic(() => import('@/components/buttons/ThemeButton'), {
