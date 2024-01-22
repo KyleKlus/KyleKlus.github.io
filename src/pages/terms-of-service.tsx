@@ -2,17 +2,17 @@
 
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import Footer from '@/components/footer/Footer';
-import Header from '@/components/header/Header';
-import Content from '@/components/container/Content';
-import Text from '@/components/container/Text';
-import Main from '@/components/container/Main';
-import ScrollNavLink from '@/components/links/ScrollNavLink';
+import Footer from '@/lib/layouts/footer/Footer';
+import Header from '@/lib/layouts/header/Header';
+import Content from '@/lib/container/Content';
+import Text from '@/lib/container/Text';
+import Main from '@/lib/container/Main';
+import ScrollNavLink from '@/lib/interaction/links/ScrollNavLink';
 
-import styles from '@/styles/website/pages/TermsOfService.module.css';
-import headerStyles from '@/styles/components/header/Header.module.css';
+import styles from '@/styles/pages/TermsOfService.module.css';
+import headerStyles from '@/styles/lib/components/layouts/header/Header.module.css';
 
-const ThemeButton = dynamic(() => import('@/components/buttons/ThemeButton'), {
+const ThemeButton = dynamic(() => import('@/lib/interaction/forms/buttons/ThemeButton'), {
   ssr: false,
 });
 

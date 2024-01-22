@@ -1,18 +1,18 @@
 /** @format */
 import Head from 'next/head';
-import Footer from '@/components/footer/Footer';
-import Header from '@/components/header/Header';
-import Content from '@/components/container/Content';
-import Text from '@/components/container/Text';
+import Footer from '@/lib/layouts/footer/Footer';
+import Header from '@/lib/layouts/header/Header';
+import Content from '@/lib/container/Content';
+import Text from '@/lib/container/Text';
 import Image from 'next/image';
 
-import Main from '@/components/container/Main';
+import Main from '@/lib/container/Main';
 
-import textStyles from '@/styles/components/container/Text.module.css';
-import homeStyles from '@/styles/website/pages/Home.module.css';
-import headerStyles from '@/styles/components/header/Header.module.css';
+import textStyles from '@/styles/lib/components/container/Text.module.css';
+import homeStyles from '@/styles/pages/Home.module.css';
+import headerStyles from '@/styles/lib/components/layouts/header/Header.module.css';
 
-import ScrollNavLink from '@/components/links/ScrollNavLink';
+import ScrollNavLink from '@/lib/interaction/links/ScrollNavLink';
 import dynamic from 'next/dynamic';
 
 import redSolitudePic from '../../public/redsolitude.png';
@@ -20,10 +20,10 @@ import solitudePic from '../../public/solitude.png';
 import solitudeVSCPic from '../../public/screenshot_red.png';
 
 import Link from 'next/link';
-import PortfolioCard from '@/components/website/container/PortfolioCard';
-import Logo from '@/components/header/Logo';
+import PortfolioCard from '@/components/container/PortfolioCard';
+import Logo from '@/lib/layouts/header/Logo';
 
-const ThemeButton = dynamic(() => import('@/components/buttons/ThemeButton'), {
+const ThemeButton = dynamic(() => import('@/lib/interaction/forms/buttons/ThemeButton'), {
   ssr: false,
 });
 
