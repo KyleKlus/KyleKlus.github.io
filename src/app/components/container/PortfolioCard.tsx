@@ -1,5 +1,5 @@
 /** @format */
-import styles from '@/styles/components/container/PortfolioCard.module.css';
+import styles from './PortfolioCard.module.css';
 import { StaticImageData } from 'next/image';
 import Text from '@/lib/container/Text';
 import Image from 'next/image';

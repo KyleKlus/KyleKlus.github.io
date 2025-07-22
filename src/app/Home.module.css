@@ -11,11 +11,11 @@
 }
 
 
-.heroPage,
+/* .heroPage,
 .aboutPage,
 .portfolioPage {
     scroll-snap-align: start;
-}
+} */
 
 .portfolioPage {
     background-color: var(--bg-color-00);
@@ -129,12 +129,13 @@
     height: 10px;
 }
 
-.aboutPageProfileSkillBar::-webkit-progress-value {
+.aboutPageInfo progress::-moz-progress-bar,
+.aboutPageInfo progress::-webkit-progress-value {
     background: var(--color-accent-10);
     border-radius: 8px;
 }
 
-.aboutPageProfileSkillBar::-webkit-progress-bar {
+.aboutPageInfo progress::-webkit-progress-bar {
     background: var(--bg-color-00);
     border: 1px solid var(--bg-color-40);
     border-radius: 8px;
