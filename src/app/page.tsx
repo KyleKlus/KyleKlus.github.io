@@ -7,9 +7,10 @@ import homeStyles from './Home.module.css';
 
 import type { Metadata, Viewport } from 'next'
 
-import redSolitudePic from '../../public/redsolitude.png';
-import solitudePic from '../../public/solitude.png';
-import solitudeVSCPic from '../../public/screenshot_red.png';
+import redSolitudePic from './redsolitude.png';
+import solitudePic from './solitude.png';
+import solitudeVSCPic from './screenshot_red.png';
+import profilePic from './KK_Profile_Photo.jpg';
 import PortfolioCard from "./components/container/PortfolioCard";
 import Link from "next/link";
 import Image from 'next/image';
@@ -82,7 +83,7 @@ export default function Page() {
                     <div className={homeStyles.aboutPageInfo}>
                         <div className={[homeStyles.aboutPage_firstBreak].join(' ')}>
                             <Image
-                                src={process.env.basePath + "/KK_Profile_Photo.jpg"}
+                                src={profilePic}
                                 alt="KK Profile Image"
                                 width={'150'}
                                 height={'150'}

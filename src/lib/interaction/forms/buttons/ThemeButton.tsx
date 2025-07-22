@@ -5,6 +5,9 @@ import styles from './ThemeButton.module.css';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
+import lightModeSVG from './light-mode.svg';
+import darkModeSVG from './dark-mode.svg';
+
 interface IThemeButtonProps { }
 
 export default function ThemeButton(
@@ -32,7 +35,7 @@ export default function ThemeButton(
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
     >
       <Image
-        src={process.env.basePath + '/' + resolvedTheme + '-mode.svg'}
+        src={resolvedTheme === "dark" ? darkModeSVG : lightModeSVG}
         alt=""
         width={'16'}
         height={'16'}
