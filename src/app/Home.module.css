@@ -142,8 +142,8 @@
 }
 
 .aboutPageText {
-    width: 60%;
-    padding: 32px;
+    width: 60% !important;
+    padding: 32px !important;
 }
 
 @keyframes slide-out-dotted {
