@@ -16,7 +16,6 @@ export default function ThemeButton(
   const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-
   // Fix hydration issue
   useEffect(() => {
     setMounted(true);
@@ -26,12 +25,9 @@ export default function ThemeButton(
     return null; // Avoids hydration mismatch on SSR
   }
 
-  // const [activeTheme, setActiveTheme] = useState(document.body.dataset.theme);
-  // const inactiveTheme = activeTheme === 'light' ? 'dark' : 'light';
-
   return (
     <button
-      className={styles.themeButton}
+      className={[styles.themeButton, 'buttonClass'].join(' ')}
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
     >
       <Image
@@ -40,7 +36,7 @@ export default function ThemeButton(
         width={'16'}
         height={'16'}
         quality={100}
-      ></Image>
+      />
       {props.children}
     </button>
   );

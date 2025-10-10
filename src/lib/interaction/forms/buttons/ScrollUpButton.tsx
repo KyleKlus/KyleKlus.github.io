@@ -10,10 +10,10 @@ interface IScrollUpButtonProps {
 export default function ScrollUpButton(
   props: React.PropsWithChildren<IScrollUpButtonProps>
 ) {
-  const isVisibleClassName = props.isVisible ? ' ' + styles.isVisible : '';
+  const isVisibleClassName = props.isVisible ? styles.isVisible : '';
   return (
     <button
-      className={styles.scrollButton + isVisibleClassName}
+      className={['buttonClass', styles.scrollUpButton, isVisibleClassName].join(' ')}
       onClick={() => {
         const top = document.getElementById('top');
         if (top) { top.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" }); }

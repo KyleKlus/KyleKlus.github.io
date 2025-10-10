@@ -10,13 +10,6 @@
     position: relative;
 }
 
-
-/* .heroPage,
-.aboutPage,
-.portfolioPage {
-    scroll-snap-align: start;
-} */
-
 .portfolioPage {
     background-color: var(--bg-color-00);
     position: relative;
@@ -38,8 +31,54 @@
     justify-content: center;
     align-items: center;
     gap: 42px;
-    margin: 48px 0px 128px 0px;
+    margin-top: 48px;
     z-index: 1;
+}
+
+.tabContainer {
+    --tab-margin: 1rem;
+    width: calc(100% - 2 * var(--tab-margin));
+    margin: 0 var(--tab-margin);
+    border-color: var(--bg-color-40);
+}
+
+.tabContainer .tabItem .tabLink {
+    color: var(--bg-color-90);
+    box-shadow: none;
+
+    &:hover {
+        isolation: unset;
+        border-color: var(--bg-color-50);
+        color: var(--bg-color-90);
+    }
+
+    &[class*='active'] {
+        background-color: var(--bg-color-00);
+        isolation: unset;
+        border-color: var(--bg-color-50);
+        color: var(--bg-color-90);
+    }
+}
+
+.carousel {
+    --arrow-width: 42px;
+}
+
+.carousel > *:nth-child(2),
+.carousel > *:nth-child(3) {
+    max-width: var(--arrow-width);
+}
+
+.carousel.disabled > *:nth-child(2),
+.carousel.disabled > *:nth-child(3) {
+    filter: opacity(0.7);
+    pointer-events: none;
+}
+
+.carouselItem {
+    margin-left: var(--arrow-width);
+    margin-right: var(--arrow-width);
+    max-width: calc(100% - 2 * var(--arrow-width));
 }
 
 .aboutPageBG {
@@ -53,7 +92,6 @@
     background-color: var(--bg-color-translucent-05);
     box-shadow: var(--shadowElevation_4);
     margin-top: min(175px, 15vh);
-    margin-bottom: min(50px, 10vh);
 }
 
 .aboutPageInfo {
@@ -144,81 +182,6 @@
 .aboutPageText {
     width: 60% !important;
     padding: 32px !important;
-}
-
-@keyframes slide-out-dotted {
-    from {
-        --circle-pos-w: calc(calc(100vw - 6.5rem + var(--cross-width)) / 2);
-        --circle-pos-h: calc(calc(100vh - 6.5rem + var(--cross-width)) / 2);
-        background-size: 6.5rem 6.5rem;
-        background-position:
-            var(--circle-pos-w) var(--circle-pos-h),
-            var(--cross-pos-w) var(--cross-pos-h),
-            var(--cross-pos-w) var(--cross-pos-h);
-    }
-
-    25% {
-        background-size: 7rem 7rem;
-        background-position:
-            calc(calc(80vw - 7rem + var(--cross-width)) / 2) calc(calc(70vh - 7rem + var(--cross-width)) / 2),
-            calc(calc(80vw + var(--cross-arm-width)) / 2) calc(calc(70vh + var(--cross-arm-width)) / 2),
-            calc(calc(80vw + var(--cross-arm-width)) / 2) calc(calc(70vh + var(--cross-arm-width)) / 2);
-    }
-
-    60% {
-        background-size: 7.5rem 7.5rem;
-        background-position:
-            calc(calc(90vw - 7.5rem + var(--cross-width)) / 2) calc(calc(80vh - 7.5rem + var(--cross-width)) / 2),
-            calc(calc(90vw + var(--cross-arm-width)) / 2) calc(calc(80vh + var(--cross-arm-width)) / 2),
-            calc(calc(90vw + var(--cross-arm-width)) / 2) calc(calc(80vh + var(--cross-arm-width)) / 2);
-    }
-
-    80% {
-        background-size: 7rem 7rem;
-        background-position:
-            calc(calc(80vw - 7rem + var(--cross-width)) / 2) calc(calc(90vh - 7rem + var(--cross-width)) / 2),
-            calc(calc(80vw + var(--cross-arm-width)) / 2) calc(calc(90vh + var(--cross-arm-width)) / 2),
-            calc(calc(80vw + var(--cross-arm-width)) / 2) calc(calc(90vh + var(--cross-arm-width)) / 2);
-    }
-
-    to {
-        --circle-pos-w: calc(calc(100vw - 6.5rem + var(--cross-width)) / 2);
-        --circle-pos-h: calc(calc(100vh - 6.5rem + var(--cross-width)) / 2);
-        background-size: 6.5rem 6.5rem;
-        background-position:
-            var(--circle-pos-w) var(--circle-pos-h),
-            var(--cross-pos-w) var(--cross-pos-h),
-            var(--cross-pos-w) var(--cross-pos-h);
-    }
-
-
-    /* to {
-      background-position: calc(var(--cross-position) - 100vh) calc(var(--cross-position) - 100vw), calc(-100vh - var(--cross-arm-width)) calc(-100vw - var(--cross-arm-width)), calc(-100vh - var(--cross-arm-width)) calc(-100vw - var(--cross-arm-width));
-    } */
-}
-
-.dotted {
-    --cross-arm-width: .09rem;
-    --cross-width: calc(var(--cross-arm-width)*2);
-    --spacing: 6.5rem;
-
-    --circle-pos-w: calc(calc(100vw - var(--spacing) + var(--cross-width)) / 2);
-    --circle-pos-h: calc(calc(100vh - var(--spacing) + var(--cross-width)) / 2);
-
-    --cross-pos-w: calc(calc(100vw + var(--cross-arm-width)) / 2);
-    --cross-pos-h: calc(calc(100vh + var(--cross-arm-width)) / 2);
-
-    background-image:
-        radial-gradient(circle, transparent var(--cross-width), var(--bg-color-05) var(--cross-width)),
-        linear-gradient(var(--bg-color-70) var(--cross-arm-width), transparent var(--cross-arm-width)),
-        linear-gradient(90deg, var(--bg-color-70) var(--cross-arm-width), transparent var(--cross-arm-width));
-    background-size: var(--spacing) var(--spacing);
-    background-position:
-        var(--circle-pos-w) var(--circle-pos-h),
-        var(--cross-pos-w) var(--cross-pos-h),
-        var(--cross-pos-w) var(--cross-pos-h);
-    background-repeat: repeat;
-    animation: slide-out-dotted 60s linear infinite;
 }
 
 @keyframes slide-left-rotate-right {
