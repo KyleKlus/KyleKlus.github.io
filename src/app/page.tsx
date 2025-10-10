@@ -11,21 +11,13 @@ import redSolitudePic from './redsolitude.png';
 import solitudePic from './solitude.png';
 import solitudeVSCPic from './screenshot_red.png';
 import profilePic from './KK_Profile_Photo.jpg';
-import PortfolioCard from "./components/container/PortfolioCard";
+import PortfolioCard from "./_components/container/PortfolioCard";
 import Link from "next/link";
 import Image from 'next/image';
 import Text from '@/lib/container/Text';
+import { defaultSiteConfig } from "./defaultSiteConfig";
 
-export const metadata: Metadata = {
-    title: "Kyle Klus | Website 🚀",
-    description: "Website of Kyle Klus.",
-    openGraph: {
-        type: "website",
-        url: "https://kyleklus.de/",
-        title: "Kyle Klus | Website",
-        description: "Website of Kyle Klus.",
-    },
-}
+export const metadata: Metadata = { ...defaultSiteConfig.metadata.en };
 
 export const viewport: Viewport = {
     width: "device-width",
