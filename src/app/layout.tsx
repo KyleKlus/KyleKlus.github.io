@@ -55,17 +55,3 @@ export default function Layout(props: React.PropsWithChildren<ILayoutProps>) {
         </html>
     );
 }
-
-function isCurrentWindow(currentPath: string, buttonPath: string): boolean {
-    const currentPathName: string = currentPath.split('/').reverse()[0].replace('#', '');
-    const buttonPathName: string = buttonPath.split('/').reverse()[0].replace('#', '');
-
-    return (buttonPathName.length === 0 && currentPathName.length === 0) ||
-        (buttonPathName.length !== 0 && currentPathName.length !== 0 && buttonPathName.indexOf(currentPathName) !== -1);
-}
-
-function applyCurrentWindowStyle(currentPath: string, buttonPath: string): string {
-    return isCurrentWindow(currentPath, buttonPath)
-        ? styles.isCurrentWindow
-        : '';
-}

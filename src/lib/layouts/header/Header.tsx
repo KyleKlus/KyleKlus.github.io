@@ -12,6 +12,7 @@ import NavLink from '@/lib/interaction/links/NavLink';
 import HeaderNavigation from '@/lib/layouts/header/HeaderNavigation';
 import Logo from '@/lib/layouts/header/Logo';
 import SideNavigation from '@/lib/layouts/header/SideNavigation';
+import { defaultSiteConfig } from '@/app/defaultSiteConfig';
 
 interface IHeaderProps {
   overrideSideNavContent?: React.ReactNode,
@@ -117,22 +118,22 @@ export default function Header(props: React.PropsWithChildren<IHeaderProps>) {
               <h4>Other Sites</h4>
               <NavLink
                 className={sideNavStyles.sideNavLink}
-                pathName="https://kyleklus.de/projects"
+                pathName={defaultSiteConfig.projectsUrl}
                 displayText="Projects 🛠️"
               />
               <NavLink
                 className={sideNavStyles.sideNavLink}
-                pathName="https://kyleklus.de/Kyles-Cookbook/en"
+                pathName={defaultSiteConfig.cookbookENUrl}
                 displayText="Cookbook 🧑‍🍳 🇬🇧"
               />
               <NavLink
                 className={sideNavStyles.sideNavLink}
-                pathName="https://kyleklus.de/Kyles-Cookbook/de"
+                pathName={defaultSiteConfig.cookbookDEUrl}
                 displayText="Cookbook 🧑‍🍳 🇩🇪"
               />
               <NavLink
                 className={sideNavStyles.sideNavLink}
-                pathName="https://kyleklus.de/receipt-manager"
+                pathName={defaultSiteConfig.receiptManagerUrl}
                 displayText="Receipt Manager 🧾"
               />
               {props.addSideNavChildren !== undefined && props.addSideNavChildren.map((child) => {
@@ -145,7 +146,6 @@ export default function Header(props: React.PropsWithChildren<IHeaderProps>) {
           </>
         }
       </SideNavigation>
-
       <ScrollUpButton isVisible={!isScrollArrowHidden}></ScrollUpButton>
     </div>
   );

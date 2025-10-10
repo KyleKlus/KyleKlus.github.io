@@ -1,21 +1,19 @@
 /** @format */
-
-import Content from "@/lib/container/Content";
-
-import textStyles from '@/lib/container/Text.module.css';
-import homeStyles from './Home.module.css';
-
 import type { Metadata, Viewport } from 'next'
+import Link from "next/link";
+import Image from 'next/image';
+
+import PortfolioCard from "./_components/container/PortfolioCard";
+import Content from "@/lib/container/Content";
+import textStyles from '@/lib/container/Text.module.css';
+import Text from '@/lib/container/Text';
+import { defaultSiteConfig } from "./defaultSiteConfig";
+import homeStyles from './Home.module.css';
 
 import redSolitudePic from './redsolitude.png';
 import solitudePic from './solitude.png';
 import solitudeVSCPic from './screenshot_red.png';
 import profilePic from './KK_Profile_Photo.jpg';
-import PortfolioCard from "./_components/container/PortfolioCard";
-import Link from "next/link";
-import Image from 'next/image';
-import Text from '@/lib/container/Text';
-import { defaultSiteConfig } from "./defaultSiteConfig";
 
 export const metadata: Metadata = { ...defaultSiteConfig.metadata.en };
 
