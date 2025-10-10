@@ -6,6 +6,7 @@ import type { Metadata, Viewport } from 'next'
 import styles from './TermsOfService.module.css';
 import Text from '@/lib/container/Text';
 import { defaultSiteConfig } from "../defaultSiteConfig";
+import StyledLink from "@/lib/interaction/links/StyledLink";
 
 export const metadata: Metadata = {
     ...defaultSiteConfig.metadata.en,
@@ -34,7 +35,7 @@ export default function Page() {
 
                 <h2>1. Terms</h2>
 
-                <p>By accessing this Website, accessible from https://kyleklus.github.io/, you are agreeing to be bound by these Website Terms and Conditions of Use and agree that you are responsible for the agreement with any applicable local laws. If you disagree with any of these terms, you are prohibited from accessing this site. The materials contained in this Website are protected by copyright and trade mark law.</p>
+                <p>By accessing this Website, accessible from {defaultSiteConfig.url}, you are agreeing to be bound by these Website Terms and Conditions of Use and agree that you are responsible for the agreement with any applicable local laws. If you disagree with any of these terms, you are prohibited from accessing this site. The materials contained in this Website are protected by copyright and trade mark law.</p>
 
                 <h2>2. Use License</h2>
 
@@ -48,7 +49,7 @@ export default function Page() {
                     <li>transferring the materials to another person or &quot;mirror&quot; the materials on any other server.</li>
                 </ul>
 
-                <p>This will let Kyle Klus to terminate upon violations of any of these restrictions. Upon termination, your viewing right will also be terminated and you should destroy any downloaded materials in your possession whether it is printed or electronic format. These Terms of Service has been created with the help of the <a href="https://www.termsofservicegenerator.net">Terms Of Service Generator</a>.</p>
+                <p>This will let Kyle Klus to terminate upon violations of any of these restrictions. Upon termination, your viewing right will also be terminated and you should destroy any downloaded materials in your possession whether it is printed or electronic format. These Terms of Service has been created with the help of the <StyledLink href="https://www.termsofservicegenerator.net">Terms Of Service Generator</StyledLink>.</p>
 
                 <h2>3. Disclaimer</h2>
 

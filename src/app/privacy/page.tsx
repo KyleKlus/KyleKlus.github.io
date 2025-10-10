@@ -4,6 +4,7 @@ import Content from "@/lib/container/Content";
 import Text from '@/lib/container/Text';
 import { defaultSiteConfig } from "../defaultSiteConfig";
 import styles from './Privacy.module.css';
+import StyledLink from '@/lib/interaction/links/StyledLink';
 
 export const metadata: Metadata = {
     ...defaultSiteConfig.metadata.en,
@@ -32,7 +33,7 @@ export default function Page() {
                 <br />
                 <p>Last updated: March 09, 2023</p>
                 <br />
-                <p>This Cookies Policy explains what Cookies are and how We use them. You should read this policy so You can understand what type of cookies We use, or the information We collect using Cookies and how that information is used. This Cookies Policy has been created with the help of the <a href="https://www.termsfeed.com/cookies-policy-generator/" target="_blank" rel="noreferrer">TermsFeed Cookies Policy Generator</a>.</p>
+                <p>This Cookies Policy explains what Cookies are and how We use them. You should read this policy so You can understand what type of cookies We use, or the information We collect using Cookies and how that information is used. This Cookies Policy has been created with the help of the <StyledLink href="https://www.termsfeed.com/cookies-policy-generator/" target="_blank" rel="noreferrer">TermsFeed Cookies Policy Generator</StyledLink>.</p>
                 <br />
                 <p>Cookies do not typically contain any information that personally identifies a user, but personal information that we store about You may be linked to the information stored in and obtained from Cookies. For further information on how We use, store and keep your personal data secure, see our Privacy Policy.</p>
                 <p>We do not store sensitive personal information, such as mailing addresses, account passwords, etc. in the Cookies We use.</p>
@@ -53,7 +54,7 @@ export default function Page() {
                 <ul>
                     <li><strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Cookies Policy) refers to Kyle Klus | Website.</li>
                     <li><strong>Cookies</strong> means small files that are placed on Your computer, mobile device or any other device by a website, containing details of your browsing history on that website among its many uses.</li>
-                    <li><strong>Website</strong> refers to Kyle Klus | Website, accessible from <a href="https://kyleklus.github.io/" rel="external nofollow noopener noreferrer" target="_blank">https://kyleklus.github.io/</a></li>
+                    <li><strong>Website</strong> refers to Kyle Klus | Website, accessible from <StyledLink href={defaultSiteConfig.url} rel="external nofollow noopener noreferrer" target="_blank">{defaultSiteConfig.url}</StyledLink></li>
                     <li><strong>You</strong> means the individual accessing or using the Website, or a company, or any legal entity on behalf of which such individual is accessing or using the Website, as applicable.</li>
                 </ul>
                 <br />
@@ -89,16 +90,16 @@ export default function Page() {
                 <p>If You would like to delete Cookies or instruct your web browser to delete or refuse Cookies, please visit the help pages of your web browser.</p>
                 <ul>
                     <li>
-                        <p>For the Chrome web browser, please visit this page from Google: <a href="https://support.google.com/accounts/answer/32050" rel="external nofollow noopener noreferrer" target="_blank">https://support.google.com/accounts/answer/32050</a></p>
+                        <p>For the Chrome web browser, please visit this page from Google: <StyledLink href="https://support.google.com/accounts/answer/32050" rel="external nofollow noopener noreferrer" target="_blank">https://support.google.com/accounts/answer/32050</StyledLink></p>
                     </li>
                     <li>
-                        <p>For the Internet Explorer web browser, please visit this page from Microsoft: <a href="http://support.microsoft.com/kb/278835" rel="external nofollow noopener noreferrer" target="_blank">http://support.microsoft.com/kb/278835</a></p>
+                        <p>For the Internet Explorer web browser, please visit this page from Microsoft: <StyledLink href="http://support.microsoft.com/kb/278835" rel="external nofollow noopener noreferrer" target="_blank">http://support.microsoft.com/kb/278835</StyledLink></p>
                     </li>
                     <li>
-                        <p>For the Firefox web browser, please visit this page from Mozilla: <a href="https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored" rel="external nofollow noopener noreferrer" target="_blank">https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored</a></p>
+                        <p>For the Firefox web browser, please visit this page from Mozilla: <StyledLink href="https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored" rel="external nofollow noopener noreferrer" target="_blank">https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored</StyledLink></p>
                     </li>
                     <li>
-                        <p>For the Safari web browser, please visit this page from Apple: <a href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac" rel="external nofollow noopener noreferrer" target="_blank">https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac</a></p>
+                        <p>For the Safari web browser, please visit this page from Apple: <StyledLink href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac" rel="external nofollow noopener noreferrer" target="_blank">https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac</StyledLink></p>
                     </li>
                 </ul>
                 <p>For any other web browser, please visit your web browsers official web pages.</p>
@@ -106,14 +107,14 @@ export default function Page() {
                 <br />
                 <h2>More Information about Cookies</h2>
                 <br />
-                <p>You can learn more about cookies here: <a href="https://www.termsfeed.com/blog/cookies/" target="_blank" rel="noreferrer">All About Cookies by TermsFeed</a>.</p>
+                <p>You can learn more about cookies here: <StyledLink href="https://www.termsfeed.com/blog/cookies/" target="_blank" rel="noreferrer">All About Cookies by TermsFeed</StyledLink>.</p>
                 <br />
                 <br />
                 <h2>Contact Me</h2>
                 <br />
                 <p>If you have any questions about this Cookies Policy, You can contact us:</p>
                 <ul>
-                    <li>By email: kyle.klus.2@gmail.com</li>
+                    <li>By email: <StyledLink href={defaultSiteConfig.contactUrl} rel="external nofollow noopener noreferrer" target="_blank">{defaultSiteConfig.contactUrl.replace('mailto:', '')}</StyledLink></li>
                 </ul>
             </Text>
         </Content>
