@@ -1,7 +1,7 @@
 /** @format */
 import Content from "@/lib/container/Content";
 import textStyles from '@/lib/container/Text.module.css';
-import homeStyles from './Home.module.css';
+import homeStyles from '../../Home.module.css';
 
 export default function HeroPage() {
     return (

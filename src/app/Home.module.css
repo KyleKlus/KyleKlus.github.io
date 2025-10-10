@@ -31,8 +31,54 @@
     justify-content: center;
     align-items: center;
     gap: 42px;
-    margin: 48px 0px 128px 0px;
+    margin-top: 48px;
     z-index: 1;
+}
+
+.tabContainer {
+    --tab-margin: 1rem;
+    width: calc(100% - 2 * var(--tab-margin));
+    margin: 0 var(--tab-margin);
+    border-color: var(--bg-color-40);
+}
+
+.tabContainer .tabItem .tabLink {
+    color: var(--bg-color-90);
+    box-shadow: none;
+
+    &:hover {
+        isolation: unset;
+        border-color: var(--bg-color-50);
+        color: var(--bg-color-90);
+    }
+
+    &[class*='active'] {
+        background-color: var(--bg-color-00);
+        isolation: unset;
+        border-color: var(--bg-color-50);
+        color: var(--bg-color-90);
+    }
+}
+
+.carousel {
+    --arrow-width: 42px;
+}
+
+.carousel > *:nth-child(2),
+.carousel > *:nth-child(3) {
+    max-width: var(--arrow-width);
+}
+
+.carousel.disabled > *:nth-child(2),
+.carousel.disabled > *:nth-child(3) {
+    filter: opacity(0.7);
+    pointer-events: none;
+}
+
+.carouselItem {
+    margin-left: var(--arrow-width);
+    margin-right: var(--arrow-width);
+    max-width: calc(100% - 2 * var(--arrow-width));
 }
 
 .aboutPageBG {

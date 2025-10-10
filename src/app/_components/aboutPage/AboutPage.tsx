@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import Content from "@/lib/container/Content";
 import Text from '@/lib/container/Text';
-import homeStyles from './Home.module.css';
+import homeStyles from '../../Home.module.css';
 
 import profilePic from './KK_Profile_Photo.jpg';
 

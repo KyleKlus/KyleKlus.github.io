@@ -2,8 +2,9 @@
 
 
 .portfolioCard {
-  max-width: clamp(600px, 100%, 900px);
-  height: fit-content;
+  max-width: 820px;
+  width: 820px;
+  height: 200px;
 
   display: flex;
   flex-direction: row;
