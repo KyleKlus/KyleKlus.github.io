@@ -1,6 +1,6 @@
 /** @format */
 
-.scrollButton {
+.scrollUpButton {
   --button-padding: 18px;
   --button-width: 36px;
   --position-bottom: calc(var(--button-width));
@@ -26,18 +26,17 @@
   transition: background 200ms ease, transform 400ms ease, opacity 1200ms ease;
 }
 
-.scrollButton.isVisible {
+.scrollUpButton.isVisible {
   transform: translateY(0);
   opacity: 1;
 }
 
-.scrollButton .image {
+.scrollUpButton .image {
   position: absolute;
 }
 
 /* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-}
+@media (hover: hover) and (pointer: fine) {}
 
 @media (prefers-reduced-motion) {}
 

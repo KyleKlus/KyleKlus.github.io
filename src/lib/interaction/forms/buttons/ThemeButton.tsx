@@ -27,7 +27,7 @@ export default function ThemeButton(
 
   return (
     <button
-      className={styles.themeButton}
+      className={[styles.themeButton, 'buttonClass'].join(' ')}
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
     >
       <Image
