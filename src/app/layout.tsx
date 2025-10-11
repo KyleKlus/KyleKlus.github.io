@@ -29,7 +29,7 @@ export default function Layout(props: React.PropsWithChildren<ILayoutProps>) {
         <html style={{ fontFamily: firaCode.style.fontFamily }}>
             <body>
                 <ThemeProvider>
-                    <Header >
+                    <Header>
                         <NavLink
                             className={headerStyles.headerNavLink}
                             href={defaultSiteConfig.heropageUrl}

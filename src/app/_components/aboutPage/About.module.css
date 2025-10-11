@@ -101,9 +101,9 @@
     border-radius: 8px;
 }
 
-.aboutPageText {
-    width: 60% !important;
-    padding: 32px !important;
+.aboutPage .aboutPageText {
+    width: 60%;
+    padding: 32px;
 }
 
 .leftHeading {
@@ -149,12 +149,15 @@
 
 @media (prefers-reduced-motion) {}
 
-
-
 /* Mobile */
 @media (max-width: 900px) {
     .aboutPage {
-        height: 100vh;
+        padding: 0;
+    }
+
+    .aboutPageInfo {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
     }
 
     .aboutPageBG {
@@ -226,7 +229,7 @@
         border-right: 1px solid var(--bg-color-40);
     }
 
-    .aboutPageText {
+    .aboutPage .aboutPageText {
         width: 100%;
         margin-bottom: 32px;
     }
@@ -254,8 +257,6 @@
         font-size: 1.1rem;
     }
 }
-
-
 
 @media (max-width: 520px) {
 
