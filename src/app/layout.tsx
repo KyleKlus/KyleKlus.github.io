@@ -1,6 +1,6 @@
 /** @format */
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './default-look.css';
+import '@/lib/default-look.css';
 import './globals.css';
 import styles from './Layout.module.css';
 import headerStyles from '@/lib/layouts/header/Header.module.css'
@@ -10,10 +10,12 @@ import { Fira_Code } from "next/font/google";
 import Header from '@/lib/layouts/header/Header';
 import Main from '@/lib/container/Main';
 import Footer from '@/lib/layouts/footer/Footer';
-import ScrollNavLink from '@/lib/interaction/links/ScrollNavLink';
 import ThemeButton from '@/lib/interaction/forms/buttons/ThemeButton';
 
 import { ThemeProvider } from '@/lib/provider/theme-provider';
+import ScrollToTargetButton from '@/lib/interaction/forms/buttons/ScrollToTargetButton';
+import NavLink from '@/lib/interaction/links/NavLink';
+import { defaultSiteConfig } from './defaultSiteConfig';
 
 const firaCode = Fira_Code({ weight: '400', subsets: ['latin'] });
 
@@ -28,25 +30,23 @@ export default function Layout(props: React.PropsWithChildren<ILayoutProps>) {
             <body>
                 <ThemeProvider>
                     <Header >
-                        <ScrollNavLink
+                        <NavLink
                             className={headerStyles.headerNavLink}
-                            elementName="https://kyleklus.de/#heroPage"
-                            displayText="Home"
-                        />
-                        <ScrollNavLink
+                            href={defaultSiteConfig.heropageUrl}
+                        >Home</NavLink>
+                        <NavLink
                             className={headerStyles.headerNavLink}
-                            elementName="https://kyleklus.de/#portfolioPage"
-                            displayText="Portfolio"
-                        />
-                        <ScrollNavLink
+                            href={defaultSiteConfig.portfoliopageUrl}
+                        >Portfolio</NavLink>
+                        <NavLink
                             className={headerStyles.headerNavLink}
-                            elementName="https://kyleklus.de/#aboutPage"
-                            displayText="About"
-                        />
+                            href={defaultSiteConfig.aboutpageUrl}
+                        >About</NavLink>
                         <ThemeButton />
                     </Header >
                     <Main>
-                        <div id={'top'}></div>
+                        <ScrollToTargetButton targetElementId='top' />
+                        <div id={'top'} />
                         {props.children}
                         <Footer />
                     </Main>
