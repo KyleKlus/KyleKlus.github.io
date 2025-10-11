@@ -13,6 +13,7 @@ import Nav from "react-bootstrap/Nav";
 import { Carousel, CarouselItem, NavItem, NavLink } from "react-bootstrap";
 import { PortfolioTabs } from './PortfolioTabs';
 import { useTheme } from 'next-themes';
+import { defaultSiteConfig } from '@/app/defaultSiteConfig';
 
 export default function PortfolioPage() {
     const [activeKey, setActiveKey] = useState(PortfolioTabs.Webapps);
@@ -51,8 +52,10 @@ export default function PortfolioPage() {
                 >
                     <CarouselItem className={[styles.carouselItem].join(' ')}>
                         <PortfolioCard image={''} alt=''>
-                            <h4>Receipt Manager (<StyledLink href={'https://github.com/KyleKlus/receipt-manager'}>GitRepo</StyledLink>) </h4>
-                            The <StyledLink href={'https://kyleklus.de/projects/posts/coding/website/Receipt-Manager'}>receipt manager</StyledLink> is a web app, which helps you calculate the amount of money a person gets from another person, when they and the other person have an occasion where both paid for some expenses and then need to split the bills again.
+                            <h4>Receipt Manager (<StyledLink href={'https://github.com/KyleKlus/receipt-manager-tool'}>GitRepo</StyledLink>) </h4>
+                            The <StyledLink href={defaultSiteConfig.receiptManagerUrl}>receipt manager</StyledLink> is a web app, which helps you calculate the amount of money a person gets from another person, when they and the other person have an occasion where both paid for some expenses and then need to split the bills again.
+                            <br />
+                            There is also a more advanced version of the app, but because it is not finished yet, I only linked the simpler version here.
                         </PortfolioCard>
                     </CarouselItem>
                     <CarouselItem className={[styles.carouselItem].join(' ')}>

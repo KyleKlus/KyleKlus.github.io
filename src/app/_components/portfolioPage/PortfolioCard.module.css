@@ -4,7 +4,7 @@
 .portfolioCard {
   max-width: 820px;
   width: 820px;
-  height: 300px;
+  height: 250px;
 
   display: flex;
   flex-direction: row;
@@ -15,7 +15,7 @@
 }
 
 .portfolioCardImg {
-  width: calc(60% - 16px);
+  width: calc(50% - 16px);
   aspect-ratio: 16/9;
   border-radius: var(--border-radius);
   outline: 1px solid var(--bg-color-40);
@@ -28,20 +28,19 @@
 }
 
 .portfolioCardText {
-  padding: 0;
-  max-width: calc(40% - 16px);
+  padding: 0 !important;
+  /* max-width: calc(40% - 16px) !important; */
 }
 
 
-@media (max-width: 600px) {
-
+@media (max-width: 900px) {
   .portfolioCard {
     width: 95%;
+    height: auto;
   }
 
   .portfolioCardText > h4 {
     text-align: center;
-    font-size: medium;
   }
 
   .portfolioCard {
@@ -65,9 +64,8 @@
   }
 
   .portfolioCardText > h4 {
-    font-size: small;
+    font-size: medium;
   }
-
 
   .portfolioCardText {
     font-size: small;

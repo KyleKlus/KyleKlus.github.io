@@ -11,7 +11,6 @@
 
 .portfolioPage h1 {
     margin-top: 42px;
-    text-align: left;
     width: 100%;
     max-width: 750px;
     padding-left: 8px;
@@ -156,11 +155,14 @@
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 600px) {
+    .tabContainer .tabItem .tabLink {
+        font-size: small;
+    }
+
     .portfolioPage h1 {
-        margin-top: 22px;
-        padding-left: 16px;
         font-size: large;
+        margin-bottom: 22px;
     }
 
     .portfolioPage h2 {
