@@ -1,0 +1,341 @@
+.aboutPage {
+    justify-content: center;
+    position: relative;
+}
+
+.aboutPageBG {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: min(950px, 90vw);
+    min-height: min(750px, 75vh);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--bg-color-40);
+    background-color: var(--bg-color-translucent-05);
+    box-shadow: var(--shadowElevation_4);
+    margin-top: min(175px, 15vh);
+}
+
+.aboutPageInfo {
+    width: 45%;
+    padding: 64px 32px 32px 32px;
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+    border-right: 1px solid var(--bg-color-40);
+    background-color: var(--bg-color-20);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.aboutPage_firstBreak {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutPage_secondBreak {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutPage_thirdBreak,
+.aboutPage_fourthBreak,
+.aboutPageSkillWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutPage_thirdBreak,
+.aboutPage_fourthBreak,
+.aboutPage_secondBreak {
+    gap: 24px;
+}
+
+.aboutPageProfilePic {
+    border-radius: 50%;
+    outline: 1px solid var(--bg-color-40);
+    box-shadow: var(--shadowElevation_4);
+    margin-bottom: 32px;
+}
+
+.aboutPageProfileName {
+    border-bottom: 2px solid var(--bg-color-40);
+    width: 100%;
+    padding-bottom: 4px;
+    padding-left: 16px;
+    margin-bottom: 16px;
+}
+
+.aboutPageProfileSkillText {
+    text-align: left;
+    width: 90%;
+    padding-left: 16px;
+}
+
+.aboutPageProfileSkillBar {
+    border: 1px solid var(--bg-color-40);
+    border-radius: 8px;
+    width: 90%;
+    height: 10px;
+}
+
+.aboutPageInfo progress::-moz-progress-bar,
+.aboutPageInfo progress::-webkit-progress-value {
+    background: var(--color-accent-10);
+    border-radius: 8px;
+}
+
+.aboutPageInfo progress::-webkit-progress-bar {
+    background: var(--bg-color-00);
+    border: 1px solid var(--bg-color-40);
+    border-radius: 8px;
+}
+
+.aboutPageText {
+    width: 60% !important;
+    padding: 32px !important;
+}
+
+.leftHeading {
+    text-align: left;
+    width: 100%;
+    max-width: 750px;
+    border-bottom: 1px solid var(--bg-color-40);
+    padding: 8px 32px;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.xxLarge {
+    font-size: 2.8rem;
+}
+
+.xLarge {
+    font-size: 1.8rem;
+}
+
+.large {
+    font-size: 1.3rem;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {}
+
+@media (prefers-reduced-motion) {}
+
+
+
+/* Mobile */
+@media (max-width: 900px) {
+    .aboutPage {
+        height: 100vh;
+    }
+
+    .aboutPageBG {
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 0px;
+        border: none;
+        border-top: 1px solid var(--bg-color-40);
+    }
+}
+
+@media (max-width: 800px) {
+    .xxLarge {
+        font-size: 2.4rem;
+    }
+
+    .xLarge {
+        font-size: 1.5rem;
+    }
+
+    .large {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 750px) {}
+
+@media (max-width: 700px) {
+    .aboutPage {
+        height: auto;
+    }
+
+    .aboutPageBG {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .aboutPageInfo {
+        width: 100%;
+        border-radius: 0;
+        border-right: none;
+        padding: 0;
+    }
+
+    .aboutPage_firstBreak {
+        height: 100%;
+        width: 100%;
+        padding: 96px 32px 0 32px;
+    }
+
+    .aboutPage_secondBreak {
+        height: 100%;
+        padding: 0px 16px 42px 16px;
+        flex-direction: row;
+        justify-content: unset;
+        align-items: unset;
+        gap: unset;
+    }
+
+    .aboutPage_thirdBreak,
+    .aboutPage_fourthBreak {
+        height: 100%;
+        width: 100%;
+        padding: 0px 0px 24px 0px;
+    }
+
+    .aboutPage_thirdBreak {
+        border-right: 1px solid var(--bg-color-40);
+    }
+
+    .aboutPageText {
+        width: 100%;
+        margin-bottom: 32px;
+    }
+
+    .aboutPageProfileName {
+        border: none;
+        padding-left: 0;
+        text-align: center;
+    }
+
+
+}
+
+@media (max-width: 610px) {
+
+    .xxLarge {
+        font-size: 1.9rem;
+    }
+
+    .xLarge {
+        font-size: 1.4rem;
+    }
+
+    .large {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+@media (max-width: 520px) {
+
+    .aboutPageProfileName {
+        font-size: large;
+    }
+
+    .aboutPageProfileSkillText {
+        font-size: small;
+    }
+
+    .portfolioCardWrapper {
+        gap: 16px;
+        margin: 8px 0px 128px 0px;
+    }
+
+    .aboutPageText {
+        font-size: small;
+    }
+
+    .aboutPageText h1 {
+        font-size: medium;
+    }
+
+    .xxLarge {
+        font-size: 1.7rem;
+    }
+
+    .xLarge {
+        font-size: 1.2rem;
+    }
+
+    .large {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 470px) {
+    .xxLarge {
+        font-size: 1.6rem;
+    }
+
+    .xLarge {
+        font-size: 1.1rem;
+    }
+
+    .large {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .xxLarge {
+        font-size: 1.5rem;
+    }
+
+    .xLarge {
+        font-size: 1rem;
+    }
+
+    .large {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 370px) {
+    .xxLarge {
+        font-size: 1.3rem;
+    }
+
+    .xLarge {
+        font-size: .9rem;
+    }
+
+    .large {
+        font-size: .7rem;
+    }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 601px) and (max-width: 1120px) {}
+
+@media (prefers-color-scheme: dark) {}
