@@ -3,65 +3,65 @@ import Image from 'next/image';
 
 import Content from "@/lib/container/Content";
 import Text from '@/lib/container/Text';
-import homeStyles from '../../Home.module.css';
+import styles from './About.module.css';
 
 import profilePic from './KK_Profile_Photo.jpg';
 
 export default function AboutPage() {
     return (
-        <Content id="aboutPage" className={[homeStyles.aboutPage, 'dotted', 'applyBottomPadding'].join(' ')}>
-            <div className={homeStyles.aboutPageBG}>
-                <div className={homeStyles.aboutPageInfo}>
-                    <div className={[homeStyles.aboutPage_firstBreak].join(' ')}>
+        <Content id="aboutPage" className={[styles.aboutPage, 'dotted', 'applyBottomPadding'].join(' ')}>
+            <div className={styles.aboutPageBG}>
+                <div className={styles.aboutPageInfo}>
+                    <div className={[styles.aboutPage_firstBreak].join(' ')}>
                         <Image
                             src={profilePic}
                             alt="KK Profile Image"
                             width={'150'}
                             height={'150'}
                             quality={100}
-                            className={[homeStyles.aboutPageProfilePic].join(' ')}
+                            className={[styles.aboutPageProfilePic].join(' ')}
                         />
-                        <h2 className={[homeStyles.aboutPageProfileName].join(' ')} >Kyle Klus</h2>
+                        <h2 className={[styles.aboutPageProfileName].join(' ')} >Kyle Klus</h2>
                     </div>
-                    <div className={[homeStyles.aboutPage_secondBreak].join(' ')}>
-                        <div className={[homeStyles.aboutPage_thirdBreak].join(' ')}>
-                            <div className={[homeStyles.aboutPageSkillWrapper].join(' ')}>
-                                <p className={[homeStyles.aboutPageProfileSkillText].join(' ')}>Web Development 🔗</p>
-                                <progress className={[homeStyles.aboutPageProfileSkillBar].join(' ')} max={100} value={84}></progress>
+                    <div className={[styles.aboutPage_secondBreak].join(' ')}>
+                        <div className={[styles.aboutPage_thirdBreak].join(' ')}>
+                            <div className={[styles.aboutPageSkillWrapper].join(' ')}>
+                                <p className={[styles.aboutPageProfileSkillText].join(' ')}>Web Development 🔗</p>
+                                <progress className={[styles.aboutPageProfileSkillBar].join(' ')} max={100} value={84}></progress>
                             </div>
-                            <div className={[homeStyles.aboutPageSkillWrapper].join(' ')}>
-                                <p className={[homeStyles.aboutPageProfileSkillText].join(' ')}>Embedded Systems Dev. 🤖</p>
-                                <progress className={[homeStyles.aboutPageProfileSkillBar].join(' ')} max={100} value={42}></progress>
+                            <div className={[styles.aboutPageSkillWrapper].join(' ')}>
+                                <p className={[styles.aboutPageProfileSkillText].join(' ')}>Embedded Systems Dev. 🤖</p>
+                                <progress className={[styles.aboutPageProfileSkillBar].join(' ')} max={100} value={42}></progress>
                             </div>
-                            <div className={[homeStyles.aboutPageSkillWrapper].join(' ')}>
-                                <p className={[homeStyles.aboutPageProfileSkillText].join(' ')}>App Development 📱</p>
-                                <progress className={[homeStyles.aboutPageProfileSkillBar].join(' ')} max={100} value={32}></progress>
+                            <div className={[styles.aboutPageSkillWrapper].join(' ')}>
+                                <p className={[styles.aboutPageProfileSkillText].join(' ')}>App Development 📱</p>
+                                <progress className={[styles.aboutPageProfileSkillBar].join(' ')} max={100} value={32}></progress>
                             </div>
-                            <div className={[homeStyles.aboutPageSkillWrapper].join(' ')}>
-                                <p className={[homeStyles.aboutPageProfileSkillText].join(' ')}>Programm Development 🧑🏻‍💻</p>
-                                <progress className={[homeStyles.aboutPageProfileSkillBar].join(' ')} max={100} value={64}></progress>
+                            <div className={[styles.aboutPageSkillWrapper].join(' ')}>
+                                <p className={[styles.aboutPageProfileSkillText].join(' ')}>Programm Development 🧑🏻‍💻</p>
+                                <progress className={[styles.aboutPageProfileSkillBar].join(' ')} max={100} value={64}></progress>
                             </div>
                         </div>
-                        <div className={[homeStyles.aboutPage_fourthBreak].join(' ')}>
-                            <div className={[homeStyles.aboutPageSkillWrapper].join(' ')}>
-                                <p className={[homeStyles.aboutPageProfileSkillText].join(' ')}>Building Stuff 🛠️</p>
-                                <progress className={[homeStyles.aboutPageProfileSkillBar].join(' ')} max={100} value={75}></progress>
+                        <div className={[styles.aboutPage_fourthBreak].join(' ')}>
+                            <div className={[styles.aboutPageSkillWrapper].join(' ')}>
+                                <p className={[styles.aboutPageProfileSkillText].join(' ')}>Building Stuff 🛠️</p>
+                                <progress className={[styles.aboutPageProfileSkillBar].join(' ')} max={100} value={75}></progress>
                             </div>
-                            <div className={[homeStyles.aboutPageSkillWrapper].join(' ')}>
-                                <p className={[homeStyles.aboutPageProfileSkillText].join(' ')}>Woodworking 🪚</p>
-                                <progress className={[homeStyles.aboutPageProfileSkillBar].join(' ')} max={100} value={55}></progress>
-                            </div><div className={[homeStyles.aboutPageSkillWrapper].join(' ')}>
-                                <p className={[homeStyles.aboutPageProfileSkillText].join(' ')}>Plants 🌱</p>
-                                <progress className={[homeStyles.aboutPageProfileSkillBar].join(' ')} max={100} value={70}></progress>
+                            <div className={[styles.aboutPageSkillWrapper].join(' ')}>
+                                <p className={[styles.aboutPageProfileSkillText].join(' ')}>Woodworking 🪚</p>
+                                <progress className={[styles.aboutPageProfileSkillBar].join(' ')} max={100} value={55}></progress>
+                            </div><div className={[styles.aboutPageSkillWrapper].join(' ')}>
+                                <p className={[styles.aboutPageProfileSkillText].join(' ')}>Plants 🌱</p>
+                                <progress className={[styles.aboutPageProfileSkillBar].join(' ')} max={100} value={70}></progress>
                             </div>
-                            <div className={[homeStyles.aboutPageSkillWrapper].join(' ')}>
-                                <p className={[homeStyles.aboutPageProfileSkillText].join(' ')}>Perseverance 🚀</p>
-                                <progress className={[homeStyles.aboutPageProfileSkillBar].join(' ')} max={100} value={100}></progress>
+                            <div className={[styles.aboutPageSkillWrapper].join(' ')}>
+                                <p className={[styles.aboutPageProfileSkillText].join(' ')}>Perseverance 🚀</p>
+                                <progress className={[styles.aboutPageProfileSkillBar].join(' ')} max={100} value={100}></progress>
                             </div>
                         </div>
                     </div>
                 </div>
-                <Text className={homeStyles.aboutPageText}>
+                <Text className={styles.aboutPageText}>
                     <br />
                     <h2 >About Me 🧑🏻‍💻</h2>
                     <br />

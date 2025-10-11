@@ -1,0 +1,272 @@
+.portfolioPage hr {
+    border-color: var(--bg-color-40);
+}
+
+.portfolioPage {
+    background-color: var(--bg-color-00);
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolioPage h1 {
+    margin-top: 42px;
+    width: 100%;
+    max-width: 750px;
+    padding-left: 8px;
+}
+
+.portfolioCardWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 42px;
+    margin-top: 48px;
+    z-index: 1;
+}
+
+.tabContainer {
+    --tab-margin: 1rem;
+    width: calc(100% - 2 * var(--tab-margin));
+    margin: 0 var(--tab-margin);
+    border-color: var(--bg-color-40);
+}
+
+.tabContainer .tabItem .tabLink {
+    color: var(--bg-color-90);
+    box-shadow: none;
+
+    &:hover {
+        isolation: unset;
+        border-color: var(--bg-color-50);
+        color: var(--bg-color-90);
+    }
+
+    &[class*='active'] {
+        background-color: var(--bg-color-00);
+        isolation: unset;
+        border-color: var(--bg-color-50);
+        color: var(--bg-color-90);
+    }
+}
+
+.carousel {
+    --arrow-width: 42px;
+}
+
+.carousel > *:nth-child(2),
+.carousel > *:nth-child(3) {
+    max-width: var(--arrow-width);
+}
+
+.carousel.disabled > *:nth-child(2),
+.carousel.disabled > *:nth-child(3) {
+    filter: opacity(0.7);
+    pointer-events: none;
+}
+
+.carouselItem {
+    margin-left: var(--arrow-width);
+    margin-right: var(--arrow-width);
+    max-width: calc(100% - 2 * var(--arrow-width));
+}
+
+.blurredImageWrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.leftHeading {
+    text-align: left;
+    width: 100%;
+    max-width: 750px;
+    border-bottom: 1px solid var(--bg-color-40);
+    padding: 8px 32px;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.xxLarge {
+    font-size: 2.8rem;
+}
+
+.xLarge {
+    font-size: 1.8rem;
+}
+
+.large {
+    font-size: 1.3rem;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {}
+
+@media (prefers-reduced-motion) {}
+
+
+
+/* Mobile */
+@media (max-width: 900px) {}
+
+@media (max-width: 800px) {
+    .portfolioPage h1 {
+        font-size: x-large;
+    }
+
+    .portfolioPage h2 {
+        font-size: large;
+    }
+
+    .portfolioCardWrapper {
+        gap: 22px;
+        margin: 8px 0px 128px 0px;
+    }
+
+    .xxLarge {
+        font-size: 2.4rem;
+    }
+
+    .xLarge {
+        font-size: 1.5rem;
+    }
+
+    .large {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .tabContainer .tabItem .tabLink {
+        font-size: small;
+    }
+
+    .portfolioPage h1 {
+        font-size: large;
+        margin-bottom: 22px;
+    }
+
+    .portfolioPage h2 {
+        font-size: medium;
+    }
+
+    .portfolioCardWrapper {
+        gap: 22px;
+        margin: 8px 0px 128px 0px;
+    }
+}
+
+@media (max-width: 700px) {}
+
+@media (max-width: 610px) {
+    .xxLarge {
+        font-size: 1.9rem;
+    }
+
+    .xLarge {
+        font-size: 1.4rem;
+    }
+
+    .large {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+@media (max-width: 520px) {
+    .portfolioPage h1 {
+        font-size: medium;
+    }
+
+    .portfolioPage h2 {
+        font-size: small;
+    }
+
+    .aboutPageProfileSkillText {
+        font-size: small;
+    }
+
+    .portfolioCardWrapper {
+        gap: 16px;
+        margin: 8px 0px 128px 0px;
+    }
+
+    .xxLarge {
+        font-size: 1.7rem;
+    }
+
+    .xLarge {
+        font-size: 1.2rem;
+    }
+
+    .large {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 470px) {
+    .xxLarge {
+        font-size: 1.6rem;
+    }
+
+    .xLarge {
+        font-size: 1.1rem;
+    }
+
+    .large {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .xxLarge {
+        font-size: 1.5rem;
+    }
+
+    .xLarge {
+        font-size: 1rem;
+    }
+
+    .large {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 370px) {
+    .xxLarge {
+        font-size: 1.3rem;
+    }
+
+    .xLarge {
+        font-size: .9rem;
+    }
+
+    .large {
+        font-size: .7rem;
+    }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 601px) and (max-width: 1120px) {}
+
+@media (prefers-color-scheme: dark) {}
