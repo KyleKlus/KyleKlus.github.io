@@ -88,6 +88,20 @@ export default function PortfolioPage() {
                             </div>
                         </PortfolioCard>
                     </CarouselItem>
+                    <CarouselItem className={[styles.carouselItem].join(' ')}>
+                        <PortfolioCard image={''} alt=''>
+                            <h4>QR Code Generator</h4>
+                            This tool creates a list of all appointments from an ICS calendar file. By default, the list is limited to the period from last year to next year.
+
+                            I wrote this tool, because the calendar tool, which is used for the political party that I am in, doesn't support a nice way to print appointments. But it can export the appointments as an ICS file, which can be imported into this tool.
+                            <hr />
+                            <div className={[styles.linkArea].join(' ')}>
+                                🔗 <StyledLink href={'https://github.com/KyleKlus/calendar-list-generator'}>GitRepo</StyledLink>
+                                {' | '}
+                                <StyledLink href={`${defaultSiteConfig.url}/calendar-list-generator`}>Calendar List Generator page</StyledLink>
+                            </div>
+                        </PortfolioCard>
+                    </CarouselItem>
                 </Carousel>
                 <Carousel
                     hidden={activeKey !== PortfolioTabs.Themes}
