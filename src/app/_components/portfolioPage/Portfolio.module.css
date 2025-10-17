@@ -26,6 +26,11 @@
     z-index: 1;
 }
 
+.linkArea {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .tabContainer {
     --tab-margin: 1rem;
     width: calc(100% - 2 * var(--tab-margin));
@@ -53,6 +58,10 @@
 
 .carousel {
     --arrow-width: 42px;
+}
+
+.carousel > *:first-child {
+    overflow: unset;
 }
 
 .carousel > *:nth-child(2),
