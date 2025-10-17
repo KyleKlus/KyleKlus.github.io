@@ -111,6 +111,12 @@
     }
 }
 
+.jiggleWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .jiggleWrapper > * {
     animation: slide-left-rotate-left 12s linear infinite;
 }
@@ -307,6 +313,8 @@
     .large {
         font-size: 1rem;
     }
+
+
 }
 
 @media (max-width: 470px) {
@@ -320,6 +328,10 @@
 
     .large {
         font-size: 0.8rem;
+    }
+
+    .jiggleWrapper {
+        gap: .5rem;
     }
 }
 
