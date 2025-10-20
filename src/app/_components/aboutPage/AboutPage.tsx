@@ -9,7 +9,7 @@ import profilePic from './KK_Profile_Photo.jpg';
 
 export default function AboutPage() {
     return (
-        <Content id="aboutPage" className={[styles.aboutPage, 'dotted', 'applyBottomPadding'].join(' ')}>
+        <Content id="aboutPage" className={[styles.aboutPage, 'crossed', 'applyBottomPadding'].join(' ')}>
             <div className={styles.aboutPageBG}>
                 <div className={styles.aboutPageInfo}>
                     <div className={[styles.aboutPage_firstBreak].join(' ')}>
