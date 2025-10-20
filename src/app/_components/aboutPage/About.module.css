@@ -10,9 +10,9 @@
     width: min(950px, 90vw);
     min-height: min(750px, 75vh);
     border-radius: var(--border-radius);
-    border: 1px solid var(--bg-color-40);
+    border: var(--border-light);
     background-color: var(--bg-color-translucent-05);
-    box-shadow: var(--shadowElevation_4);
+    box-shadow: var(--shadow-40);
     margin-top: min(175px, 15vh);
 }
 
@@ -21,7 +21,7 @@
     padding: 64px 32px 32px 32px;
     border-top-left-radius: var(--border-radius);
     border-bottom-left-radius: var(--border-radius);
-    border-right: 1px solid var(--bg-color-40);
+    border-right: var(--border-light);
     background-color: var(--bg-color-20);
     display: flex;
     flex-direction: column;
@@ -63,13 +63,13 @@
 
 .aboutPageProfilePic {
     border-radius: 50%;
-    outline: 1px solid var(--bg-color-40);
-    box-shadow: var(--shadowElevation_4);
+    outline: var(--border-light);
+    box-shadow: var(--shadow-40);
     margin-bottom: 32px;
 }
 
 .aboutPageProfileName {
-    border-bottom: 2px solid var(--bg-color-40);
+    border-bottom: 2px solid var(--border-light-color);
     width: 100%;
     padding-bottom: 4px;
     padding-left: 16px;
@@ -83,7 +83,7 @@
 }
 
 .aboutPageProfileSkillBar {
-    border: 1px solid var(--bg-color-40);
+    border: var(--border-light);
     border-radius: 8px;
     width: 90%;
     height: 10px;
@@ -97,7 +97,7 @@
 
 .aboutPageInfo progress::-webkit-progress-bar {
     background: var(--bg-color-00);
-    border: 1px solid var(--bg-color-40);
+    border: var(--border-light);
     border-radius: 8px;
 }
 
@@ -110,7 +110,7 @@
     text-align: left;
     width: 100%;
     max-width: 750px;
-    border-bottom: 1px solid var(--bg-color-40);
+    border-bottom: var(--border-light);
     padding: 8px 32px;
 }
 
@@ -166,7 +166,7 @@
         height: 100%;
         margin-bottom: 0px;
         border: none;
-        border-top: 1px solid var(--bg-color-40);
+        border-top: var(--border-light);
     }
 }
 
@@ -226,7 +226,7 @@
     }
 
     .aboutPage_thirdBreak {
-        border-right: 1px solid var(--bg-color-40);
+        border-right: var(--border-light);
     }
 
     .aboutPage .aboutPageText {

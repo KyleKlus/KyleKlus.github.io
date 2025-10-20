@@ -5,7 +5,7 @@ import styles from './Hero.module.css';
 
 export default function HeroPage() {
     return (
-        <Content id="heroPage" className={[styles.heroPage, 'dotted'].join(' ')}>
+        <Content id="heroPage" className={[styles.heroPage, 'crossed'].join(' ')}>
             <div className={styles.jiggleWrapper}>
                 <p className={[styles.xxLarge, textStyles.left].join(' ')} content={'Hi there👋, I am Kyle!'}>Hi there👋, I am Kyle!</p>
                 <p className={[styles.xLarge, textStyles.right].join(' ')} content={'I am a computer science student,'}>I am a computer science student,</p>
