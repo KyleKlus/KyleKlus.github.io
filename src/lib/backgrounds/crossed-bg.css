@@ -1,76 +1,69 @@
 @keyframes slide-out-crossed-bg {
     from {
-        background-size: var(--cross-spacing) var(--cross-spacing);
+        --circle-pos-w: calc(calc(100vw - 6.5rem + var(--cross-width)) / 2);
+        --circle-pos-h: calc(calc(100vh - 6.5rem + var(--cross-width)) / 2);
+        background-size: 6.5rem 6.5rem;
         background-position:
-            var(--default-circle-pos-w) var(--default-circle-pos-h),
-            var(--default-cross-pos-w) var(--default-cross-pos-h),
-            var(--default-cross-pos-w) var(--default-cross-pos-h);
+            var(--circle-pos-w) var(--circle-pos-h),
+            var(--cross-pos-w) var(--cross-pos-h),
+            var(--cross-pos-w) var(--cross-pos-h);
     }
 
     25% {
-        --cross-spacing-25: calc(var(--cross-spacing) + 1rem);
-        --cross-length-25: calc(var(--cross-spacing-25) + var(--cross-width));
-        background-size: var(--cross-spacing-25) var(--cross-spacing-25);
+        background-size: 7rem 7rem;
         background-position:
-            calc(calc(80vw - var(--cross-length-25)) / 2) calc(calc(70vh - var(--cross-length-25)) / 2),
+            calc(calc(80vw - 7rem + var(--cross-width)) / 2) calc(calc(70vh - 7rem + var(--cross-width)) / 2),
             calc(calc(80vw + var(--cross-arm-width)) / 2) calc(calc(70vh + var(--cross-arm-width)) / 2),
             calc(calc(80vw + var(--cross-arm-width)) / 2) calc(calc(70vh + var(--cross-arm-width)) / 2);
     }
 
     60% {
-        --cross-spacing-60: calc(var(--cross-spacing) + 1.5rem);
-        --cross-length-60: calc(var(--cross-spacing-60) + var(--cross-width));
-        background-size: var(--cross-spacing-60) var(--cross-spacing-60);
+        background-size: 7.5rem 7.5rem;
         background-position:
-            calc(calc(90vw - var(--cross-length-60)) / 2) calc(calc(80vh - var(--cross-length-60)) / 2),
+            calc(calc(90vw - 7.5rem + var(--cross-width)) / 2) calc(calc(80vh - 7.5rem + var(--cross-width)) / 2),
             calc(calc(90vw + var(--cross-arm-width)) / 2) calc(calc(80vh + var(--cross-arm-width)) / 2),
             calc(calc(90vw + var(--cross-arm-width)) / 2) calc(calc(80vh + var(--cross-arm-width)) / 2);
     }
 
     80% {
-        --cross-spacing-80: calc(var(--cross-spacing) + 1rem);
-        --cross-length-80: calc(var(--cross-spacing-80) + var(--cross-width));
-        background-size: var(--cross-spacing-80) var(--cross-spacing-80);
+        background-size: 7rem 7rem;
         background-position:
-            calc(calc(80vw - var(--cross-length-80)) / 2) calc(calc(90vh - var(--cross-length-80)) / 2),
+            calc(calc(80vw - 7rem + var(--cross-width)) / 2) calc(calc(90vh - 7rem + var(--cross-width)) / 2),
             calc(calc(80vw + var(--cross-arm-width)) / 2) calc(calc(90vh + var(--cross-arm-width)) / 2),
             calc(calc(80vw + var(--cross-arm-width)) / 2) calc(calc(90vh + var(--cross-arm-width)) / 2);
     }
 
     to {
-        background-size: var(--cross-spacing) var(--cross-spacing);
+        --circle-pos-w: calc(calc(100vw - 6.5rem + var(--cross-width)) / 2);
+        --circle-pos-h: calc(calc(100vh - 6.5rem + var(--cross-width)) / 2);
+        background-size: 6.5rem 6.5rem;
         background-position:
-            var(--default-circle-pos-w) var(--default-circle-pos-h),
-            var(--default-cross-pos-w) var(--default-cross-pos-h),
-            var(--default-cross-pos-w) var(--default-cross-pos-h);
+            var(--circle-pos-w) var(--circle-pos-h),
+            var(--cross-pos-w) var(--cross-pos-h),
+            var(--cross-pos-w) var(--cross-pos-h);
     }
 }
 
 .crossed {
     --cross-arm-width: .08rem;
-    --cross-width: calc(var(--cross-arm-width) * 2);
-    --cross-spacing: 6.5rem;
-    --cross-length: var(--cross-spacing) + var(--cross-width);
+    --cross-width: calc(var(--cross-arm-width)*2);
+    --spacing: 6.5rem;
 
-    --default-circle-pos-w: calc(calc(100vw - var(--cross-length)) / 2);
-    --circle-pos-w: var(--default-circle-pos-w);
-    --default-circle-pos-h: calc(calc(100vh - var(--cross-length)) / 2);
-    --circle-pos-h: var(--default-circle-pos-h);
+    --circle-pos-w: calc(calc(100vw - var(--spacing) + var(--cross-width)) / 2);
+    --circle-pos-h: calc(calc(100vh - var(--spacing) + var(--cross-width)) / 2);
 
-    --default-cross-pos-w: calc(calc(100vw + var(--cross-arm-width)) / 2);
-    --cross-pos-w: var(--default-cross-pos-w);
-    --default-cross-pos-h: calc(calc(100vh + var(--cross-arm-width)) / 2);
-    --cross-pos-h: var(--default-cross-pos-h);
+    --cross-pos-w: calc(calc(100vw + var(--cross-arm-width)) / 2);
+    --cross-pos-h: calc(calc(100vh + var(--cross-arm-width)) / 2);
 
     background-image:
         radial-gradient(circle, transparent var(--cross-width), var(--bg-color-05) var(--cross-width)),
         linear-gradient(var(--bg-color-60) var(--cross-arm-width), transparent var(--cross-arm-width)),
         linear-gradient(90deg, var(--bg-color-60) var(--cross-arm-width), transparent var(--cross-arm-width));
-    background-size: var(--cross-spacing) var(--cross-spacing);
+    background-size: var(--spacing) var(--spacing);
     background-position:
         var(--circle-pos-w) var(--circle-pos-h),
         var(--cross-pos-w) var(--cross-pos-h),
         var(--cross-pos-w) var(--cross-pos-h);
     background-repeat: repeat;
-    animation: slide-out-crossed-bg 60s linear infinite;
+    animation: slide-out-crossedBG 60s linear infinite;
 }
