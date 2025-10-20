@@ -46,7 +46,7 @@
     }
 }
 
-.crossedBG {
+.crossed {
     --cross-arm-width: .08rem;
     --cross-width: calc(var(--cross-arm-width) * 2);
     --cross-spacing: 6.5rem;
@@ -72,5 +72,5 @@
         var(--cross-pos-w) var(--cross-pos-h),
         var(--cross-pos-w) var(--cross-pos-h);
     background-repeat: repeat;
-    animation: slide-out-crossed 60s linear infinite;
+    animation: slide-out-crossed-bg 60s linear infinite;
 }
