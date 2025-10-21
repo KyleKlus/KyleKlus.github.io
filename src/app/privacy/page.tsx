@@ -2,7 +2,7 @@
 import type { Metadata, Viewport } from 'next';
 import Content from "@/lib/container/Content";
 import Text from '@/lib/container/Text';
-import { siteConfig } from "../siteConfig";
+import { siteConfig } from "../../siteConfig";
 import styles from './Privacy.module.css';
 import StyledLink from '@/lib/interaction/links/StyledLink';
 

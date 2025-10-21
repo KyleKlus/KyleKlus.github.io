@@ -13,7 +13,7 @@ import Nav from "react-bootstrap/Nav";
 import { Carousel, CarouselItem, NavItem, NavLink } from "react-bootstrap";
 import { PortfolioTabs } from './PortfolioTabs';
 import { useTheme } from 'next-themes';
-import { siteConfig } from '@/app/siteConfig';
+import { siteConfig } from '@/siteConfig';
 
 export default function PortfolioPage() {
     const [activeKey, setActiveKey] = useState(PortfolioTabs.Webapps);

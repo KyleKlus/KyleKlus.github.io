@@ -5,7 +5,7 @@ import Content from "@/lib/container/Content";
 import type { Metadata, Viewport } from 'next'
 import styles from './TermsOfService.module.css';
 import Text from '@/lib/container/Text';
-import { siteConfig } from "../siteConfig";
+import { siteConfig } from "../../siteConfig";
 import StyledLink from "@/lib/interaction/links/StyledLink";
 
 export const metadata: Metadata = {
