@@ -9,13 +9,13 @@ import { Fira_Code } from "next/font/google";
 
 import Header from '@/lib/layouts/header/Header';
 import Main from '@/lib/container/Main';
-import Footer from '@/lib/layouts/footer/Footer';
 import ThemeButton from '@/lib/interaction/forms/buttons/ThemeButton';
 
 import { ThemeProvider } from '@/lib/provider/theme-provider';
 import ScrollToTargetButton from '@/lib/interaction/forms/buttons/ScrollToTargetButton';
 import NavLink from '@/lib/interaction/links/NavLink';
 import { defaultSiteConfig } from './defaultSiteConfig';
+import SiteMapFooter from '@/lib/layouts/footer/SiteMapFooter';
 
 const firaCode = Fira_Code({ weight: '400', subsets: ['latin'] });
 
@@ -48,7 +48,7 @@ export default function Layout(props: React.PropsWithChildren<ILayoutProps>) {
                         <ScrollToTargetButton targetElementId='top' />
                         <div id={'top'} />
                         {props.children}
-                        <Footer />
+                        <SiteMapFooter />
                     </Main>
                 </ThemeProvider>
             </body>

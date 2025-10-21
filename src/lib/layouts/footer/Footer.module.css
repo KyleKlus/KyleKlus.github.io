@@ -2,12 +2,45 @@
 
 .footer {
   flex-grow: 0;
-  height: var(--footer-height);
   width: 100%;
   padding: 1rem;
   background-color: var(--bg-tertiary);
   z-index: 20;
   border-top: var(--border-light);
+}
+
+.smallFooter {
+  height: var(--footer-height);
+}
+
+.bigFooter {
+  height: 40vh;
+}
+
+.siteMapFooter {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.siteMapFooter th {
+  text-align: left;
+}
+
+.siteMapFooter td {
+  vertical-align: top;
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: .3rem;
+  align-items: start;
+  min-width: 200px;
 }
 
 .footerContent {
