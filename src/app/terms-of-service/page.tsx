@@ -5,16 +5,16 @@ import Content from "@/lib/container/Content";
 import type { Metadata, Viewport } from 'next'
 import styles from './TermsOfService.module.css';
 import Text from '@/lib/container/Text';
-import { defaultSiteConfig } from "../defaultSiteConfig";
+import { siteConfig } from "../siteConfig";
 import StyledLink from "@/lib/interaction/links/StyledLink";
 
 export const metadata: Metadata = {
-    ...defaultSiteConfig.metadata.en,
+    ...siteConfig.metadata.en,
     title: "Kyle Klus | Terms of Service 📜",
     description: "The terms of service of Kyle Klus Website.",
     openGraph: {
-        ...defaultSiteConfig.metadata.en.openGraph,
-        url: defaultSiteConfig.termsOfServiceUrl,
+        ...siteConfig.metadata.en.openGraph,
+        url: siteConfig.termsOfServiceUrl,
         title: "Kyle Klus | Terms of Service",
         description: "The terms of service of Kyle Klus Website.",
     },
@@ -35,7 +35,7 @@ export default function Page() {
 
                 <h2>1. Terms</h2>
 
-                <p>By accessing this Website, accessible from {defaultSiteConfig.url}, you are agreeing to be bound by these Website Terms and Conditions of Use and agree that you are responsible for the agreement with any applicable local laws. If you disagree with any of these terms, you are prohibited from accessing this site. The materials contained in this Website are protected by copyright and trade mark law.</p>
+                <p>By accessing this Website, accessible from {siteConfig.url}, you are agreeing to be bound by these Website Terms and Conditions of Use and agree that you are responsible for the agreement with any applicable local laws. If you disagree with any of these terms, you are prohibited from accessing this site. The materials contained in this Website are protected by copyright and trade mark law.</p>
 
                 <h2>2. Use License</h2>
 

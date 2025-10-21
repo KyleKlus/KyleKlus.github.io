@@ -13,7 +13,7 @@ import Nav from "react-bootstrap/Nav";
 import { Carousel, CarouselItem, NavItem, NavLink } from "react-bootstrap";
 import { PortfolioTabs } from './PortfolioTabs';
 import { useTheme } from 'next-themes';
-import { defaultSiteConfig } from '@/app/defaultSiteConfig';
+import { siteConfig } from '@/app/siteConfig';
 
 export default function PortfolioPage() {
     const [activeKey, setActiveKey] = useState(PortfolioTabs.Webapps);
@@ -59,7 +59,7 @@ export default function PortfolioPage() {
                             <hr />
                             🔗 <StyledLink href={'https://github.com/KyleKlus/receipt-manager-tool'}>GitRepo</StyledLink>
                             {' | '}
-                            <StyledLink href={defaultSiteConfig.receiptManagerUrl}>Receipt Manager page</StyledLink>
+                            <StyledLink href={siteConfig.receiptManagerUrl}>Receipt Manager page</StyledLink>
                         </PortfolioCard>
                     </CarouselItem>
                     <CarouselItem className={[styles.carouselItem].join(' ')}>
@@ -71,7 +71,7 @@ export default function PortfolioPage() {
                             <hr />
                             🔗 <StyledLink href={'https://github.com/KyleKlus/text-tools'}>GitRepo</StyledLink>
                             {' | '}
-                            <StyledLink href={defaultSiteConfig.textToolsUrl}>Text Tools page</StyledLink>
+                            <StyledLink href={siteConfig.textToolsUrl}>Text Tools page</StyledLink>
                         </PortfolioCard>
                     </CarouselItem>
                     <CarouselItem className={[styles.carouselItem].join(' ')}>
@@ -84,7 +84,7 @@ export default function PortfolioPage() {
                             <div className={[styles.linkArea].join(' ')}>
                                 🔗 <StyledLink href={'https://github.com/KyleKlus/qr-code-generator'}>GitRepo</StyledLink>
                                 {' | '}
-                                <StyledLink href={defaultSiteConfig.qrCodeGeneratorUrl}>QR Code Generator page</StyledLink>
+                                <StyledLink href={siteConfig.qrCodeGeneratorUrl}>QR Code Generator page</StyledLink>
                             </div>
                         </PortfolioCard>
                     </CarouselItem>
@@ -98,7 +98,7 @@ export default function PortfolioPage() {
                             <div className={[styles.linkArea].join(' ')}>
                                 🔗 <StyledLink href={'https://github.com/KyleKlus/calendar-list-generator'}>GitRepo</StyledLink>
                                 {' | '}
-                                <StyledLink href={`${defaultSiteConfig.url}/calendar-list-generator`}>Calendar List Generator page</StyledLink>
+                                <StyledLink href={`${siteConfig.url}/calendar-list-generator`}>Calendar List Generator page</StyledLink>
                             </div>
                         </PortfolioCard>
                     </CarouselItem>

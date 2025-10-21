@@ -1,6 +1,6 @@
 /** @format */
 
-import { defaultSiteConfig } from '@/app/defaultSiteConfig';
+import { siteConfig } from '@/app/siteConfig';
 import StyledLink from '@/lib/interaction/links/StyledLink';
 import BigFooter from './BigFooter';
 import styles from './Footer.module.css';
@@ -25,33 +25,33 @@ export default function SiteMapFooter(props: ISiteMapFooterProps) {
           <tr>
             <td>
               <div className={[styles.linkList].join(' ')}>
-                <StyledLink href={defaultSiteConfig.heropageUrl} className={styles.footerNavLink}>Home</StyledLink>
-                <StyledLink href={defaultSiteConfig.portfoliopageUrl} className={styles.footerNavLink}>Portfolio</StyledLink>
-                <StyledLink href={defaultSiteConfig.aboutpageUrl} className={styles.footerNavLink}>About</StyledLink>
-                <StyledLink href={defaultSiteConfig.cookbookENUrl} className={styles.footerNavLink}>Cookbook 🇬🇧</StyledLink>
-                <StyledLink href={defaultSiteConfig.cookbookENUrl} className={styles.footerNavLink}>Cookbook 🇩🇪</StyledLink>
-                <StyledLink href={defaultSiteConfig.projectsUrl} className={styles.footerNavLink}>Projects 🛠️</StyledLink>
+                <StyledLink href={siteConfig.heropageUrl} className={styles.footerNavLink}>Home</StyledLink>
+                <StyledLink href={siteConfig.portfoliopageUrl} className={styles.footerNavLink}>Portfolio</StyledLink>
+                <StyledLink href={siteConfig.aboutpageUrl} className={styles.footerNavLink}>About</StyledLink>
+                <StyledLink href={siteConfig.cookbookENUrl} className={styles.footerNavLink}>Cookbook 🇬🇧</StyledLink>
+                <StyledLink href={siteConfig.cookbookENUrl} className={styles.footerNavLink}>Cookbook 🇩🇪</StyledLink>
+                <StyledLink href={siteConfig.projectsUrl} className={styles.footerNavLink}>Projects 🛠️</StyledLink>
               </div>
             </td>
             <td>
               <div className={[styles.linkList].join(' ')}>
-                <StyledLink href={defaultSiteConfig.receiptManagerUrl} className={styles.footerNavLink}>Receipt Manager 🧾</StyledLink>
-                <StyledLink href={defaultSiteConfig.textToolsUrl} className={styles.footerNavLink}>Text Tools 📝</StyledLink>
-                <StyledLink href={defaultSiteConfig.qrCodeGeneratorUrl} className={styles.footerNavLink}>QR Code Generator 📱</StyledLink>
+                <StyledLink href={siteConfig.receiptManagerUrl} className={styles.footerNavLink}>Receipt Manager 🧾</StyledLink>
+                <StyledLink href={siteConfig.textToolsUrl} className={styles.footerNavLink}>Text Tools 📝</StyledLink>
+                <StyledLink href={siteConfig.qrCodeGeneratorUrl} className={styles.footerNavLink}>QR Code Generator 📱</StyledLink>
               </div>
             </td>
             <td>
               <div className={[styles.linkList].join(' ')}>
-                <StyledLink href={defaultSiteConfig.githubUrl} className={styles.footerNavLink}>GitHub</StyledLink>
-                <StyledLink href={defaultSiteConfig.linkedinUrl} className={styles.footerNavLink}>LinkedIn</StyledLink>
-                <StyledLink href={defaultSiteConfig.kofiUrl} className={styles.footerNavLink}>Ko-fi</StyledLink>
+                <StyledLink href={siteConfig.githubUrl} className={styles.footerNavLink}>GitHub</StyledLink>
+                <StyledLink href={siteConfig.linkedinUrl} className={styles.footerNavLink}>LinkedIn</StyledLink>
+                <StyledLink href={siteConfig.kofiUrl} className={styles.footerNavLink}>Ko-fi</StyledLink>
               </div>
             </td>
             <td>
               <div className={[styles.linkList].join(' ')}>
-                <StyledLink href={defaultSiteConfig.contactUrl} className={styles.footerNavLink}>Contact</StyledLink>
-                <StyledLink href={defaultSiteConfig.privacyUrl} className={styles.footerNavLink}>Privacy</StyledLink>
-                <StyledLink href={defaultSiteConfig.termsOfServiceUrl} className={styles.footerNavLink}>Terms of Service</StyledLink>
+                <StyledLink href={siteConfig.contactUrl} className={styles.footerNavLink}>Contact</StyledLink>
+                <StyledLink href={siteConfig.privacyUrl} className={styles.footerNavLink}>Privacy</StyledLink>
+                <StyledLink href={siteConfig.termsOfServiceUrl} className={styles.footerNavLink}>Terms of Service</StyledLink>
               </div>
             </td>
           </tr>
@@ -59,7 +59,7 @@ export default function SiteMapFooter(props: ISiteMapFooterProps) {
       </table>
       <span>
         {'Copyright © 2024 '}
-        <StyledLink href={defaultSiteConfig.githubUrl} className={['hoverBGEffect'].join(' ')} style={{ padding: '0 2px' }}>Kyle Klus</StyledLink>
+        <StyledLink href={siteConfig.githubUrl} className={['hoverBGEffect'].join(' ')} style={{ padding: '0 2px' }}>Kyle Klus</StyledLink>
       </span>
     </BigFooter>
   );

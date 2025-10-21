@@ -2,17 +2,17 @@
 import type { Metadata, Viewport } from 'next';
 import Content from "@/lib/container/Content";
 import Text from '@/lib/container/Text';
-import { defaultSiteConfig } from "../defaultSiteConfig";
+import { siteConfig } from "../siteConfig";
 import styles from './Privacy.module.css';
 import StyledLink from '@/lib/interaction/links/StyledLink';
 
 export const metadata: Metadata = {
-    ...defaultSiteConfig.metadata.en,
+    ...siteConfig.metadata.en,
     title: "Kyle Klus | Privacy 🔒",
     description: "The privacy policy of Kyle Klus Website.",
     openGraph: {
-        ...defaultSiteConfig.metadata.en.openGraph,
-        url: defaultSiteConfig.privacyUrl,
+        ...siteConfig.metadata.en.openGraph,
+        url: siteConfig.privacyUrl,
         title: "Kyle Klus | Privacy",
         description: "The privacy policy of Kyle Klus Website.",
     },
@@ -54,7 +54,7 @@ export default function Page() {
                 <ul>
                     <li><strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Cookies Policy) refers to Kyle Klus | Website.</li>
                     <li><strong>Cookies</strong> means small files that are placed on Your computer, mobile device or any other device by a website, containing details of your browsing history on that website among its many uses.</li>
-                    <li><strong>Website</strong> refers to Kyle Klus | Website, accessible from <StyledLink href={defaultSiteConfig.url} rel="external nofollow noopener noreferrer" target="_blank">{defaultSiteConfig.url}</StyledLink></li>
+                    <li><strong>Website</strong> refers to Kyle Klus | Website, accessible from <StyledLink href={siteConfig.url} rel="external nofollow noopener noreferrer" target="_blank">{siteConfig.url}</StyledLink></li>
                     <li><strong>You</strong> means the individual accessing or using the Website, or a company, or any legal entity on behalf of which such individual is accessing or using the Website, as applicable.</li>
                 </ul>
                 <br />
@@ -114,7 +114,7 @@ export default function Page() {
                 <br />
                 <p>If you have any questions about this Cookies Policy, You can contact us:</p>
                 <ul>
-                    <li>By email: <StyledLink href={defaultSiteConfig.contactUrl} rel="external nofollow noopener noreferrer" target="_blank">{defaultSiteConfig.contactUrl.replace('mailto:', '')}</StyledLink></li>
+                    <li>By email: <StyledLink href={siteConfig.contactUrl} rel="external nofollow noopener noreferrer" target="_blank">{siteConfig.contactUrl.replace('mailto:', '')}</StyledLink></li>
                 </ul>
             </Text>
         </Content>

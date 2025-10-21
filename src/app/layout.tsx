@@ -14,7 +14,7 @@ import ThemeButton from '@/lib/interaction/forms/buttons/ThemeButton';
 import { ThemeProvider } from '@/lib/provider/theme-provider';
 import ScrollToTargetButton from '@/lib/interaction/forms/buttons/ScrollToTargetButton';
 import NavLink from '@/lib/interaction/links/NavLink';
-import { defaultSiteConfig } from './defaultSiteConfig';
+import { siteConfig } from './siteConfig';
 import SiteMapFooter from '@/lib/layouts/footer/SiteMapFooter';
 
 const firaCode = Fira_Code({ weight: '400', subsets: ['latin'] });
@@ -32,15 +32,15 @@ export default function Layout(props: React.PropsWithChildren<ILayoutProps>) {
                     <Header>
                         <NavLink
                             className={headerStyles.headerNavLink}
-                            href={defaultSiteConfig.heropageUrl}
+                            href={siteConfig.heropageUrl}
                         >Home</NavLink>
                         <NavLink
                             className={headerStyles.headerNavLink}
-                            href={defaultSiteConfig.portfoliopageUrl}
+                            href={siteConfig.portfoliopageUrl}
                         >Portfolio</NavLink>
                         <NavLink
                             className={headerStyles.headerNavLink}
-                            href={defaultSiteConfig.aboutpageUrl}
+                            href={siteConfig.aboutpageUrl}
                         >About</NavLink>
                         <ThemeButton />
                     </Header >

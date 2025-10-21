@@ -1,7 +1,7 @@
 /** @format */
 
 import styles from './Footer.module.css';
-import { defaultSiteConfig } from '@/app/defaultSiteConfig';
+import { siteConfig } from '@/app/siteConfig';
 import StyledLink from '@/lib/interaction/links/StyledLink';
 
 export interface IFooterProps extends React.PropsWithChildren {
@@ -17,7 +17,7 @@ export default function Footer(props: IFooterProps) {
         : <div className={styles.footerContent}>
           <span>
             {'Copyright © 2024 '}
-            <StyledLink href={defaultSiteConfig.githubUrl} className={['hoverBGEffect'].join(' ')} style={{ padding: '0 2px' }}>Kyle Klus</StyledLink>
+            <StyledLink href={siteConfig.githubUrl} className={['hoverBGEffect'].join(' ')} style={{ padding: '0 2px' }}>Kyle Klus</StyledLink>
           </span>
           <div className={styles.navLinkWrapper}>
             {props.children}
