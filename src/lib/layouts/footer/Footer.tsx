@@ -16,8 +16,8 @@ export default function Footer(props: IFooterProps) {
         ? props.children
         : <div className={styles.footerContent}>
           <span>
-            {'Copyright © 2024 '}
             <StyledLink href={siteConfig.githubUrl} className={['hoverBGEffect'].join(' ')} style={{ padding: '0 2px' }}>Kyle Klus</StyledLink>
+            {` © 2023-${new Date().getFullYear()}`}
           </span>
           <div className={styles.navLinkWrapper}>
             {props.children}
